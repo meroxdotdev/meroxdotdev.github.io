@@ -1,7 +1,7 @@
 ---
 title: How to Set Up Your Own AI at Home
 date: 2024-08-16 10:00:00 +0200
-categories: [Self-Hosting, AI]
+#categories: [Self-Hosting, AI]
 tags: [ai, self-hosting, server, ollama, stable-diffusion]
 description: Learn how to set up AI at home with Ollama, OpenWebUI and Stable Diffusion in this guide.
 image:

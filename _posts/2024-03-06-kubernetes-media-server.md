@@ -1,7 +1,7 @@
 ---
 title: Deploying a Kubernetes-Based Media Server
 date: 2024-03-06 10:00:00 +0200
-categories: [DevOps, Self-Hosting]
+#categories: [DevOps, Self-Hosting]
 tags: [kubernetes, self-hosting, media-server, jellyfin, radarr, sonarr]
 description: Well-crafted tutorial to deploy a media server on my Kubernetes cluster
 image:

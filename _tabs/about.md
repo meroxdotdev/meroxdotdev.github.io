@@ -1,8 +1,37 @@
 ---
-# the default layout is 'page'
+title: About
 icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+
+
+## System Administrator | Linux | DevOps
+
+**merox.dev** = **ME**lcher **RO**bert + **X** (from mer0x39)
+
+### Current Focus
+
+Expanding expertise in modern infrastructure:
+- Kubernetes orchestration & container management
+- DevOps practices & automation pipelines
+- Cloud-native technologies & GitOps
+
+### Experience
+
+**Companies**: Hella, Atos, Netex
+
+**Key Projects**:
+- Migrated Puppet infrastructure from VM to Kubernetes
+- Led enterprise-wide Forescout policy migration
+- Designed datacenter backup solution with Bareos
+- Implemented security across Palo Alto, Fortigate, Cisco
+
+### Tech Stack
+
+`Linux` `Docker` `Kubernetes` `Bash` `Python` `Ansible` `Terraform` `Git`
+
+---
+
+> Open to collaboration and new opportunities in DevOps and cloud infrastructure.
+{: .prompt-info }

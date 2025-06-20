@@ -1,0 +1,44 @@
+# Dependabot configuration for automatic updates
+version: 2
+updates:
+  # Ruby gems updates (including Chirpy theme)
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Bucharest"
+    # Limit number of open PRs
+    open-pull-requests-limit: 5
+    # Auto-rebase strategy
+    rebase-strategy: "auto"
+    # Group minor and patch updates
+    groups:
+      chirpy-and-plugins:
+        patterns:
+          - "jekyll*"
+          - "*chirpy*"
+    # Ignore major updates (for stability)
+    ignore:
+      - dependency-name: "jekyll"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "jekyll-theme-chirpy"
+        update-types: ["version-update:semver-major"]
+    # PR labels
+    labels:
+      - "dependencies"
+      - "automated"
+    # Commit message configuration
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    
+  # GitHub Actions updates
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "github-actions"
+      - "automated"

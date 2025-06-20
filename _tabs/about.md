@@ -4,11 +4,10 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-
-
 ## System Administrator | Linux | DevOps
 
 **merox.dev** = **ME**lcher **RO**bert + **X** (from mer0x39)
+
 
 ### Current Focus
 
@@ -19,7 +18,6 @@ Expanding expertise in modern infrastructure:
 
 ### Experience
 
-**Companies**: Hella, Atos, Netex
 
 **Key Projects**:
 - Migrated Puppet infrastructure from VM to Kubernetes
@@ -31,7 +29,10 @@ Expanding expertise in modern infrastructure:
 
 `Linux` `Docker` `Kubernetes` `Bash` `Python` `Ansible` `Terraform` `Git`
 
+
 ---
 
-> Open to collaboration and new opportunities in DevOps and cloud infrastructure.
+Download [my resume](https://merox.dev/robert-melcher-cv.pdf)
+
+> Open to collaboration and new opportunities in DevOps and cloud infrastructure. Let's build something amazing together!
 {: .prompt-info }

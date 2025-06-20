@@ -1,7 +1,7 @@
 ---
 title: "From WordPress to Hugo: My Setup Explained"
 date: 2025-04-07 10:00:00 +0200
-categories: [web-development, devops, infrastructure]
+categories: [infrastructure]
 tags: [wordpress, hugo, github-actions, github-pages, cloudflare, static-site, website-setup, migration]
 description: Why I migrated from WordPress to Hugo, pros and cons of both platforms, and a detailed look into how my website runs today using GitHub Actions, GitHub Pages, and Cloudflare.
 image:

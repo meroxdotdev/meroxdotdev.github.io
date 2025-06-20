@@ -4,6 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
+![merox.dev](../assets/header-about.png)
+
 ## System Administrator | Linux | DevOps
 
 **merox.dev** = **ME**lcher **RO**bert + **X** (from mer0x39)

@@ -9,7 +9,7 @@ image:
   alt: WordPress to Hugo Migration Guide
 ---
 
-Ten years ago, I started my first website projects—some for myself, others for friends or clients. I spent a lot of time experimenting with themes, plugins, and WordPress setups. Some of the projects I dedicated the most effort to are listed here: [https://merox.dev/websites/](https://merox.dev/websites/)
+Ten years ago, I started my first website projects—some for myself, others for friends or clients. I spent a lot of time experimenting with themes, plugins, and WordPress setups.
 
 ##  My Experience with WordPress
 

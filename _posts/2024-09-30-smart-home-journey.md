@@ -111,7 +111,7 @@ shell_command:
   set_fans_away: 'ssh -i /config/ssh/id_rsa -o StrictHostKeyChecking=no root@10.10.10.10 /usr/bin/ipmitool -I lanplus -H 10.10.10.200 -U root -P SuperSecretPassword raw 0x30 0x30 0x02 0xff 0x28'
 ```
 
-![Home Assistant Automation](/assets/img/posts/gallery/HAuto.PNG){: width="700" height="400" }
+![Home Assistant Automation](/assets/img/posts/gallery/haauto.PNG){: width="700" height="400" }
 _Home Assistant automation dashboard_
 
 ### Future Plans

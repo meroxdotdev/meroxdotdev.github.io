@@ -6,9 +6,11 @@ order: 4
 
 ![merox.dev](../assets/header-about.png)
 
-## System Administrator | Linux | DevOps
+## Hello, World 👋
 
-**merox.dev** = **ME**lcher **RO**bert + **X** (from mer0x39)
+**I’m merox** = **ME**lcher **RO**bert + **X** (evolved from mer0x39, where 0x39 is my birthday in hex)  
+
+HPC Sysadmin | Homelab Enthusiast | Cognitive Science Explorer
 
 
 ### Current Focus
@@ -26,10 +28,6 @@ Expanding expertise in modern infrastructure:
 - Led enterprise-wide Forescout policy migration
 - Designed datacenter backup solution with Bareos
 - Implemented security across Palo Alto, Fortigate, Cisco
-
-### Tech Stack
-
-`Linux` `Docker` `Kubernetes` `Bash` `Python` `Ansible` `Terraform` `Git`
 
 
 ---

@@ -63,7 +63,7 @@ analytics:
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
-    id: # fill in your Umami ID
+    id: merox # fill in your Umami ID
     domain: # fill in your Umami domain
   matomo:
     id: # fill in your Matomo ID

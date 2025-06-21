@@ -61,9 +61,9 @@ analytics:
   google:
     id: RXSCNFY5WZ
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: merox # fill in your GoatCounter ID
   umami:
-    id: merox # fill in your Umami ID
+    id:  # fill in your Umami ID
     domain: # fill in your Umami domain
   matomo:
     id: # fill in your Matomo ID

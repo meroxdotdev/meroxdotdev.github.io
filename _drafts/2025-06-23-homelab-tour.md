@@ -104,6 +104,18 @@ Pushes system metrics to Grafana for monitoring dashboards.
 - **LAN → WAN**: Allow all  
 - **WAN → Internal**: Block all except exposed services
 
+
+### UPS #2
+
+- Used with pwrstat on GTi13 Pro with USB for safety shutdown all the proxmox&k8s cluster
+
+### Synology
+
+### Test enterprise server (Dell R720)
+
+- idrac
+- constantly changing my mind what to run here
+
 ### Proxmox
 
 The compute playground of my homelab - a small but mighty 3-node cluster spread across my mini PCs.
@@ -143,4 +155,36 @@ Each Proxmox node runs one Talos VM, ensuring:
 - No single point of failure for Kubernetes
 
 The "meroxos" VM serves as my Docker escape hatch - when I need something running quickly without the overhead of Kubernetes manifests and GitOps workflows.
+
+### Cloud machines
+
+![alt text](../assets/img/posts/clusters.png)
+- cloud instance USA 
+  - quick testing different kind of docker images 
+  - exitnode tailscale
+
+- cloud instance
+  - monitoring
+  - pihole
+  - traefik
+  - guacamole
+  - firefox
+  - cloudflare tunnel
+- meroxos
+  - arr stack
+  - netbootxyz
+
+- k8s 
+ - more to k8s section
+
+### Talos & Kubernetes
+
+- CI/CD based on onedr0p/cluster-template:
+  - https://github.com/meroxdotdev/infrastructure 
+  - specific added for my usecase:
+    - longhorn (with MinIO backup on Hetzner VPS & Storagebox)
+    - grafana & kube-prometetheus stack
+    - Arr stack ( analog to meroxos VM)
+    - dashboard homepage
+
 

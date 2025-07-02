@@ -223,7 +223,7 @@ While I have various IoT devices, my Home Assistant setup is intentionally minim
 -  **Phone at home** → Dell R720 fans run quieter
 -  **Away from home** → Fans ramp up for better cooling
 
-> **Pro tip:** For Dell R720 fan control details, check out my [dedicated post](http://merox.dev/blog/dell-r720/)
+> **Pro tip:** For Dell R720 fan control details, check out my [dedicated post](https://merox.dev/blog/dell-r720/)
 {: .prompt-tip }
 
 **Infrastructure Distribution**

@@ -9,8 +9,6 @@ image:
   alt: Complete homelab tour 2025
 ---
 
-![Complete homelab server rack with Proxmox nodes, UPS, and network equipment](/assets/img/posts/homelab.jpg)
-
 
 
 ## Hardware Overview
@@ -73,7 +71,7 @@ WiFi Interface → Guest/IoT Isolation
 
 Here's how everything connects together. The key insight: Tailscale creates a flat network across all locations:
 
-![Homelab Network Topology Diagram showing Tailscale mesh connections](/assets/img/posts/network.draw.svg)
+![Homelab Network Topology Diagram showing Tailscale mesh connections](/assets/img/posts/homelab-tour/network.draw.svg)
 *Click to enlarge - Full network topology including Tailscale mesh connections*
 
 > **Geo-distributed Exit Nodes:** Both VPS instances double as Tailscale exit nodes, allowing me to route traffic through EU (Hetzner) or US (Oracle) regions for geo-restricted content or better latency.
@@ -88,7 +86,7 @@ The heart of my network - a fanless mini PC from AliExpress (~200€) running pf
 
 👉 [XCY X44 on AliExpress](https://www.aliexpress.com/item/1005004848317962.html)
 
-![pfSense services dashboard showing active services](/assets/img/posts/pfsense-services.png)
+![pfSense services dashboard showing active services](/assets/img/posts/homelab-tour/pfsense-services.webp)
 
 **Tailscale Subnet Router**
 Exposes the entire homelab to cloud VPS without installing Tailscale on every device. Perfect solution for CGNAT (Carrier-Grade NAT) bypass - when your ISP doesn't give you a public IP address.
@@ -118,7 +116,7 @@ Managing power for the critical infrastructure - the CyberPower 1000VA protects 
 | **SSH Scripts** | Custom automation | Graceful cluster shutdown |
 | **Monitoring** | Telegram alerts | Real-time power notifications |
 
-![UPS monitoring dashboard showing power statistics](/assets/img/posts/ups.png)
+![UPS monitoring dashboard showing power statistics](/assets/img/posts/homelab-tour/ups.webp)
 
 > **Safety First:** When power fails, the UPS triggers a cascading shutdown sequence - Kubernetes nodes drain properly before Proxmox hosts power down
 {: .prompt-warning }
@@ -127,7 +125,7 @@ Managing power for the critical infrastructure - the CyberPower 1000VA protects 
 
 Instant notifications keep me informed of power events wherever I am:
 
-![Telegram UPS notification showing power alert](/assets/img/posts/telegram-notif1.jpeg)
+![Telegram UPS notification showing power alert](/assets/img/posts/homelab-tour/telegram-notif1.webp)
 
 ### Storage Solutions
 
@@ -148,7 +146,7 @@ After 3 years of self-hosting Nextcloud, I switched to Synology Drive for a more
 -  **Set-and-forget** reliability for family photos/documents
 -  **2TB RAID1** protection for peace of mind
 
-![Synology services overview dashboard](/assets/img/posts/synology.png)
+![Synology services overview dashboard](/assets/img/posts/homelab-tour/synology.webp)
 
 > **Experience Note:** Sometimes the best self-hosted solution is the one that requires the least maintenance. Synology Drive has been that for my personal files.
 {: .prompt-info }
@@ -176,7 +174,7 @@ The most interesting project was **flashing the RAID controller to IT mode** - c
 
 iDRAC Enterprise makes this server a joy to manage remotely:
 
-![iDRAC management interface for Dell R720](/assets/img/posts/idrac-dellr720.png)
+![iDRAC management interface for Dell R720](/assets/img/posts/homelab-tour/idrac-dellr720.webp)
 
 **Current Role: Off-site Backup Target**
 
@@ -198,7 +196,7 @@ Given the ~200W idle power consumption, I've implemented a smart scheduling syst
 
 The compute playground of my homelab - a small but mighty 3-node cluster spread across my mini PCs.
 
-![Proxmox cluster overview showing all nodes](/assets/img/posts/proxmox.png)
+![Proxmox cluster overview showing all nodes](/assets/img/posts/homelab-tour/proxmox.webp)
 
 > **Philosophy Change:** I've simplified from my previous complex setup. Rather than managing dozens of VMs/containers, I now focus on quality over quantity - running only what truly adds value.
 {: .prompt-info }
@@ -239,13 +237,13 @@ Each Proxmox node runs one Talos VM, ensuring:
 
 Extending beyond the homelab walls - strategic cloud deployments for resilience and global reach:
 
-![Hetzner cloud dashboard showing VPS instances](/assets/img/posts/hetzner.png)
+![Hetzner cloud dashboard showing VPS instances](/assets/img/posts/homelab-tour/hetzner.webp)
 
 **Infrastructure Overview**
 
 All managed through a single Portainer instance at `cloud.merox.dev`:
 
-![Portainer multi-cluster view showing all environments](/assets/img/posts/clusters.png)
+![Portainer multi-cluster view showing all environments](/assets/img/posts/homelab-tour/clusters.webp)
 
 > **Cost Optimization:** Hetzner's CX22 at ~€4/month provides the perfect balance of resources for 24/7 operations
 {: .prompt-tip }
@@ -343,7 +341,7 @@ infrastructure/kubernetes/apps/
 
 For day-to-day Kubernetes management, I use Lens - it provides a beautiful overview of the entire cluster health, resource usage, and running workloads:
 
-![Lens Kubernetes IDE showing cluster overview with nodes, pods, and resource utilization](/assets/img/posts/lens-k8s-overview.png)
+![Lens Kubernetes IDE showing cluster overview with nodes, pods, and resource utilization](/assets/img/posts/homelab-tour/lens-k8s-overview.webp)
 
 
 **Deployed Applications**
@@ -363,7 +361,7 @@ For day-to-day Kubernetes management, I use Lens - it provides a beautiful overv
 
 My centralized view of everything (work in progress on the organization):
 
-![Homepage dashboard showing all services](/assets/img/posts/getHomepage.png)
+![Homepage dashboard showing all services](/assets/img/posts/homelab-tour/getHomepage.webp)
 
 **Automation Benefits**
 
@@ -385,7 +383,7 @@ Daily automated backups ensure data persistence:
 - **MinIO on R720** → Weekly sync to Hetzner Storagebox
 - **Result**: Complete 3-2-1 backup strategy
 
-![MinIO dashboard](../assets/img/posts/minio.png)
+![MinIO dashboard](../assets/img/posts/homelab-tour/minio.webp)
 
 *For detailed deployment instructions, check out the excellent [onedr0p/cluster-template README](https://github.com/onedr0p/cluster-template) - it's surprisingly straightforward to follow.*
 

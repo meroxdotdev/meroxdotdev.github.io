@@ -184,7 +184,7 @@ Given the ~200W idle power consumption, I've implemented a smart scheduling syst
 -  **Storage**: RAID-Z2 for redundancy
 -  **3-2-1 Rule**: Completes my backup strategy
 
-> **Power Efficiency Note:** Running 24/7 would cost ~€20/month in electricity. Weekly syncs reduce this to ~€7/month while maintaining backup integrity.
+> **Power Efficiency Note:** Running 24/7 would cost ~€20/month in electricity.
 {: .prompt-warning }
 
 *Still constantly changing my mind about what to run here - the curse of having enterprise hardware at home!*

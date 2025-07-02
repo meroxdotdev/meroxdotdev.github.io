@@ -228,28 +228,70 @@ Each Proxmox node runs one Talos VM, ensuring:
 - Balanced resource utilization  
 - No single point of failure for Kubernetes
 
-The "meroxos" VM serves as my Docker escape hatch - when I need something running quickly without the overhead of Kubernetes manifests and GitOps workflows.
 
-### Cloud machines
+### Cloud Machines
 
-![alt text](../assets/img/posts/clusters.png)
-- cloud instance USA 
-  - quick testing different kind of docker images 
-  - exitnode tailscale
+Extending beyond the homelab walls - strategic cloud deployments for resilience and global reach:
 
-- cloud instance
-  - monitoring
-  - pihole
-  - traefik
-  - guacamole
-  - firefox
-  - cloudflare tunnel
-- meroxos
-  - arr stack
-  - netbootxyz
+![Hetzner cloud dashboard](/assets/img/posts/hetzner.png)
 
-- k8s 
- - more to k8s section
+#### Infrastructure Overview
+
+All managed through a single Portainer instance at `cloud.merox.dev`:
+
+![Portainer multi-cluster view](/assets/img/posts/clusters.png)
+
+> **Cost Optimization:** Hetzner's CX32 at ~€8/month provides the perfect balance of resources for 24/7 operations
+{: .prompt-tip }
+
+#### cloud-de (Hetzner VPS)
+
+The always-on sentinel watching over my homelab:
+
+| Service | Container | Purpose |
+|:--------|:----------|:--------|
+| **Monitoring Stack** | Grafana, Prometheus, Alertmanager | External homelab monitoring |
+| **Pi-hole** | DNS resolver | Dedicated Tailscale split-DNS |
+| **Traefik** | Reverse proxy | SSL certificates for all VPS services |
+| **Guacamole** | Remote access | Cloudflare Tunnel exposed |
+| **Firefox** | Browser container | GUI access via Guacamole RDP |
+
+> **Reliability First:** When the homelab is down, this VPS ensures I can still access critical services and troubleshoot remotely
+{: .prompt-warning }
+
+#### homelab-ro (Local Docker)
+
+The emergency escape hatch - when Kubernetes complexity becomes too much:
+
+| Service | Purpose | Note |
+|:--------|:--------|:-----|
+| **ARR Stack** | Media automation | Quick restore when K8s fails |
+| **Netboot.xyz** | PXE server | Network boot any OS/tools |
+| **Portainer Agent** | Management | Remote Docker control |
+
+*Because sometimes you just need things to work without debugging YAML manifests at 2 AM*
+
+#### cloud-usa (Oracle Free Tier)
+
+The wildcard instance leveraging Oracle's generous free tier:
+
+- **Testing ground** for experimental Docker images
+- **Tailscale exit node** for US geo-location
+- **Not in Portainer** - hit the 5-node limit (3× K8s + 2× Docker)
+
+> **Free Tier Limits:** Portainer BE restricts to 5 nodes. Priority given to production workloads over test instances.
+{: .prompt-info }
+
+#### k8s (Kubernetes Cluster)
+
+*My guilty pleasure* - because who doesn't love over-engineering their homelab?
+
+- **Portainer integration** for centralized overview
+- **Quick health checks** without kubectl
+- **Detailed coverage** in the dedicated K8s section below
+
+> **Architecture Note:** Each cloud instance serves as a Tailscale subnet router, creating a global mesh network with automatic failover capabilities
+{: .prompt-tip }
 
 ### Talos & Kubernetes
 

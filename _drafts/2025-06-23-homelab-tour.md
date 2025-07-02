@@ -294,10 +294,83 @@ The wildcard instance leveraging Oracle's generous free tier:
 
 ### Talos & Kubernetes
 
-- CI/CD based on onedr0p/cluster-template:
-  - https://github.com/meroxdotdev/infrastructure 
-  - specific added for my usecase:
-    - longhorn (with MinIO backup on Hetzner VPS & Storagebox)
-    - grafana & kube-prometetheus stack
-    - Arr stack ( analog to meroxos VM)
-    - dashboard homepage
+*My guilty pleasure* indeed - because apparently my [K3s deployment from earlier this year](https://merox.dev/blog/k3s-cluster-in-2025/) wasn't complex enough...
+
+#### The Journey to Over-Engineering
+
+After diving deeper into Kubernetes automation, I discovered this magic: 
+🎯 [onedr0p/cluster-template](https://github.com/onedr0p/cluster-template)
+
+> **Game Changer:** Talos OS - my first experience with a declarative, immutable operating system. After a few days of troubleshooting and research, I was completely sold on this approach.
+{: .prompt-info }
+
+#### My Infrastructure Repository
+
+Fork and customize: 👉 [github.com/meroxdotdev/infrastructure](https://github.com/meroxdotdev/infrastructure)
+
+##### Key Customizations
+
+| Component | Modification | Reason |
+|:----------|:-------------|:-------|
+| **Storage** | Longhorn CSI | Simpler PV/PVC management |
+| **Talos Patches** | [Custom machine config](https://github.com/meroxdotdev/infrastructure/blob/main/talos/patches/global/machine-longhorn.yaml) | Longhorn requirements |
+| **Custom Image** | `factory.talos.dev/installer/8d37fcc...` | Intel iGPU + iSCSI support |
+
+> **Custom Talos Image includes:**
+> - Linux driver tools
+> - iSCSI initiator
+> - Intel iGPU drivers for Proxmox passthrough
+{: .prompt-tip }
+
+#### GitOps Structure
+
+```
+infrastructure/kubernetes/apps/
+├── storage/          # Longhorn configuration
+├── observability/    # Prometheus, Grafana, Loki (WIP)
+└── default/          # Production workloads
+```
+
+##### Deployed Applications
+
+| App | Purpose | Special Notes |
+|:----|:--------|:--------------|
+| **Radarr** | Movie automation | NFS to Synology |
+| **Sonarr** | TV automation | SMB mount configured |
+| **Prowlarr** | Indexer manager | Central search |
+| **qBittorrent** | Torrent client | ⚠️ Use v5.0.4 for GUI config |
+| **Jellyseer** | Request management | Public via Cloudflare |
+| **Jellyfin** | Media server | Intel QuickSync enabled |
+| **Homepage** | Dashboard | Still organizing... |
+
+> **qBittorrent Tip:** Stick to version 5.0.4 in HelmRelease - newer versions reset the GUI password on each restart!
+{: .prompt-warning }
+
+#### Homepage Dashboard
+
+My centralized view of everything (work in progress on the organization):
+
+![Homepage dashboard](/assets/img/posts/getHomepage.png)
+
+#### Automation Benefits
+
+With this setup, I can completely rebuild my cluster in **8-9 minutes**:
+
+- ✅ **Clean**: Declarative configuration for everything
+- ✅ **Organized**: GitOps workflow with Flux
+- ✅ **Sustainable**: Renovate bot keeps dependencies updated
+- ✅ **Reproducible**: All configs in Git
+
+> **Security Reminder:** Keep your SOPS keys and secrets backed up separately - you'll need them to decrypt your repository when rebuilding!
+{: .prompt-warning }
+
+#### Backup Strategy
+
+Daily automated backups ensure data persistence:
+
+- **Longhorn PVCs** → Daily backup to MinIO on R720
+- **MinIO on R720** → Weekly sync to Hetzner Storagebox
+- **Result**: Complete 3-2-1 backup strategy
+
+*For detailed deployment instructions, check out the excellent [onedr0p/cluster-template README](https://github.com/onedr0p/cluster-template) - it's surprisingly straightforward to follow.*
+

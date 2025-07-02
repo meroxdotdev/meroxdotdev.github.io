@@ -150,10 +150,45 @@ After 3 years of self-hosting Nextcloud, I switched to Synology Drive for a more
 > **Experience Note:** Sometimes the best self-hosted solution is the one that requires the least maintenance. Synology Drive has been that for my personal files.
 {: .prompt-info }
 
-### Test enterprise server (Dell R720)
+### Test Enterprise Server (Dell R720)
 
-- idrac
-- constantly changing my mind what to run here
+The power-hungry beast of the homelab - this old datacenter workhorse has served many purposes over the past year:
+
+#### Evolution of Use Cases
+
+| Period | Purpose | Configuration | Notes |
+|:-------|:--------|:--------------|:------|
+| **Phase 1** | Proxmox hypervisor | 24C/48T, 192GB RAM | Raw performance testing |
+| **Phase 2** | AI Playground | Quadro P2200 GPU | Ollama + Open WebUI |
+| **Current** | Backup Target | 4× 960GB RAID-Z2 | Weekly MinIO sync |
+
+#### Hardware Modifications
+
+The most interesting project was **flashing the RAID controller to IT mode** - completely bypassing hardware RAID for direct disk access:
+
+> **Guide:** For H710/H310 crossflashing instructions, check out [Fohdeesha's excellent guide](https://fohdeesha.com/docs/perc.html)
+{: .prompt-tip }
+
+#### Remote Management
+
+iDRAC Enterprise makes this server a joy to manage remotely:
+
+![iDRAC management interface](/assets/img/posts/idrac-dellr720.png)
+
+#### Current Role: Off-site Backup Target
+
+Given the ~200W idle power consumption, I've implemented a smart scheduling system:
+
+- 🔌 **Power Schedule**: Wake-on-LAN 1-2× weekly
+- 💾 **Sync Task**: Pull MinIO backups from Hetzner VPS
+- 🛡️ **Storage**: RAID-Z2 for redundancy
+- ✅ **3-2-1 Rule**: Completes my backup strategy
+
+> **Power Efficiency Note:** Running 24/7 would cost ~€20/month in electricity. Weekly syncs reduce this to ~€7/month while maintaining backup integrity.
+{: .prompt-warning }
+
+*Still constantly changing my mind about what to run here - the curse of having enterprise hardware at home!*
+
 
 ### Proxmox
 

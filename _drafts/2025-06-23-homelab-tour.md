@@ -187,7 +187,7 @@ Given the ~200W idle power consumption, I've implemented a smart scheduling syst
 > **Power Efficiency Note:** Running 24/7 would cost ~€20/month in electricity.
 {: .prompt-warning }
 
-*Still constantly changing my mind about what to run here - the curse of having enterprise hardware at home!*
+*Still constantly changing my mind about what to run here*
 
 
 ### Proxmox
@@ -215,8 +215,8 @@ The compute playground of my homelab - a small but mighty 3-node cluster spread 
 
 While I have various IoT devices, my Home Assistant setup is intentionally minimal. The most interesting automation? **Location-based server fan control**:
 
-- 📱 **Phone at home** → Dell R720 fans run quieter
-- 🚗 **Away from home** → Fans ramp up for better cooling
+-  **Phone at home** → Dell R720 fans run quieter
+-  **Away from home** → Fans ramp up for better cooling
 
 > **Pro tip:** For Dell R720 fan control details, check out my [dedicated post](http://merox.dev/blog/dell-r720/)
 {: .prompt-tip }

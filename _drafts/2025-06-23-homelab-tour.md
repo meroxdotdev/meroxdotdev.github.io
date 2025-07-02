@@ -107,9 +107,48 @@ Pushes system metrics to Grafana for monitoring dashboards.
 
 ### UPS #2
 
-- Used with pwrstat on GTi13 Pro with USB for safety shutdown all the proxmox&k8s cluster
+Managing power for the critical infrastructure - the CyberPower 1000VA protects all mini PCs and network equipment:
 
-### Synology
+#### Power Management Features
+
+| Feature | Implementation | Purpose |
+|:--------|:---------------|:--------|
+| **pwrstat** | USB to GTi13 Pro | Automated shutdown orchestration |
+| **SSH Scripts** | Custom automation | Graceful cluster shutdown |
+| **Monitoring** | Telegram alerts | Real-time power notifications |
+
+![UPS monitoring dashboard](/assets/img/posts/ups.png)
+
+> **Safety First:** When power fails, the UPS triggers a cascading shutdown sequence - K8s nodes drain properly before Proxmox hosts power down
+{: .prompt-warning }
+
+#### Telegram Integration
+
+Instant notifications keep me informed of power events wherever I am:
+
+![Telegram UPS notification](/assets/img/posts/telegram-notif1.jpeg)
+
+### Synology DS223+
+
+The reliable storage backbone - serving dual purposes in my infrastructure:
+
+#### Media Storage
+- **Protocol**: SMB/NFS shares (experimenting with both)
+- **Purpose**: Central storage for ARR stack
+- **Access**: Mounted directly in K8s pods and Docker containers
+
+#### Personal Cloud
+After 3 years of self-hosting Nextcloud, I switched to Synology Drive for a more polished experience:
+
+- ✅ **Better performance** than my Nextcloud instance
+- ✅ **Native mobile apps** that actually work reliably
+- ✅ **Set-and-forget** reliability for family photos/documents
+- ✅ **2TB RAID1** protection for peace of mind
+
+![Synology services overview](/assets/img/posts/synology.png)
+
+> **Experience Note:** Sometimes the best self-hosted solution is the one that requires the least maintenance. Synology Drive has been that for my personal files.
+{: .prompt-info }
 
 ### Test enterprise server (Dell R720)
 

@@ -374,3 +374,4 @@ Daily automated backups ensure data persistence:
 
 *For detailed deployment instructions, check out the excellent [onedr0p/cluster-template README](https://github.com/onedr0p/cluster-template) - it's surprisingly straightforward to follow.*
 
+All these been told, this is my homelab and I hope you really enjoyed or helped you in any way, if you have any questions dont hesitate to wite down a comment to ask me, I ll be prompt :)

@@ -3,7 +3,7 @@ title: "Complete Homelab Tour 2025: Proxmox, Kubernetes, and 30+ Self-Hosted Ser
 date: 2025-06-23 10:00:00 +0300
 categories: [infrastructure]
 tags: [homelab,kubernetes,automation,flux,talos,k8s,self-hosting,proxmox,home-server]
-description: Detailed homelab setup guide featuring Proxmox virtualization, Talos Kubernetes, automated backups, and real-world lessons from 3 years of self-hosting. Hardware specs, network architecture, and cost analysis included.
+description: Detailed homelab setup guide featuring Proxmox virtualization, Talos Kubernetes, automated backups, and real-world lessons from 3 years of self-hosting.
 image:
   path: /assets/img/posts/homelab.webp
   alt: Complete homelab tour 2025
@@ -11,20 +11,7 @@ image:
 
 ![Complete homelab server rack with Proxmox nodes, UPS, and network equipment](/assets/img/posts/homelab.jpg)
 
-## Table of Contents
-- [Hardware Overview](#hardware-overview)
-  - [Power Protection](#power-protection)
-  - [Network Stack](#network-stack)
-  - [Compute Resources](#compute-resources)
-- [Network Architecture](#network-architecture)
-- [Self-Hosted Applications and Services](#self-hosted-applications-and-services)
-  - [Core Infrastructure](#core-infrastructure)
-  - [Storage Solutions](#storage-solutions)
-  - [Virtualization Platform](#virtualization-platform)
-  - [Cloud Infrastructure](#cloud-infrastructure)
-  - [Container Orchestration](#container-orchestration)
-- [Backup Strategy](#backup-strategy)
-- [What's Next](#whats-next)
+
 
 ## Hardware Overview
 
@@ -62,7 +49,7 @@ image:
 
 | Provider | Instance | Specs | Location | Purpose |
 |:---------|:---------|:------|:---------|:--------|
-| **Hetzner** | CX32 | 4vCPU/8GB/80GB | 🇩🇪 Germany | Off-site Backup |
+| **Hetzner** | CX22 | 4vCPU/8GB/80GB | 🇩🇪 Germany | Off-site Backup |
 | **Oracle** | Ampere A1 | 4vCPU/24GB/200GB | 🇺🇸 USA | Docker Test |
 
 
@@ -97,7 +84,7 @@ Here's how everything connects together. The key insight: Tailscale creates a fl
 
 #### pfSense
 
-The heart of my network - a fanless mini PC from AliExpress (~100€) running pfSense for 3+ years:
+The heart of my network - a fanless mini PC from AliExpress (~200€) running pfSense for 3+ years:
 
 👉 [XCY X44 on AliExpress](https://www.aliexpress.com/item/1005004848317962.html)
 
@@ -156,10 +143,10 @@ The reliable storage backbone - serving dual purposes in my infrastructure:
 **Personal Cloud**
 After 3 years of self-hosting Nextcloud, I switched to Synology Drive for a more polished experience:
 
-- ✅ **Better performance** than my Nextcloud instance
-- ✅ **Native mobile apps** that actually work reliably
-- ✅ **Set-and-forget** reliability for family photos/documents
-- ✅ **2TB RAID1** protection for peace of mind
+-  **Better performance** than my Nextcloud instance
+-  **Native mobile apps** that actually work reliably
+-  **Set-and-forget** reliability for family photos/documents
+-  **2TB RAID1** protection for peace of mind
 
 ![Synology services overview dashboard](/assets/img/posts/synology.png)
 
@@ -182,7 +169,7 @@ The power-hungry beast of the homelab - this old datacenter workhorse has served
 
 The most interesting project was **flashing the RAID controller to IT mode** - completely bypassing hardware RAID for direct disk access. IT mode allows the operating system to see drives directly rather than through a RAID abstraction layer.
 
-> **Guide:** For H710/H310 crossflashing instructions, check out [Fohdeesha's excellent guide](https://fohdeesha.com/docs/perc.html)
+> **Guide:** For H710/H310 and more crossflashing instructions, check out [Fohdeesha's excellent guide](https://fohdeesha.com/docs/perc.html)
 {: .prompt-tip }
 
 **Remote Management**
@@ -225,15 +212,15 @@ The compute playground of my homelab - a small but mighty 3-node cluster spread 
 | **Windows Server 2019** | AD Lab | 4vCPU/8GB/100GB | Active Directory experiments |
 | **Windows 11** | Remote desktop | 4vCPU/8GB/50GB | Always-ready Windows machine |
 | **Home Assistant** | Home automation | 2vCPU/4GB/32GB | See automation section below |
-| **Kali Linux** | Security testing | 2vCPU/4GB/50GB | *To be restored from PBS* |
-| **GNS3** | Network lab | 4vCPU/8GB/100GB | *To be restored from PBS* |
+| **Kali Linux** | Security testing | 2vCPU/4GB/50GB | *To be restored from backup* |
+| **GNS3** | Network lab | 4vCPU/8GB/100GB | *To be restored from backup* |
 
 > **New to Homelabbing?** Start with the Proxmox + Docker section before diving into Kubernetes. You can run everything there first!
 {: .prompt-info }
 
 **Smart Home Integration**
 
-While I have various IoT devices, my Home Assistant setup is intentionally minimal. The most interesting automation? **Location-based server fan control**:
+While I have various IoT devices, my Home Assistant setup is intentionally minimal(for the moment). The most interesting automation? **Location-based server fan control**:
 
 -  **Phone at home** → Dell R720 fans run quieter
 -  **Away from home** → Fans ramp up for better cooling
@@ -260,7 +247,7 @@ All managed through a single Portainer instance at `cloud.merox.dev`:
 
 ![Portainer multi-cluster view showing all environments](/assets/img/posts/clusters.png)
 
-> **Cost Optimization:** Hetzner's CX32 at ~€8/month provides the perfect balance of resources for 24/7 operations
+> **Cost Optimization:** Hetzner's CX22 at ~€4/month provides the perfect balance of resources for 24/7 operations
 {: .prompt-tip }
 
 #### cloud-de (Hetzner VPS)
@@ -318,7 +305,7 @@ After diving deeper into Kubernetes automation, I discovered this magic:
 > **Game Changer:** Talos OS - my first experience with a declarative, immutable operating system. After a few days of troubleshooting and research, I was completely sold on this approach.
 {: .prompt-info }
 
-> ** Why Talos over K3s?**
+> **Why Talos over K3s?**
 > - Immutable OS = less maintenance
 > - GitOps-first design
 > - Declarative everything
@@ -339,7 +326,7 @@ Fork and customize: 👉 [github.com/meroxdotdev/infrastructure](https://github.
 
 > **Custom Talos Image includes:**
 > - Linux driver tools
-> - iSCSI initiator (for network storage)
+> - iSCSI-tools (for network storage)
 > - Intel iGPU drivers for Proxmox passthrough
 {: .prompt-tip }
 
@@ -382,12 +369,12 @@ My centralized view of everything (work in progress on the organization):
 
 With this setup, I can completely rebuild my cluster in **8-9 minutes**:
 
-- ✅ **Clean**: Declarative configuration for everything
-- ✅ **Organized**: GitOps workflow with Flux
-- ✅ **Sustainable**: Renovate bot keeps dependencies updated
-- ✅ **Reproducible**: All configs in Git
+-  **Clean**: Declarative configuration for everything
+-  **Organized**: GitOps workflow with Flux
+-  **Sustainable**: Renovate bot keeps dependencies updated
+-  **Reproducible**: All configs in Git
 
-> **Security Reminder:** Keep your SOPS keys and secrets backed up separately - you'll need them to decrypt your repository when rebuilding!
+> **Security Reminder:** Keep your SOPS keys and secrets backed up separately - you'll need them to decrypt your repository when rebuilding from scratch!
 {: .prompt-warning }
 
 ## Backup Strategy
@@ -398,10 +385,7 @@ Daily automated backups ensure data persistence:
 - **MinIO on R720** → Weekly sync to Hetzner Storagebox
 - **Result**: Complete 3-2-1 backup strategy
 
-### 3-2-1 Backup Strategy Explained
-- **3 copies**: Live data + MinIO on R720 + Hetzner Storagebox
-- **2 different media**: NVMe/SSD (live) + HDD (R720)
-- **1 off-site**: Hetzner cloud storage
+![MinIO dashboard](../assets/img/posts/minio.png)
 
 *For detailed deployment instructions, check out the excellent [onedr0p/cluster-template README](https://github.com/onedr0p/cluster-template) - it's surprisingly straightforward to follow.*
 

@@ -179,10 +179,10 @@ iDRAC Enterprise makes this server a joy to manage remotely:
 
 Given the ~200W idle power consumption, I've implemented a smart scheduling system:
 
-- 🔌 **Power Schedule**: Wake-on-LAN 1-2× weekly
-- 💾 **Sync Task**: Pull MinIO backups from Hetzner VPS
-- 🛡️ **Storage**: RAID-Z2 for redundancy
-- ✅ **3-2-1 Rule**: Completes my backup strategy
+-  **Power Schedule**: Wake-on-LAN 1-2× weekly
+-  **Sync Task**: Pull MinIO backups from Hetzner VPS
+-  **Storage**: RAID-Z2 for redundancy
+-  **3-2-1 Rule**: Completes my backup strategy
 
 > **Power Efficiency Note:** Running 24/7 would cost ~€20/month in electricity. Weekly syncs reduce this to ~€7/month while maintaining backup integrity.
 {: .prompt-warning }

@@ -336,7 +336,7 @@ infrastructure/kubernetes/apps/
 | App | Purpose | Special Notes |
 |:----|:--------|:--------------|
 | **Radarr** | Movie automation | NFS to Synology |
-| **Sonarr** | TV automation | SMB mount configured |
+| **Sonarr** | TV automation | NFS to Synology |
 | **Prowlarr** | Indexer manager | Central search |
 | **qBittorrent** | Torrent client | ⚠️ Use v5.0.4 for GUI config |
 | **Jellyseer** | Request management | Public via Cloudflare |

@@ -9,7 +9,6 @@ image:
   alt: Complete homelab tour
 ---
 
-After three years of tinkering, upgrading, and late-night debugging sessions, here's the full tour of my homelab — from hardware to the services that keep everything running!
 
 ![My homelab rack setup](/assets/img/posts/homelab.jpg)
 

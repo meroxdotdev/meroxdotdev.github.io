@@ -371,8 +371,6 @@ For day-to-day Kubernetes management, I use Lens - it provides a beautiful overv
 | **Jellyfin** | Media server | Intel QuickSync enabled |
 | **Homepage** | Dashboard | Still organizing... |
 
-> **qBittorrent Tip:** Stick to version 5.0.4 in HelmRelease - newer versions reset the GUI password on each restart!
-{: .prompt-warning }
 
 **Homepage Dashboard**
 

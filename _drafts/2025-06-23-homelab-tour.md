@@ -352,6 +352,13 @@ infrastructure/kubernetes/apps/
 └── default/          # Production workloads
 ```
 
+**Cluster Management with Lens**
+
+For day-to-day Kubernetes management, I use Lens - it provides a beautiful overview of the entire cluster health, resource usage, and running workloads:
+
+![Lens Kubernetes IDE showing cluster overview with nodes, pods, and resource utilization](/assets/img/posts/lens-k8s-overview.png)
+
+
 **Deployed Applications**
 
 | App | Purpose | Special Notes |

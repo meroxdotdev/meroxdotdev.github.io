@@ -302,5 +302,4 @@ The wildcard instance leveraging Oracle's generous free tier:
     - grafana & kube-prometetheus stack
     - Arr stack ( analog to meroxos VM)
     - dashboard homepage
-
-
+    - test

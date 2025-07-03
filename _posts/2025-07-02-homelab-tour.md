@@ -3,7 +3,7 @@ title: "Complete Homelab Tour 2025: Proxmox, Kubernetes, and 30+ Self-Hosted Ser
 date: 2025-07-02 10:00:00 +0300
 categories: [infrastructure]
 tags: [homelab,kubernetes,automation,flux,talos,k8s,self-hosting,proxmox,home-server]
-description: Detailed homelab setup guide featuring Proxmox virtualization, Talos Kubernetes, automated backups, and real-world lessons from 3 years of self-hosting.
+description: Detailed homelab setup guide featuring Proxmox virtualization, Talos Kubernetes, automated backups, and real-world lessons from years of self-hosting experience.
 image:
   path: /assets/img/posts/homelab.webp
   alt: Complete homelab tour 2025

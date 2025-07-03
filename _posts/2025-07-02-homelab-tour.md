@@ -365,7 +365,7 @@ For day-to-day Kubernetes management, I use Lens - it provides a beautiful overv
 
 My centralized view of everything (work in progress on the organization):
 
-![Homepage dashboard showing all services](/assets/img/posts/homelab-tour/getHomepage.webp)
+![Homepage dashboard showing all services](/assets/img/posts/homelab-tour/dashboard.webp)
 
 **Automation Benefits**
 

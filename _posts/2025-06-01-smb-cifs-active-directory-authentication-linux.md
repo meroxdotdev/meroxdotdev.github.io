@@ -335,7 +335,7 @@ sudo nano /etc/samba/smb.conf
 ### Create share directories
 
 ```bash
-# Create directories
+# Create dirs
 sudo mkdir -p /srv/shared /srv/data
 
 # Set permissions

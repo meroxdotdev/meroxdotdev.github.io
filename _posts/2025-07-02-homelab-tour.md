@@ -9,7 +9,8 @@ image:
   alt: Complete homelab tour 2025
 ---
 
-![Homelab 2025](../assets/img/posts/homelab-tour/homelab.webp)
+![Homelab 2025](../assets/img/posts/homelab-tour/homelab-modified.webp)
+*Click to enlarge - Merox Homelab*
 
 ## Hardware Overview
 

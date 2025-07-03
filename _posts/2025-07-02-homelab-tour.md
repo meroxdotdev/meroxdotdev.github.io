@@ -47,8 +47,8 @@ image:
 
 | Provider | Instance | Specs | Location | Purpose |
 |:---------|:---------|:------|:---------|:--------|
-| **Hetzner** | CX22 | 4vCPU/8GB/80GB | 🇩🇪 Germany | Off-site Backup |
-| **Oracle** | Ampere A1 | 4vCPU/24GB/200GB | 🇺🇸 USA | Docker Test |
+| **Hetzner** | CX22 | 4vCPU/8GB/80GB | Germany | Off-site Backup |
+| **Oracle** | Ampere A1 | 4vCPU/24GB/200GB | USA | Docker Test |
 
 
 

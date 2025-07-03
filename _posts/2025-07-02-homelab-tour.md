@@ -320,7 +320,7 @@ Fork and customize: 👉 [github.com/meroxdotdev/infrastructure](https://github.
 |:----------|:-------------|:-------|
 | **Storage** | Longhorn CSI | Simpler PV/PVC management |
 | **Talos Patches** | [Custom machine config](https://github.com/meroxdotdev/infrastructure/blob/main/talos/patches/global/machine-longhorn.yaml) | Longhorn requirements |
-| **Custom Image** | `factory.talos.dev/installer/8d37fcc...` | Intel iGPU + iSCSI support |
+| **Custom Image** | [factory.talos.dev/installer/8d37fcc...](https://factory.talos.dev/image/8d37fcc01bb9173406853e7fd97ad9eda40732043f88e09dafe55e53fcf4b510/v1.10.4/metal-amd64.iso) | Intel iGPU + iSCSI support |
 
 > **Custom Talos Image includes:**
 > - Linux driver tools

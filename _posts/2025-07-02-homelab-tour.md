@@ -9,7 +9,7 @@ image:
   alt: Complete homelab tour 2025
 ---
 
-
+![Homelab 2025](../assets/img/posts/homelab-tour/homelab.webp)
 
 ## Hardware Overview
 

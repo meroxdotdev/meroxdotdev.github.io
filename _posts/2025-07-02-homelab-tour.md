@@ -337,6 +337,9 @@ infrastructure/kubernetes/apps/
 └── default/          # Production workloads
 ```
 
+![Monitoring with Grafana and Loki](../assets/img/posts/homelab-tour/grafana-loki.webp)
+*Click to enlarge - Grafana and Loki dashboard example*
+
 **Cluster Management with Lens**
 
 For day-to-day Kubernetes management, I use Lens - it provides a beautiful overview of the entire cluster health, resource usage, and running workloads:
@@ -380,6 +383,9 @@ With this setup, I can completely rebuild my cluster in **8-9 minutes**:
 Daily automated backups ensure data persistence:
 
 - **Longhorn PVCs** → Daily backup to MinIO on R720
+
+![Longhorn dashboard](../assets/img/posts/homelab-tour/longhorn.webp)
+
 - **MinIO on R720** → Weekly sync to Hetzner Storagebox
 - **Result**: Complete 3-2-1 backup strategy
 

@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![merox.dev](../assets/header-about.png)
+<!--![merox.dev](../assets/header-about.png)-->
 
 ## Hello, World 👋
 

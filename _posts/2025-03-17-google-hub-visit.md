@@ -1,5 +1,5 @@
 ---
-title: "Inside Google's Offices: A Tour of Innovation and Comfort"
+title: "Inside Google's Offices"
 date: 2025-03-17 10:00:00 +0200
 categories: [tech-culture]
 tags: [google, work-environment, innovation, warsaw, office-tour, tech-culture]

@@ -1,5 +1,5 @@
 ---
-title: "From Basic Skills to Networking Specialist: My CCNA Journey"
+title: "Networking Specialist: My CCNA Journey"
 date: 2025-05-02 10:00:00 +0300
 categories: [career]
 tags: [ccna, networking, professional-development, cisco, cybersecurity, career-growth]

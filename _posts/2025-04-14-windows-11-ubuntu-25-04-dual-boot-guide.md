@@ -1,5 +1,5 @@
 ---
-title: "Ultimate Dual Boot Guide: Windows 11 and Ubuntu 25.04"
+title: "Dual Boot Guide: Windows 11 and Ubuntu 25.04"
 date: 2025-04-14 10:00:00 +0200
 categories: [infrastructure]
 tags: [dual-boot, windows-11, ubuntu-25-04, linux, ubuntu-installation, partitioning, grub, dual-boot-tutorial, uefi, secure-boot]

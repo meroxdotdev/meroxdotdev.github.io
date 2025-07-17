@@ -1,5 +1,5 @@
 ---
-title: "Complete Homelab Tour 2025: Proxmox, Kubernetes, and 30+ Self-Hosted Services"
+title: "Complete Homelab Tour 2025"
 date: 2025-07-02 10:00:00 +0300
 categories: [infrastructure]
 tags: [homelab,kubernetes,automation,flux,talos,k8s,self-hosting,proxmox,home-server]

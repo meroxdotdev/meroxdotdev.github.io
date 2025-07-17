@@ -1,5 +1,5 @@
 ---
-title: "Disaster Recovery: My Approach to Safeguarding Critical Data"
+title: "Disaster Recovery: Safeguarding My Critical Data"
 date: 2025-03-01 10:00:00 +0200
 categories: [infrastructure]
 tags: [homelab, backup, disaster-recovery, proxmox, synology, hetzner, pbs, security]

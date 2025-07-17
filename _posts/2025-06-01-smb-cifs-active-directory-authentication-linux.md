@@ -1,5 +1,5 @@
 ---
-title: SMB Authentication with Active Directory on Linux
+title: SMB Authentication with AD on Linux
 date: 2025-06-01 10:00:00 +0300
 categories: [infrastructure]
 tags: [samba, sssd, active-directory, smb, cifs, kerberos, realmd, enterprise, authentication, linux-administration]

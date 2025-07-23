@@ -7,14 +7,14 @@ order: 4
 # Robert Melcher
 {: .text-center }
 
-**System Administrator & DevOps Engineer**
+**HPC System Administrator**
 {: .text-center .text-muted }
 
 ---
 
 ## Professional Summary
 
-System Administrator with 6+ years of experience specializing in Linux, networking, and cybersecurity. I focus on building secure, scalable IT infrastructures with expertise in server management, virtualization, and DevOps practices.
+System Administrator with 8+ years of experience specializing in Linux, networking, and cybersecurity. I focus on building secure, scalable IT infrastructures with expertise in server management, virtualization, and DevOps practices.
 
 ---
 
@@ -74,4 +74,4 @@ Kubernetes, DevOps, and cloud-native technologies. Automation pipelines and GitO
 > Open to collaboration and new opportunities in DevOps and cloud infrastructure.
 {: .prompt-info }
 
-**[Download Full Resume](https://merox.dev/robert-melcher-cv.pdf){: .btn .btn-primary }**
+**[Download Full Resume](https://merox.dev/robert-melcher-cv.pdf)**

@@ -28,9 +28,7 @@ Managing enterprise Windows/Linux servers and virtual infrastructure. Configurin
 
 ## Key Experience
 
-{% tabs experience %}
 
-{% tab experience Previous %}
 **Founder @ Dolphost** *(2022–2024)*  
 Built secure WordPress hosting platform and managed VPS services.
 
@@ -39,15 +37,15 @@ Performed vulnerability assessments and managed enterprise firewalls.
 
 **System Administrator @ Netex Romania** *(2018–2020)*  
 Managed backups, automation, and migrated infrastructure to Kubernetes.
-{% endtab %}
 
-{% tab experience Skills %}
+
+
 **Systems**: Linux, Windows Server, Proxmox, Docker, Kubernetes  
 **Security**: Vulnerability Assessments, Backup Solutions, DevOps  
 **Networking**: Cisco, Firewalls, VPNs
-{% endtab %}
 
-{% endtabs %}
+
+
 
 ---
 

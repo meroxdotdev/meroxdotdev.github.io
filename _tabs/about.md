@@ -71,7 +71,5 @@ Kubernetes, DevOps, and cloud-native technologies. Automation pipelines and GitO
 
 ---
 
-> Open to collaboration and new opportunities in DevOps and cloud infrastructure.
-{: .prompt-info }
 
 **[Download Full Resume](https://merox.dev/robert-melcher-cv.pdf)**

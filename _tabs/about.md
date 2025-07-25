@@ -1,6 +1,6 @@
 ---
 title: About
-icon: fas fa-user-tie
+icon: fas fa-user-cog
 order: 4
 ---
 

@@ -461,7 +461,7 @@ spec:
 
 For our media server applications to communicate efficiently within the Kubernetes cluster without exposing them directly to the external network, we utilize ClusterIP services.
 
-Create `app-service.yaml` for each app:
+Create `app-service.yaml` for each application:
 
 ```yaml
 apiVersion: v1

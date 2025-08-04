@@ -2,114 +2,114 @@
   color-scheme: dark;
 
   /* Framework color */
-  --main-bg: rgb(27 27 30);
-  --mask-bg: rgb(68 69 70);
-  --main-border-color: rgb(44 45 45);
+  --main-bg: #0d1117; /* Deep black with a slight blue tint, inspired by modern dark themes */
+  --mask-bg: #161b22; /* Slightly lighter dark gray for overlays */
+  --main-border-color: #21262d; /* Subtle gray for borders */
 
   /* Common color */
-  --text-color: rgb(175 176 177);
-  --text-muted-color: #868686;
-  --text-muted-highlight-color: #aeaeae;
-  --heading-color: #cccccc;
-  --label-color: #a7a7a7;
-  --blockquote-border-color: rgb(66 66 66);
-  --blockquote-text-color: #868686;
-  --link-color: rgb(138 180 248);
-  --link-underline-color: rgb(82 108 150);
-  --button-bg: #1e1e1e;
-  --btn-border-color: #2e2f31;
-  --btn-backtotop-color: var(--text-color);
-  --btn-backtotop-border-color: #212122;
-  --card-header-bg: #292929;
-  --checkbox-color: rgb(118 120 121);
-  --checkbox-checked-color: var(--link-color);
-  --img-bg: radial-gradient(circle, rgb(22 22 24) 0%, rgb(32 32 32) 100%);
+  --text-color: #c9d1d9; /* Light gray for body text, high readability */
+  --text-muted-color: #8b949e; /* Muted gray for secondary text */
+  --text-muted-highlight-color: #b3bac5; /* Slightly brighter for hover states */
+  --heading-color: #e6edf3; /* Near-white for headings, high contrast */
+  --label-color: #b3bac5; /* Light gray for labels */
+  --blockquote-border-color: #30363d; /* Dark gray for blockquote borders */
+  --blockquote-text-color: #8b949e; /* Muted gray for blockquote text */
+  --link-color: #58a6ff; /* Vibrant blue for links, inspired by tech themes */
+  --link-underline-color: #2f81f7; /* Darker blue for link underlines */
+  --button-bg: #161b22; /* Dark gray for buttons */
+  --btn-border-color: #30363d; /* Subtle border for buttons */
+  --btn-backtotop-color: var(--text-color); /* Matches text color */
+  --btn-backtotop-border-color: #21262d; /* Matches main border */
+  --card-header-bg: #161b22; /* Consistent dark gray for card headers */
+  --checkbox-color: #6e7681; /* Muted gray for checkboxes */
+  --checkbox-checked-color: var(--link-color); /* Blue for checked state */
+  --img-bg: radial-gradient(circle, #0d1117 0%, #161b22 100%); /* Darker gradient for images */
   --shimmer-bg: linear-gradient(
     90deg,
-    rgb(255 255 255 / 0%) 0%,
-    rgb(58 55 55 / 40%) 50%,
-    rgb(255 255 255 / 0%) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(88, 166, 255, 0.2) 50%, /* Subtle blue shimmer */
+    rgba(255, 255, 255, 0) 100%
   );
 
   /* Sidebar */
-  --site-title-color: #717070;
-  --site-subtitle-color: #868686;
-  --sidebar-bg: #1e1e1e;
-  --sidebar-border-color: #292929;
-  --sidebar-muted-color: #868686;
-  --sidebar-active-color: rgb(255 255 255 / 95%);
-  --sidebar-hover-bg: #262626;
-  --sidebar-btn-bg: #232328;
-  --sidebar-btn-color: #787878;
-  --avatar-border-color: rgb(206 206 206 / 90%);
+  --site-title-color: #c9d1d9; /* Light gray for site title */
+  --site-subtitle-color: #8b949e; /* Muted for subtitle */
+  --sidebar-bg: #0d1117; /* Matches main background */
+  --sidebar-border-color: #21262d; /* Consistent border color */
+  --sidebar-muted-color: #8b949e; /* Muted for sidebar text */
+  --sidebar-active-color: #ffffff; /* Bright white for active states */
+  --sidebar-hover-bg: #161b22; /* Slightly lighter hover state */
+  --sidebar-btn-bg: #21262d; /* Dark gray for sidebar buttons */
+  --sidebar-btn-color: #8b949e; /* Muted button text */
+  --avatar-border-color: rgba(201, 209, 217, 0.9); /* Light gray for avatar borders */
 
   /* Topbar */
-  --topbar-bg: rgb(27 27 30 / 64%);
-  --topbar-text-color: var(--text-color);
-  --search-border-color: rgb(55 55 55);
-  --search-icon-color: rgb(100 102 105);
-  --input-focus-border-color: rgb(112 114 115);
+  --topbar-bg: rgba(13, 17, 23, 0.8); /* Semi-transparent deep black */
+  --topbar-text-color: var(--text-color); /* Matches body text */
+  --search-border-color: #30363d; /* Dark gray for search borders */
+  --search-icon-color: #6e7681; /* Muted gray for icons */
+  --input-focus-border-color: #58a6ff; /* Blue for focused inputs */
 
   /* Home page */
-  --post-list-text-color: rgb(175 176 177);
-  --btn-patinator-text-color: var(--text-color);
-  --btn-paginator-hover-color: #2e2e2e;
+  --post-list-text-color: #c9d1d9; /* Light gray for post lists */
+  --btn-patinator-text-color: var(--text-color); /* Matches text color */
+  --btn-paginator-hover-color: #21262d; /* Dark gray for hover */
 
   /* Posts */
-  --toc-highlight: rgb(116 178 243);
-  --toc-popup-border-color: #373737;
-  --tag-hover: rgb(43 56 62);
-  --tb-odd-bg: #252526; /* odd rows of the posts' table */
-  --tb-even-bg: rgb(31 31 34); /* even rows of the posts' table */
-  --tb-border-color: var(--tb-odd-bg);
-  --footnote-target-bg: rgb(63 81 181);
-  --btn-share-color: #6c757d;
-  --btn-share-hover-color: #bfc1ca;
-  --card-bg: #1e1e1e;
-  --card-hover-bg: #464d51;
-  --card-shadow: rgb(21 21 21 / 72%) 0 6px 18px 0,
-    rgb(137 135 135 / 24%) 0 0 0 1px;
-  --kbd-wrap-color: #6a6a6a;
-  --kbd-text-color: #d3d3d3;
-  --kbd-bg-color: #242424;
-  --prompt-text-color: rgb(216 212 212 / 75%);
-  --prompt-tip-bg: rgb(22 60 36 / 64%);
-  --prompt-tip-icon-color: rgb(15 164 15 / 81%);
-  --prompt-info-bg: rgb(7 59 104 / 80%);
-  --prompt-info-icon-color: #0075d1;
-  --prompt-warning-bg: rgb(90 69 3 / 88%);
-  --prompt-warning-icon-color: rgb(255 165 0 / 80%);
-  --prompt-danger-bg: rgb(86 28 8 / 80%);
-  --prompt-danger-icon-color: #cd0202;
+  --toc-highlight: #58a6ff; /* Blue for table of contents highlights */
+  --toc-popup-border-color: #30363d; /* Dark gray for TOC borders */
+  --tag-hover: #21262d; /* Dark gray for tag hovers */
+  --tb-odd-bg: #161b22; /* Dark gray for odd table rows */
+  --tb-even-bg: #0d1117; /* Deeper black for even rows */
+  --tb-border-color: var(--tb-odd-bg); /* Matches odd rows */
+  --footnote-target-bg: #1f6feb; /* Darker blue for footnote highlights */
+  --btn-share-color: #6e7681; /* Muted gray for share buttons */
+  --btn-share-hover-color: #c9d1d9; /* Light gray for hover */
+  --card-bg: #161b22; /* Dark gray for cards */
+  --card-hover-bg: #21262d; /* Slightly lighter for hover */
+  --card-shadow: rgba(0, 0, 0, 0.5) 0 6px 18px 0,
+    rgba(201, 209, 217, 0.2) 0 0 0 1px; /* Darker shadow */
+  --kbd-wrap-color: #6e7681; /* Muted gray for keyboard input wrap */
+  --kbd-text-color: #e6edf3; /* Near-white for keyboard text */
+  --kbd-bg-color: #0d1117; /* Matches main background */
+  --prompt-text-color: rgba(201, 209, 217, 0.75); /* Muted light gray */
+  --prompt-tip-bg: rgba(22, 101, 52, 0.7); /* Dark green for tips */
+  --prompt-tip-icon-color: #22c55e; /* Bright green for icons */
+  --prompt-info-bg: rgba(29, 78, 216, 0.7); /* Dark blue for info */
+  --prompt-info-icon-color: #3b82f6; /* Bright blue for icons */
+  --prompt-warning-bg: rgba(124, 45, 18, 0.7); /* Dark orange for warnings */
+  --prompt-warning-icon-color: #f97316; /* Bright orange for icons */
+  --prompt-danger-bg: rgba(153, 27, 27, 0.7); /* Dark red for danger */
+  --prompt-danger-icon-color: #ef4444; /* Bright red for icons */
 
   /* Tags */
-  --tag-border: rgb(59 79 88);
-  --tag-shadow: rgb(32 33 33);
-  --dash-color: rgb(63 65 68);
-  --search-tag-bg: #292828;
+  --tag-border: #30363d; /* Dark gray for tag borders */
+  --tag-shadow: #0d1117; /* Matches main background */
+  --dash-color: #6e7681; /* Muted gray for dashes */
+  --search-tag-bg: #161b22; /* Dark gray for search tags */
 
   /* Categories */
-  --categories-border: rgb(64 66 69 / 50%);
-  --categories-hover-bg: rgb(73 75 76);
-  --categories-icon-hover-color: white;
+  --categories-border: rgba(48, 54, 61, 0.5); /* Semi-transparent gray */
+  --categories-hover-bg: #21262d; /* Dark gray for hover */
+  --categories-icon-hover-color: #ffffff; /* White for icon hovers */
 
   /* Archive */
-  --timeline-node-bg: rgb(150 152 156);
-  --timeline-color: rgb(63 65 68);
-  --timeline-year-dot-color: var(--timeline-color);
+  --timeline-node-bg: #6e7681; /* Muted gray for timeline nodes */
+  --timeline-color: #30363d; /* Dark gray for timeline */
+  --timeline-year-dot-color: var(--timeline-color); /* Matches timeline */
 
   /* Code highlight colors */
-  --language-border-color: #2d2d2d;
-  --highlight-bg-color: #151515;
-  --highlighter-rouge-color: #c9def1;
-  --highlight-lineno-color: #808080;
-  --inline-code-bg: rgb(255 255 255 / 5%);
-  --code-color: #b0b0b0;
-  --code-header-text-color: #6a6a6a;
-  --code-header-muted-color: #353535;
-  --code-header-icon-color: #565656;
-  --clipboard-checked-color: #2bcc2b;
-  --filepath-text-color: #cacaca;
+  --language-border-color: #21262d; /* Dark gray for code borders */
+  --highlight-bg-color: #0d1117; /* Deep black for code background */
+  --highlighter-rouge-color: #c9d1d9; /* Light gray for code text */
+  --highlight-lineno-color: #6e7681; /* Muted gray for line numbers */
+  --inline-code-bg: rgba(255, 255, 255, 0.05); /* Subtle white for inline code */
+  --code-color: #c9d1d9; /* Light gray for code */
+  --code-header-text-color: #8b949e; /* Muted gray for code headers */
+  --code-header-muted-color: #21262d; /* Dark gray for muted headers */
+  --code-header-icon-color: #6e7681; /* Muted gray for icons */
+  --clipboard-checked-color: #22c55e; /* Green for clipboard check */
+  --filepath-text-color: #c9d1d9; /* Light gray for file paths */
 
   .light {
     display: none;
@@ -141,11 +141,11 @@
   #archives li:nth-child(odd) {
     background-image: linear-gradient(
       to left,
-      rgb(26 26 30),
-      rgb(39 39 45),
-      rgb(39 39 45),
-      rgb(39 39 45),
-      rgb(26 26 30)
+      #0d1117,
+      #161b22,
+      #161b22,
+      #161b22,
+      #0d1117
     );
   }
 
@@ -154,10 +154,9 @@
     color-scheme: none;
   }
 
-  /* --- Syntax highlight theme from `rougify style base16.dark` --- */
-
+  /* --- Syntax highlight theme --- */
   .highlight .gp {
-    color: #87939d;
+    color: #8b949e; /* Muted gray for prompt */
   }
 
   .highlight table td {
@@ -170,13 +169,13 @@
 
   .highlight,
   .highlight .w {
-    color: #d0d0d0;
-    background-color: #151515;
+    color: #c9d1d9;
+    background-color: #0d1117;
   }
 
   .highlight .err {
-    color: #151515;
-    background-color: #ac4142;
+    color: #0d1117;
+    background-color: #f85149; /* Bright red for errors */
   }
 
   .highlight .c,
@@ -186,39 +185,39 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #848484;
+    color: #8b949e; /* Muted gray for comments */
   }
 
   .highlight .cp {
-    color: #f4bf75;
+    color: #e6b800; /* Yellow for preprocessor */
   }
 
   .highlight .nt {
-    color: #f4bf75;
+    color: #e6b800; /* Yellow for tags */
   }
 
   .highlight .o,
   .highlight .ow {
-    color: #d0d0d0;
+    color: #c9d1d9; /* Light gray for operators */
   }
 
   .highlight .p,
   .highlight .pi {
-    color: #d0d0d0;
+    color: #c9d1d9; /* Light gray for punctuation */
   }
 
   .highlight .gi {
-    color: #90a959;
+    color: #22c55e; /* Green for insertions */
   }
 
   .highlight .gd {
-    color: #f08a8b;
-    background-color: #320000;
+    color: #f85149; /* Red for deletions */
+    background-color: #2d0000; /* Dark red background */
   }
 
   .highlight .gh {
-    color: #6a9fb5;
-    background-color: #151515;
+    color: #58a6ff; /* Blue for headers */
+    background-color: #0d1117;
     font-weight: bold;
   }
 
@@ -227,19 +226,19 @@
   .highlight .kp,
   .highlight .kr,
   .highlight .kv {
-    color: #aa759f;
+    color: #d3869b; /* Soft pink for keywords */
   }
 
   .highlight .kc {
-    color: #d28445;
+    color: #e6b800; /* Yellow for constants */
   }
 
   .highlight .kt {
-    color: #d28445;
+    color: #e6b800; /* Yellow for types */
   }
 
   .highlight .kd {
-    color: #d28445;
+    color: #e6b800; /* Yellow for declarations */
   }
 
   .highlight .s,
@@ -251,39 +250,39 @@
   .highlight .sh,
   .highlight .sx,
   .highlight .s1 {
-    color: #90a959;
+    color: #22c55e; /* Green for strings */
   }
 
   .highlight .sa {
-    color: #aa759f;
+    color: #d3869b; /* Pink for string attributes */
   }
 
   .highlight .sr {
-    color: #75b5aa;
+    color: #2dd4bf; /* Teal for regex */
   }
 
   .highlight .si {
-    color: #b76d45;
+    color: #e6b800; /* Yellow for interpolation */
   }
 
   .highlight .se {
-    color: #b76d45;
+    color: #e6b800; /* Yellow for escapes */
   }
 
   .highlight .nn {
-    color: #f4bf75;
+    color: #e6b800; /* Yellow for names */
   }
 
   .highlight .nc {
-    color: #f4bf75;
+    color: #e6b800; /* Yellow for class names */
   }
 
   .highlight .no {
-    color: #f4bf75;
+    color: #e6b800; /* Yellow for constants */
   }
 
   .highlight .na {
-    color: #6a9fb5;
+    color: #58a6ff; /* Blue for attributes */
   }
 
   .highlight .m,
@@ -294,10 +293,10 @@
   .highlight .il,
   .highlight .mo,
   .highlight .mx {
-    color: #90a959;
+    color: #22c55e; /* Green for numbers */
   }
 
   .highlight .ss {
-    color: #90a959;
+    color: #22c55e; /* Green for symbols */
   }
 }

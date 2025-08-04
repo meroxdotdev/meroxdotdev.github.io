@@ -3,59 +3,136 @@
 @use '../abstracts/placeholders';
 
 #post-list {
-  margin-top: 2rem;
-
+  margin-top: 3rem;
+  
   @include bp.lg {
-    margin-top: 2.5rem;
+    margin-top: 4rem;
   }
 
   .card-wrapper {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+    
     &:hover {
       text-decoration: none;
+      transform: translateY(-8px) scale(1.02);
+      
+      .card {
+        box-shadow: 
+          0 25px 50px -12px rgba(0, 0, 0, 0.08),
+          0 8px 16px -8px rgba(0, 0, 0, 0.06),
+          0 0 0 1px rgba(255, 255, 255, 0.05);
+      }
+      
+      .preview-img img {
+        transform: scale(1.05);
+      }
+      
+      .card-title {
+        color: var(--link-color) !important;
+      }
     }
 
     &:not(:last-child) {
-      margin-bottom: 1.25rem;
+      margin-bottom: 2rem;
+      
+      @include bp.lg {
+        margin-bottom: 2.5rem;
+      }
     }
   }
 
   .card {
     border: 0;
-    background: none;
+    background: var(--card-bg);
+    border-radius: v.$radius-lg;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    position: relative;
+    
+    // Subtle gradient overlay
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        transparent 100%);
+      z-index: 1;
+    }
 
     %img-radius {
       border-radius: v.$radius-lg v.$radius-lg 0 0;
 
       @include bp.md {
-        border-radius: 0 v.$radius-lg v.$radius-lg 0;
+        border-radius: v.$radius-lg 0 0 v.$radius-lg;
       }
     }
 
     .preview-img {
       @extend %img-radius;
+      overflow: hidden;
+      position: relative;
 
       img {
         @extend %img-radius;
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: transform;
+      }
+      
+      // Subtle overlay for better text readability
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          180deg, 
+          rgba(0, 0, 0, 0) 0%, 
+          rgba(0, 0, 0, 0.02) 100%
+        );
+        pointer-events: none;
       }
     }
 
     .card-body {
       height: 100%;
-      padding: 1rem;
+      padding: 1.5rem;
+      position: relative;
+      z-index: 2;
 
       @include bp.md {
-        padding: 1.75rem 1.75rem 1.25rem;
+        padding: 2rem 2rem 1.75rem;
       }
 
       .card-title {
         @extend %text-clip;
-
         color: var(--heading-color) !important;
-        font-size: 1.25rem;
+        font-size: 1.375rem;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 0.75rem;
+        transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        letter-spacing: -0.01em;
+        
+        @include bp.lg {
+          font-size: 1.5rem;
+        }
       }
 
       %muted {
         color: var(--text-muted-color) !important;
+        transition: color 0.3s ease;
       }
 
       .card-text {
@@ -65,20 +142,59 @@
 
         &.content {
           @extend %muted;
+          margin-bottom: 1.25rem;
 
           p {
             @extend %text-clip;
-
-            line-height: 1.5;
+            line-height: 1.6;
             margin: 0;
+            font-size: 0.95rem;
+            font-weight: 400;
           }
         }
       }
 
       .post-meta {
         @extend %muted;
+        font-size: 0.875rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        margin-top: auto; // Push to bottom of card
+        padding-top: 1rem; // Add breathing space from content
+        
+        @include bp.md {
+          padding-top: 1.25rem;
+        }
 
         i {
+          opacity: 0.8;
+          transition: opacity 0.3s ease;
+          font-size: 0.8rem;
+          flex-shrink: 0;
+          
+          &:hover {
+            opacity: 1;
+          }
+          
+          // Calendar icon spacing
+          &.far.fa-calendar-alt,
+          &.fas.fa-calendar-alt {
+            margin-right: 0.4rem;
+          }
+          
+          // Folder icon spacing  
+          &.far.fa-folder-open,
+          &.fas.fa-folder-open {
+            margin-right: 0.3rem;
+          }
+          
+          // General spacing for other icons
+          &:not(.fa-calendar-alt):not(.fa-folder-open) {
+            margin-right: 0.4rem;
+          }
+          
+          // Space between different meta groups
           &:not(:first-child) {
             margin-left: 1.5rem;
 
@@ -90,13 +206,11 @@
 
         em {
           @extend %normal-font-style;
-
           color: inherit;
+          font-weight: 500;
         }
 
         > div:first-child {
-          display: block;
-
           @extend %text-ellipsis;
         }
       }
@@ -106,12 +220,14 @@
 
 .pagination {
   color: var(--text-color);
-  font-family: Lato, sans-serif;
-  justify-content: space-evenly;
-
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  justify-content: center;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  
   @include bp.lg {
-    font-size: 0.85rem;
-    justify-content: center;
+    font-size: 0.9rem;
+    margin-top: 5rem;
   }
 
   a:hover {
@@ -119,55 +235,141 @@
   }
 
   .page-item {
+    margin: 0 0.25rem;
+    
     @include bp.lt(bp.get(lg)) {
       &:not(:first-child):not(:last-child) {
         display: none;
       }
     }
 
-    @include bp.lg {
-      &:not(:last-child) {
-        margin-right: 0.7rem;
-      }
-    }
-
     .page-link {
       color: var(--btn-patinator-text-color);
-      padding: 0 0.6rem;
-      display: -webkit-box;
-      -webkit-box-pack: center;
-      -webkit-box-align: center;
-      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
       border: 0;
-      background-color: inherit;
+      background-color: var(--card-bg);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      
+      // Subtle shine effect
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.1) 50%,
+          transparent 100%
+        );
+        transition: left 0.5s ease;
+      }
+      
+      &:hover::before {
+        left: 100%;
+      }
     }
 
     &.active {
       .page-link {
-        background-color: var(--btn-paginator-hover-color);
+        background: linear-gradient(
+          135deg, 
+          var(--link-color) 0%, 
+          color-mix(in srgb, var(--link-color) 80%, #000) 100%
+        );
+        color: white;
+        border-color: var(--link-color);
+        box-shadow: 
+          0 4px 12px rgba(var(--link-color-rgb), 0.3),
+          0 2px 4px rgba(0, 0, 0, 0.1);
+        transform: translateY(-1px);
       }
     }
 
     &:not(.active) {
       .page-link {
         &:hover {
-          box-shadow: inset var(--btn-border-color) 0 0 0 1px;
+          background-color: var(--btn-paginator-hover-color);
+          border-color: rgba(255, 255, 255, 0.12);
+          transform: translateY(-2px);
+          box-shadow: 
+            0 8px 25px rgba(0, 0, 0, 0.1),
+            0 4px 10px rgba(0, 0, 0, 0.06);
         }
       }
     }
 
     &.disabled {
       cursor: not-allowed;
+      opacity: 0.5;
 
       .page-link {
         color: rgb(108 117 125 / 57%);
+        
+        &:hover {
+          transform: none;
+          box-shadow: none;
+          background-color: var(--card-bg);
+        }
       }
     }
   } /* .page-item */
 
   .page-index {
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
     @include bp.lg {
       display: none;
     }
+  }
+}
+
+// Additional enhancements for Apple-like feel
+@media (prefers-reduced-motion: no-preference) {
+  #post-list .card-wrapper {
+    &:hover {
+      animation: subtle-pulse 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes subtle-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(var(--link-color-rgb), 0); 
+  }
+  50% { 
+    box-shadow: 0 0 0 4px rgba(var(--link-color-rgb), 0.1); 
+  }
+}
+
+// Dark mode specific enhancements
+@media (prefers-color-scheme: dark) {
+  #post-list .card {
+    background: rgba(28, 28, 30, 0.8);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+  
+  .pagination .page-link {
+    background: rgba(28, 28, 30, 0.8);
   }
 }

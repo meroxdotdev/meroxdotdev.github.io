@@ -5,7 +5,7 @@
 
 $btn-border-width: 3px;
 $btn-mb: 0.5rem;
-$sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
+$sidebar-display: 'sidebar-display';
 
 #sidebar {
   @include mx.pl-pr(0);
@@ -18,10 +18,13 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   width: v.$sidebar-width;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--sidebar-border-color);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
@@ -30,9 +33,9 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
   @include bp.lt(bp.get(lg)) {
     @include mx.slide;
-
-    transform: translateX(-#{v.$sidebar-width}); /* hide */
+    transform: translateX(-#{v.$sidebar-width});
     -webkit-transform: translateX(-#{v.$sidebar-width});
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
     [#{$sidebar-display}] & {
       transform: translateX(0);
@@ -59,7 +62,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     height: 6.5rem;
     overflow: hidden;
     box-shadow: var(--avatar-border-color) 0 0 0 2px;
-    transform: translateZ(0); /* fixed the zoom in Safari */
+    transform: translateZ(0);
+    border-radius: 50%; /* Retained from first code for consistency */
 
     @include bp.sm {
       width: 7rem;
@@ -68,6 +72,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
     img {
       transition: transform 0.5s;
+      filter: contrast(1.05) saturate(1.05); /* Retained from first code for consistency */
 
       &:hover {
         transform: scale(1.2);
@@ -78,7 +83,6 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   .profile-wrapper {
     @include mx.mt-mb(2.5rem);
     @extend %clickable-transition;
-
     padding-left: 2.5rem;
     padding-right: 1.25rem;
     width: 100%;
@@ -97,7 +101,6 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   .site-title {
     @extend %clickable-transition;
     @extend %sidebar-link-hover;
-
     font-family: inherit;
     font-weight: 900;
     font-size: 1.75rem;
@@ -114,10 +117,17 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     color: var(--site-subtitle-color);
     margin-top: 0.25rem;
     word-spacing: 1px;
+    line-height: 1.4;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   ul {
@@ -126,6 +136,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     li.nav-item {
       opacity: 0.9;
       width: 100%;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
       @include mx.pl-pr(1.5rem);
 
@@ -133,22 +144,54 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
         @include mx.pl-pr(2.75rem);
       }
 
+      &:hover {
+        opacity: 1;
+        transform: translateX(4px);
+      }
+
       a.nav-link {
         @include mx.pt-pb(0.6rem);
-
         display: flex;
         align-items: center;
-        border-radius: 0.75rem;
+        border-radius: 12px;
         font-weight: 600;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        // Subtle shine effect
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.05) 50%,
+            transparent 100%
+          );
+          transition: left 0.5s ease;
+        }
 
         &:hover {
           background-color: var(--sidebar-hover-bg);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+          &::before {
+            left: 100%;
+          }
         }
 
         i {
           font-size: 95%;
           opacity: 0.8;
-          margin-right: 1.5rem;
+          margin-right: 1.25rem;
+          transition: all 0.3s ease;
+          width: 18px;
+          text-align: center;
         }
 
         span {
@@ -161,9 +204,18 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
         .nav-link {
           color: var(--sidebar-active-color);
           background-color: var(--sidebar-hover-bg);
+          box-shadow: 
+            0 4px 12px rgba(0, 0, 0, 0.1),
+            inset 3px 0 0 var(--sidebar-active-color);
+
+          i {
+            opacity: 1;
+            transform: scale(1.1);
+          }
 
           span {
             opacity: 1;
+            font-weight: 700;
           }
         }
       }
@@ -189,7 +241,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     %button {
       width: $btn-size;
       height: $btn-size;
-      margin-bottom: $btn-mb; // multi line gap
+      margin-bottom: $btn-mb;
       border-radius: 50%;
       color: var(--sidebar-btn-color);
       background-color: var(--sidebar-btn-bg);
@@ -197,13 +249,45 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
       &:not(:focus-visible) {
-        box-shadow: var(--sidebar-border-color) 0 0 0 1px;
+        box-shadow: 
+          var(--sidebar-border-color) 0 0 0 1px,
+          0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      // Ripple effect
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+        transform: translate(-50%, -50%);
       }
 
       &:hover {
         background-color: var(--sidebar-hover-bg);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 
+          0 8px 25px rgba(0, 0, 0, 0.15),
+          0 4px 10px rgba(0, 0, 0, 0.1);
+
+        &::before {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &:active {
+        transform: translateY(0) scale(0.95);
       }
     }
 
@@ -223,36 +307,54 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
     i {
       line-height: $btn-size;
+      z-index: 1;
+      position: relative;
     }
 
     #mode-toggle {
       @extend %button;
       @extend %sidebar-links;
       @extend %sidebar-link-hover;
+
+      &:hover {
+        i {
+          transform: rotate(180deg);
+          transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+      }
     }
 
     .icon-border {
       @extend %no-cursor;
       @include mx.ml-mr(calc((v.$sb-btn-gap - $btn-border-width) / 2));
-
       background-color: var(--sidebar-btn-color);
       content: '';
       width: $btn-border-width;
       height: $btn-border-width;
       border-radius: 50%;
       margin-bottom: $btn-mb;
+      opacity: 0.6;
 
       @include bp.xxxl {
         @include mx.ml-mr(calc((v.$sb-btn-gap-lg - $btn-border-width) / 2));
       }
     }
-  } /* .sidebar-bottom */
-} /* #sidebar */
+  }
 
-[#{$sidebar-display}] {
-  #main-wrapper {
-    @include bp.lt(bp.get(lg)) {
-      transform: translateX(v.$sidebar-width);
+  [#{$sidebar-display}] {
+    #main-wrapper {
+      @include bp.lt(bp.get(lg)) {
+        transform: translateX(v.$sidebar-width);
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+    }
+  }
+
+  // Reduce motion for accessibility
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition-duration: 0.1s !important;
+      animation: none !important;
     }
   }
 }

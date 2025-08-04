@@ -26,9 +26,9 @@
   --img-bg: radial-gradient(circle, #0d1117 0%, #161b22 100%); /* Darker gradient for images */
   --shimmer-bg: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(88, 166, 255, 0.2) 50%, /* Subtle blue shimmer */
-    rgba(255, 255, 255, 0) 100%
+    rgb(255 255 255 / 0%) 0%,
+    rgb(88 166 255 / 20%) 50%, /* Subtle blue shimmer */
+    rgb(255 255 255 / 0%) 100%
   );
 
   /* Sidebar */
@@ -41,10 +41,10 @@
   --sidebar-hover-bg: #161b22; /* Slightly lighter hover state */
   --sidebar-btn-bg: #21262d; /* Dark gray for sidebar buttons */
   --sidebar-btn-color: #8b949e; /* Muted button text */
-  --avatar-border-color: rgba(201, 209, 217, 0.9); /* Light gray for avatar borders */
+  --avatar-border-color: rgb(201 209 217 / 90%); /* Light gray for avatar borders */
 
   /* Topbar */
-  --topbar-bg: rgba(13, 17, 23, 0.8); /* Semi-transparent deep black */
+  --topbar-bg: rgb(13 17 23 / 80%); /* Semi-transparent deep black */
   --topbar-text-color: var(--text-color); /* Matches body text */
   --search-border-color: #30363d; /* Dark gray for search borders */
   --search-icon-color: #6e7681; /* Muted gray for icons */
@@ -67,19 +67,20 @@
   --btn-share-hover-color: #c9d1d9; /* Light gray for hover */
   --card-bg: #161b22; /* Dark gray for cards */
   --card-hover-bg: #21262d; /* Slightly lighter for hover */
-  --card-shadow: rgba(0, 0, 0, 0.5) 0 6px 18px 0,
-    rgba(201, 209, 217, 0.2) 0 0 0 1px; /* Darker shadow */
+  --card-shadow: rgb(0 0 0 / 50%) 0 6px 18px 0,
+    rgb(201 209 217 / 20%) 0 0 0 1px; /* Darker shadow */
+
   --kbd-wrap-color: #6e7681; /* Muted gray for keyboard input wrap */
   --kbd-text-color: #e6edf3; /* Near-white for keyboard text */
   --kbd-bg-color: #0d1117; /* Matches main background */
-  --prompt-text-color: rgba(201, 209, 217, 0.75); /* Muted light gray */
-  --prompt-tip-bg: rgba(22, 101, 52, 0.7); /* Dark green for tips */
+  --prompt-text-color: rgb(201 209 217 / 75%); /* Muted light gray */
+  --prompt-tip-bg: rgb(22 101 52 / 70%); /* Dark green for tips */
   --prompt-tip-icon-color: #22c55e; /* Bright green for icons */
-  --prompt-info-bg: rgba(29, 78, 216, 0.7); /* Dark blue for info */
+  --prompt-info-bg: rgb(29 78 216 / 70%); /* Dark blue for info */
   --prompt-info-icon-color: #3b82f6; /* Bright blue for icons */
-  --prompt-warning-bg: rgba(124, 45, 18, 0.7); /* Dark orange for warnings */
+  --prompt-warning-bg: rgb(124 45 18 / 70%); /* Dark orange for warnings */
   --prompt-warning-icon-color: #f97316; /* Bright orange for icons */
-  --prompt-danger-bg: rgba(153, 27, 27, 0.7); /* Dark red for danger */
+  --prompt-danger-bg: rgb(153 27 27 / 70%); /* Dark red for danger */
   --prompt-danger-icon-color: #ef4444; /* Bright red for icons */
 
   /* Tags */
@@ -89,7 +90,7 @@
   --search-tag-bg: #161b22; /* Dark gray for search tags */
 
   /* Categories */
-  --categories-border: rgba(48, 54, 61, 0.5); /* Semi-transparent gray */
+  --categories-border: rgb(48 54 61 / 50%); /* Semi-transparent gray */
   --categories-hover-bg: #21262d; /* Dark gray for hover */
   --categories-icon-hover-color: #ffffff; /* White for icon hovers */
 
@@ -103,7 +104,7 @@
   --highlight-bg-color: #0d1117; /* Deep black for code background */
   --highlighter-rouge-color: #c9d1d9; /* Light gray for code text */
   --highlight-lineno-color: #6e7681; /* Muted gray for line numbers */
-  --inline-code-bg: rgba(255, 255, 255, 0.05); /* Subtle white for inline code */
+  --inline-code-bg: rgb(255 255 255 / 5%); /* Subtle white for inline code */
   --code-color: #c9d1d9; /* Light gray for code */
   --code-header-text-color: #8b949e; /* Muted gray for code headers */
   --code-header-muted-color: #21262d; /* Dark gray for muted headers */

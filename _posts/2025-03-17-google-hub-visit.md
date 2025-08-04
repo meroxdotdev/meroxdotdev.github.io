@@ -2,7 +2,7 @@
 title: "Inside Google's Offices"
 date: 2025-03-17 10:00:00 +0200
 categories: [tech-culture]
-tags: [google, work-environment, innovation, warsaw, office-tour, tech-culture]
+#tags: [google, work-environment, innovation, warsaw, office-tour, tech-culture]
 description: A deep dive into Google's Warsaw HUB, exploring its work culture, amenities, and high-tech environment.
 image:
   path: /assets/img/posts/google-warsaw-hub-banner.webp

@@ -2,7 +2,7 @@
 title: "Networking Specialist: My CCNA Journey"
 date: 2025-05-02 10:00:00 +0300
 categories: [career]
-tags: [ccna, networking, professional-development, cisco, cybersecurity, career-growth]
+#tags: [ccna, networking, professional-development, cisco, cybersecurity, career-growth]
 description: Follow my complete journey from networking beginner to CCNA certified professional - including study methods, practical labs, challenges, and how this certification opened doors to cybersecurity opportunities.
 image:
   path: /assets/img/posts/ccna-journey-banner.webp

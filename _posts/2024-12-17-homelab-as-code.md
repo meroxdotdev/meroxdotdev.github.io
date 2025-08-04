@@ -2,7 +2,7 @@
 title: "Homelab as Code: Packer + Terraform + Ansible"
 date: 2024-12-17 10:00:00 +0200
 categories: [infrastructure]
-tags: [automation, terraform, ansible, homelab, packer, proxmox, docker]
+#tags: [automation, terraform, ansible, homelab, packer, proxmox, docker]
 description: Step-by-step guide to building and automating your homelab, from the ground up. Discover why a homelab is a must-have for mastering IT skills in server management, networking, and automation.
 image:
   path: /assets/img/posts/featured-homelabascode.webp

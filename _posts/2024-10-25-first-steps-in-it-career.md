@@ -2,7 +2,7 @@
 title: My First Steps in IT Career
 date: 2024-10-25 10:00:00 +0200
 categories: [career]
-tags: [guide, interview, professional-development, system-administrator]
+#tags: [guide, interview, professional-development, system-administrator]
 description: Discover my journey into the IT industry, from a hesitant student to landing my first job as a System Administrator. Explore the challenges, experiences, and valuable lessons learned along the way.
 image:
   path: /assets/img/posts/featured-itjourney.webp

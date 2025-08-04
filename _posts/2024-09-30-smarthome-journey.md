@@ -2,7 +2,7 @@
 title: Smart Home Journey
 date: 2024-09-30 10:00:00 +0200
 categories: [infrastructure]
-tags: [homeassistant, alexa, automation, broadlink, philips-hue]
+#tags: [homeassistant, alexa, automation, broadlink, philips-hue]
 description: Discover how I transformed my home into a smart, automated space using Alexa, Home Assistant, and other devices. Learn about routines, integration challenges, and tips for building your own efficient smart home setup.
 image:
   path: /assets/img/posts/smart-home-banner.webp

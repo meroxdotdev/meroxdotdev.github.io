@@ -2,7 +2,7 @@
 title: "Safeguarding My Critical Data"
 date: 2025-03-01 10:00:00 +0200
 categories: [infrastructure]
-tags: [homelab, backup, disaster-recovery, proxmox, synology, hetzner, pbs, security]
+#tags: [homelab, backup, disaster-recovery, proxmox, synology, hetzner, pbs, security]
 description: A structured disaster recovery plan for homelab enthusiasts and businesses.
 image:
   path: /assets/img/posts/disaster-recovery-banner.webp

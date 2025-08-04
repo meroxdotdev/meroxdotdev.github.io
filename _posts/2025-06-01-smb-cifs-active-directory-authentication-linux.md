@@ -2,7 +2,7 @@
 title: SMB Authentication with AD on Linux
 date: 2025-06-01 10:00:00 +0300
 categories: [infrastructure]
-tags: [samba, sssd, active-directory, smb, cifs, kerberos, realmd, enterprise, authentication, linux-administration]
+#tags: [samba, sssd, active-directory, smb, cifs, kerberos, realmd, enterprise, authentication, linux-administration]
 description: Comprehensive step-by-step tutorial for setting up SMB/CIFS file sharing with Active Directory authentication on Linux servers. Covers SSSD, Samba, Kerberos configuration, troubleshooting, and security best practices.
 image:
   path: /assets/img/posts/smb-cifs-ad-authentication-banner.webp

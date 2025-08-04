@@ -2,7 +2,7 @@
 title: Tailscale site-to-site pfSense - Linux
 date: 2024-04-06 10:00:00 +0200
 categories: [infrastructure]
-tags: [vpn, security, tutorial, tailscale, pfsense]
+#tags: [vpn, security, tutorial, tailscale, pfsense]
 description: Setting up Tailscale site-to-site connection between pfSense and Linux
 image:
   path: /assets/img/posts/tailscale-pfsense-banner.webp

@@ -20,9 +20,9 @@
       
       .card {
         box-shadow: 
-          0 25px 50px -12px rgba(0, 0, 0, 0.08),
-          0 8px 16px -8px rgba(0, 0, 0, 0.06),
-          0 0 0 1px rgba(255, 255, 255, 0.05);
+          0 25px 50px -12px rgb(0 0 0 / 8%),
+          0 8px 16px -8px rgb(0 0 0 / 6%),
+          0 0 0 1px rgb(255 255 255 / 5%);
       }
       
       .preview-img img {
@@ -44,12 +44,11 @@
   }
 
   .card {
-    border: 0;
     background: var(--card-bg);
     border-radius: v.$radius-lg;
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgb(255 255 255 / 8%);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
     position: relative;
@@ -64,7 +63,7 @@
       height: 1px;
       background: linear-gradient(90deg, 
         transparent 0%, 
-        rgba(255, 255, 255, 0.1) 50%, 
+        rgb(255 255 255 / 10%) 50%, 
         transparent 100%);
       z-index: 1;
     }
@@ -79,11 +78,13 @@
 
     .preview-img {
       @extend %img-radius;
+
       overflow: hidden;
       position: relative;
 
       img {
         @extend %img-radius;
+
         transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         will-change: transform;
       }
@@ -92,14 +93,11 @@
       &::after {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0 0 0 0;
         background: linear-gradient(
           180deg, 
-          rgba(0, 0, 0, 0) 0%, 
-          rgba(0, 0, 0, 0.02) 100%
+          rgb(0 0 0 / 0%) 0%, 
+          rgb(0 0 0 / 2%) 100%
         );
         pointer-events: none;
       }
@@ -117,6 +115,7 @@
 
       .card-title {
         @extend %text-clip;
+
         color: var(--heading-color) !important;
         font-size: 1.375rem;
         font-weight: 600;
@@ -142,10 +141,12 @@
 
         &.content {
           @extend %muted;
+
           margin-bottom: 1.25rem;
 
           p {
             @extend %text-clip;
+
             line-height: 1.6;
             margin: 0;
             font-size: 0.95rem;
@@ -156,6 +157,7 @@
 
       .post-meta {
         @extend %muted;
+
         font-size: 0.875rem;
         font-weight: 500;
         display: flex;
@@ -206,6 +208,7 @@
 
         em {
           @extend %normal-font-style;
+
           color: inherit;
           font-weight: 500;
         }
@@ -252,11 +255,10 @@
       align-items: center;
       justify-content: center;
       border-radius: 12px;
-      border: 0;
       background-color: var(--card-bg);
       backdrop-filter: blur(20px) saturate(180%);
       -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgb(255 255 255 / 6%);
       transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       font-weight: 500;
       position: relative;
@@ -273,7 +275,7 @@
         background: linear-gradient(
           90deg,
           transparent 0%,
-          rgba(255, 255, 255, 0.1) 50%,
+          rgb(255 255 255 / 10%) 50%,
           transparent 100%
         );
         transition: left 0.5s ease;
@@ -289,13 +291,13 @@
         background: linear-gradient(
           135deg, 
           var(--link-color) 0%, 
-          color-mix(in srgb, var(--link-color) 80%, #000) 100%
+          color-mix(in srgb, var(--link-color) 80%, #000000) 100%
         );
         color: white;
         border-color: var(--link-color);
         box-shadow: 
-          0 4px 12px rgba(var(--link-color-rgb), 0.3),
-          0 2px 4px rgba(0, 0, 0, 0.1);
+          0 4px 12px rgb(var(--link-color-rgb), 0.3),
+          0 2px 4px rgb(0 0 0 / 10%);
         transform: translateY(-1px);
       }
     }
@@ -304,11 +306,11 @@
       .page-link {
         &:hover {
           background-color: var(--btn-paginator-hover-color);
-          border-color: rgba(255, 255, 255, 0.12);
+          border-color: rgb(255 255 255 / 12%);
           transform: translateY(-2px);
           box-shadow: 
-            0 8px 25px rgba(0, 0, 0, 0.1),
-            0 4px 10px rgba(0, 0, 0, 0.06);
+            0 8px 25px rgb(0 0 0 / 10%),
+            0 4px 10px rgb(0 0 0 / 6%);
         }
       }
     }
@@ -334,7 +336,7 @@
     padding: 0.75rem 1.5rem;
     background: var(--card-bg);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgb(255 255 255 / 6%);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     
@@ -355,21 +357,22 @@
 
 @keyframes subtle-pulse {
   0%, 100% { 
-    box-shadow: 0 0 0 0 rgba(var(--link-color-rgb), 0); 
+    box-shadow: 0 0 0 0 rgb(var(--link-color-rgb), 0); 
   }
+
   50% { 
-    box-shadow: 0 0 0 4px rgba(var(--link-color-rgb), 0.1); 
+    box-shadow: 0 0 0 4px rgb(var(--link-color-rgb), 0.1); 
   }
 }
 
 // Dark mode specific enhancements
 @media (prefers-color-scheme: dark) {
   #post-list .card {
-    background: rgba(28, 28, 30, 0.8);
-    border-color: rgba(255, 255, 255, 0.06);
+    background: rgb(28 28 30 / 80%);
+    border-color: rgb(255 255 255 / 6%);
   }
   
   .pagination .page-link {
-    background: rgba(28, 28, 30, 0.8);
+    background: rgb(28 28 30 / 80%);
   }
 }

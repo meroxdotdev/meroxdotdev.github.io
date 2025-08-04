@@ -33,11 +33,11 @@ $sidebar-display: 'sidebar-display';
 
   @include bp.lt(bp.get(lg)) {
     @include mx.slide;
-
     transform: translateX(-#{v.$sidebar-width});
     -webkit-transform: translateX(-#{v.$sidebar-width});
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
+    /* Toggle sidebar visibility on mobile when sidebar-display attribute is present */
     [#{$sidebar-display}] & {
       transform: translateX(0);
     }
@@ -64,7 +64,7 @@ $sidebar-display: 'sidebar-display';
     overflow: hidden;
     box-shadow: var(--avatar-border-color) 0 0 0 2px;
     transform: translateZ(0);
-    border-radius: 50%; /* Retained from first code for consistency */
+    border-radius: 50%; /* Retained for circular avatar */
 
     @include bp.sm {
       width: 7rem;
@@ -73,7 +73,7 @@ $sidebar-display: 'sidebar-display';
 
     img {
       transition: transform 0.5s;
-      filter: contrast(1.05) saturate(1.05); /* Retained from first code for consistency */
+      filter: contrast(1.05) saturate(1.05); /* Retained for consistency */
 
       &:hover {
         transform: scale(1.2);
@@ -84,7 +84,6 @@ $sidebar-display: 'sidebar-display';
   .profile-wrapper {
     @include mx.mt-mb(2.5rem);
     @extend %clickable-transition;
-
     padding-left: 2.5rem;
     padding-right: 1.25rem;
     width: 100%;
@@ -103,7 +102,6 @@ $sidebar-display: 'sidebar-display';
   .site-title {
     @extend %clickable-transition;
     @extend %sidebar-link-hover;
-
     font-family: inherit;
     font-weight: 900;
     font-size: 1.75rem;
@@ -154,7 +152,6 @@ $sidebar-display: 'sidebar-display';
 
       a.nav-link {
         @include mx.pt-pb(0.6rem);
-
         display: flex;
         align-items: center;
         border-radius: 12px;
@@ -174,7 +171,7 @@ $sidebar-display: 'sidebar-display';
           background: linear-gradient(
             90deg,
             transparent 0%,
-            rgb(255 255 255 / 5%) 50%,
+            rgba(255, 255, 255, 0.05) 50%,
             transparent 100%
           );
           transition: left 0.5s ease;
@@ -182,7 +179,7 @@ $sidebar-display: 'sidebar-display';
 
         &:hover {
           background-color: var(--sidebar-hover-bg);
-          box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
           &::before {
             left: 100%;
@@ -209,7 +206,7 @@ $sidebar-display: 'sidebar-display';
           color: var(--sidebar-active-color);
           background-color: var(--sidebar-hover-bg);
           box-shadow: 
-            0 4px 12px rgb(0 0 0 / 10%),
+            0 4px 12px rgba(0, 0, 0, 0.1),
             inset 3px 0 0 var(--sidebar-active-color);
 
           i {
@@ -260,7 +257,7 @@ $sidebar-display: 'sidebar-display';
       &:not(:focus-visible) {
         box-shadow: 
           var(--sidebar-border-color) 0 0 0 1px,
-          0 2px 8px rgb(0 0 0 / 10%);
+          0 2px 8px rgba(0, 0, 0, 0.1);
       }
 
       // Ripple effect
@@ -272,7 +269,7 @@ $sidebar-display: 'sidebar-display';
         width: 0;
         height: 0;
         border-radius: 50%;
-        background: rgb(255 255 255 / 20%);
+        background: rgba(255, 255, 255, 0.2);
         transition: all 0.3s ease;
         transform: translate(-50%, -50%);
       }
@@ -281,8 +278,8 @@ $sidebar-display: 'sidebar-display';
         background-color: var(--sidebar-hover-bg);
         transform: translateY(-2px) scale(1.05);
         box-shadow: 
-          0 8px 25px rgb(0 0 0 / 15%),
-          0 4px 10px rgb(0 0 0 / 10%);
+          0 8px 25px rgba(0, 0, 0, 0.15),
+          0 4px 10px rgba(0, 0, 0, 0.1);
 
         &::before {
           width: 100%;
@@ -331,7 +328,6 @@ $sidebar-display: 'sidebar-display';
     .icon-border {
       @extend %no-cursor;
       @include mx.ml-mr(calc((v.$sb-btn-gap - $btn-border-width) / 2));
-
       background-color: var(--sidebar-btn-color);
       content: '';
       width: $btn-border-width;
@@ -345,18 +341,20 @@ $sidebar-display: 'sidebar-display';
       }
     }
   }
+}
 
-  [#{$sidebar-display}] {
-    #main-wrapper {
-      @include bp.lt(bp.get(lg)) {
-        transform: translateX(v.$sidebar-width);
-        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      }
+[#{$sidebar-display}] {
+  #main-wrapper {
+    @include bp.lt(bp.get(lg)) {
+      transform: translateX(v.$sidebar-width);
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
   }
+}
 
-  // Reduce motion for accessibility
-  @media (prefers-reduced-motion: reduce) {
+// Reduce motion for accessibility
+@media (prefers-reduced-motion: reduce) {
+  #sidebar {
     * {
       transition-duration: 0.1s !important;
       animation: none !important;

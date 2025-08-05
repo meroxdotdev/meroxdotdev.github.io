@@ -1,21 +1,17 @@
 <!-- Get 5 last posted/updated posts -->
 
 {% assign MAX_SIZE = 5 %}
-
 {% assign all_list = '' | split: '' %}
 
 {% for post in site.posts %}
   {% assign datetime = post.last_modified_at | default: post.date %}
-
   {% capture elem %}
     {{- datetime | date: "%Y%m%d%H%M%S" -}}::{{- forloop.index0 -}}
   {% endcapture %}
-
   {% assign all_list = all_list | push: elem %}
 {% endfor %}
 
 {% assign all_list = all_list | sort | reverse %}
-
 {% assign update_list = '' | split: '' %}
 
 {% for entry in all_list limit: MAX_SIZE %}
@@ -35,6 +31,20 @@
         </li>
       {% endfor %}
     </ul>
+
+    <!-- Google AdSense ad inside lastmod panel -->
+    <div class="ad-container mt-3">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2989869646477878"
+        crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2989869646477878"
+           data-ad-slot="3183113175"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
   </section>
-  <!-- #access-lastmod -->
 {% endif %}

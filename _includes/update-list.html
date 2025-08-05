@@ -32,6 +32,49 @@
       {% endfor %}
     </ul>
 
+
+<div class="sidepanel-cta">
+  <p class="cta-text">Promote your brand here! <a href="mailto:hello@merox.dev" class="cta-link">Contact me</a></p>
+  <style>
+    .sidepanel-cta {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: #fff;
+      padding: 1rem;
+      border-radius: 6px;
+      text-align: center;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease-in-out;
+    }
+    .sidepanel-cta:hover {
+      transform: scale(1.02);
+    }
+    .cta-text {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .cta-link {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: opacity 0.2s ease;
+    }
+    .cta-link:hover {
+      opacity: 0.8;
+    }
+    @media (max-width: 768px) {
+      .sidepanel-cta {
+        padding: 0.8rem;
+      }
+      .cta-text {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</div>
+
     <!-- Google AdSense ad inside lastmod panel -->
     <div class="ad-container mt-3">
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2989869646477878"

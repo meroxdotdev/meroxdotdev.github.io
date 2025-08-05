@@ -6,7 +6,6 @@
   top: 2rem;
   transition: top 0.2s ease-in-out;
   margin-top: 3rem;
-  position: relative; // adăugat pentru context absolut ads-panel
 
   &:only-child {
     position: -webkit-sticky;
@@ -21,25 +20,6 @@
     &:not(:first-child) {
       margin-top: 4rem;
     }
-
-    &.ads-panel {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 1rem;
-      text-align: center;
-      background-color: var(--panel-bg, #ffffff);
-      border-radius: 0.25rem;
-      z-index: 1;
-      box-shadow: 0 0 8px rgb(0 0 0 / 5%);
-
-      .adsbygoogle {
-        width: 100%; // lăsăm Google să își regleze dimensiunea
-        max-width: 100%;
-        overflow: hidden;
-        display: block;
-      }
-    }
   }
 
   .content {
@@ -48,6 +28,7 @@
 }
 
 #panel-wrapper {
+  /* the headings */
   .panel-heading {
     font-family: inherit;
     line-height: inherit;

@@ -15,6 +15,7 @@
 
   > section {
     @extend %panel-border;
+
     padding-left: 1rem;
 
     &:not(:first-child) {
@@ -30,7 +31,7 @@
       background-color: var(--panel-bg, #ffffff);
       border-radius: 0.25rem;
       z-index: 1;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 8px rgb(0 0 0 / 5%);
 
       .adsbygoogle {
         width: 100%; // lăsăm Google să își regleze dimensiunea
@@ -50,6 +51,7 @@
   .panel-heading {
     font-family: inherit;
     line-height: inherit;
+
     @include mx.label(inherit);
   }
 

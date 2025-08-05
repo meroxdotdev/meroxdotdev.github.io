@@ -20,6 +20,19 @@
     &:not(:first-child) {
       margin-top: 4rem;
     }
+
+    &.ads-panel {
+      padding: 1rem;
+      text-align: center;
+      background-color: var(--panel-bg, #ffffff);
+      border-radius: 0.25rem;
+
+      .adsbygoogle {
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
   }
 
   .content {
@@ -66,23 +79,5 @@
     }
 
     @extend %no-bottom-border;
-  }
-}
-
-/* 🔥 Stil personalizat pentru reclamele AdSense */
-.ads-section {
-  margin-top: 2rem;
-  padding: 1rem;
-  background-color: var(--main-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
-  text-align: center;
-
-  ins.adsbygoogle {
-    display: block !important;
-    margin: auto;
-    min-height: 100px;
-    width: 100%;
   }
 }

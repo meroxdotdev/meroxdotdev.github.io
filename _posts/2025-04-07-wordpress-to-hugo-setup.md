@@ -11,6 +11,9 @@ image:
 
 Ten years ago, I started my first website projects—some for myself, others for friends or clients. I spent a lot of time experimenting with themes, plugins, and WordPress setups.
 
+> **UPDATE (August 2025)**: Since writing this post, I've migrated from Hugo to Jekyll with the Chirpy theme. Why? Pure curiosity and the desire to explore different static site generators. The principles and benefits I discuss here remain the same—static sites are still the way to go for content-focused websites. I'll share my Jekyll experience in an upcoming post if you want!
+
+
 ##  My Experience with WordPress
 
 WordPress is a solid way to get started—especially if you're messing around with your first LAMP server. But long term? It can be a pain. You'll find yourself tweaking PHP configs, switching to LiteSpeed, juggling plugin updates, and basically fine-tuning everything so it doesn't fall apart.

@@ -12,64 +12,69 @@ order: 4
 
 ---
 
-## Professional Summary
+## 👋 Hello!
 
-System Administrator with 8+ years of experience specializing in Linux, networking, and cybersecurity. I focus on building secure, scalable IT infrastructures with expertise in server management, virtualization, and DevOps practices.
+I'm a System Administrator with **8+ years of experience** building secure, scalable IT infrastructures. Currently working as an HPC System Administrator at Forvia, where I manage enterprise servers and virtual infrastructure.
 
----
+## 🚀 What I Do
 
-## Current Role
+**Current Role:** HPC System Administrator @ Forvia *(2022–Present)*
+- Managing enterprise Windows/Linux servers and virtual infrastructure
+- Configuring HPC job scheduling with PBS
+- Integrating Active Directory/SALT systems
 
-**HPC System Administrator @ Forvia** *(2022–Present)*
+## 🛠️ Technical Skills
 
-Managing enterprise Windows/Linux servers and virtual infrastructure. Configuring HPC job scheduling with PBS and integrating Active Directory/SALT systems.
+**Systems & Infrastructure**
+- Linux & Windows Server administration
+- Proxmox virtualization & Docker containerization  
+- Kubernetes orchestration & K3S clusters
 
----
+**Security & DevOps**
+- Vulnerability assessments & penetration testing
+- Backup solutions (Bareos, enterprise-grade)
+- CI/CD pipelines & GitOps workflows
 
-## Key Experience
+**Networking**
+- CCNA certified
+- Firewall management & VPN solutions
+- Enterprise network architecture
 
+## 💼 Career Highlights
+
+### Recent Experience
 
 **Founder @ Dolphost** *(2022–2024)*  
-Built secure WordPress hosting platform and managed VPS services.
+Built and managed a secure WordPress hosting platform with VPS services.
 
 **Cybersecurity Engineer @ Atos IT Solutions** *(2020–2022)*  
-Performed vulnerability assessments and managed enterprise firewalls.
+Performed vulnerability assessments and managed enterprise firewall infrastructure.
 
 **System Administrator @ Netex Romania** *(2018–2020)*  
-Managed backups, automation, and migrated infrastructure to Kubernetes.
+Managed automated backup solutions and led infrastructure migration to Kubernetes.
 
+## 🏆 Notable Projects
 
+- **Infrastructure Migration:** Successfully migrated Puppet infrastructure to Kubernetes for enhanced scalability
+- **Security Implementation:** Led Forescout policy migration for Windows 10 endpoints across enterprise
+- **Backup Architecture:** Designed and implemented Bareos-based datacenter backup solution
+- **Homelab Innovation:** Built production-grade homelab with Proxmox, pFsense, and K3S cluster
 
-**Systems**: Linux, Windows Server, Proxmox, Docker, Kubernetes  
-**Security**: Vulnerability Assessments, Backup Solutions, DevOps  
-**Networking**: Cisco, Firewalls, VPNs
+## 🎓 Education & Certifications
 
+**Computer Science** - West University of Timișoara *(2016–2018)*  
+**Cisco Certified Network Associate (CCNA)** *(2019–2020)*
 
+## 🔮 Current Focus
 
-
----
-
-## Notable Projects
-
-- Migrated Puppet infrastructure to Kubernetes for enhanced scalability
-- Led Forescout policy migration for Windows 10 endpoints  
-- Designed Bareos-based datacenter backup solution
-- Built production homelab with Proxmox, pFsense, and K3S cluster
-
----
-
-## Education & Certifications
-
-**Computer Science** - *West University of Timișoara* (2016–2018)  
-**Cisco Certified Network Associate (CCNA)** (2019–2020)
+Exploring cutting-edge technologies in:
+- Kubernetes & cloud-native applications
+- DevOps automation & GitOps workflows  
+- Infrastructure as Code (IaC)
+- Container security & orchestration
 
 ---
 
-## Current Focus
+**Ready to connect?** Feel free to reach out for collaboration opportunities or technical discussions.
 
-Kubernetes, DevOps, and cloud-native technologies. Automation pipelines and GitOps workflows.
-
----
-
-
-**[Download Full Resume](https://merox.dev/robert-melcher-cv.pdf)**
+[📄 Download Full Resume](https://merox.dev/robert-melcher-cv.pdf){: .btn .btn-primary }

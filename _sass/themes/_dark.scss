@@ -1,116 +1,116 @@
 @mixin styles {
   color-scheme: dark;
 
-  /* Framework color */
-  --main-bg: #0d1117; /* Deep black with a slight blue tint, inspired by modern dark themes */
-  --mask-bg: #161b22; /* Slightly lighter dark gray for overlays */
-  --main-border-color: #21262d; /* Subtle gray for borders */
+  /* Framework color - Paper gray theme */
+  --main-bg: #1f1f23; /* Soft charcoal paper */
+  --mask-bg: #2a2a2f; /* Medium gray paper */
+  --main-border-color: #3a3a40; /* Subtle gray borders */
 
-  /* Common color */
-  --text-color: #c9d1d9; /* Light gray for body text, high readability */
-  --text-muted-color: #8b949e; /* Muted gray for secondary text */
-  --text-muted-highlight-color: #b3bac5; /* Slightly brighter for hover states */
-  --heading-color: #e6edf3; /* Near-white for headings, high contrast */
-  --label-color: #b3bac5; /* Light gray for labels */
-  --blockquote-border-color: #30363d; /* Dark gray for blockquote borders */
-  --blockquote-text-color: #8b949e; /* Muted gray for blockquote text */
-  --link-color: #58a6ff; /* Vibrant blue for links, inspired by tech themes */
-  --link-underline-color: #2f81f7; /* Darker blue for link underlines */
-  --button-bg: #161b22; /* Dark gray for buttons */
-  --btn-border-color: #30363d; /* Subtle border for buttons */
-  --btn-backtotop-color: var(--text-color); /* Matches text color */
-  --btn-backtotop-border-color: #21262d; /* Matches main border */
-  --card-header-bg: #161b22; /* Consistent dark gray for card headers */
-  --checkbox-color: #6e7681; /* Muted gray for checkboxes */
-  --checkbox-checked-color: var(--link-color); /* Blue for checked state */
-  --img-bg: radial-gradient(circle, #0d1117 0%, #161b22 100%); /* Darker gradient for images */
+  /* Common color - Warm paper tones */
+  --text-color: #f0f0f2; /* Soft paper white */
+  --text-muted-color: #b4b4b8; /* Warm gray ink */
+  --text-muted-highlight-color: #c8c8cc; /* Light gray ink */
+  --heading-color: #f8f8fa; /* Pure paper white */
+  --label-color: #c8c8cc; /* Light gray labels */
+  --blockquote-border-color: #4a4a50; /* Medium gray border */
+  --blockquote-text-color: #b4b4b8; /* Muted gray text */
+  --link-color: #7c9dd9; /* Soft paper blue */
+  --link-underline-color: #5a7bc2; /* Deeper blue underline */
+  --button-bg: #2a2a2f; /* Same as mask-bg */
+  --btn-border-color: #4a4a50; /* Medium gray borders */
+  --btn-backtotop-color: var(--text-color);
+  --btn-backtotop-border-color: #8ab61b;
+  --card-header-bg: #2a2a2f; /* Same as card background */
+  --card-bg: #2a2a2f; /* Medium gray paper for cards */
+  --checkbox-color: #7a7a7f; /* Neutral gray */
+  --checkbox-checked-color: #8b9dc3; /* Soft blue accent */
+  --img-bg: radial-gradient(circle, #1f1f23 0%, #2a2a2f 100%); /* Paper gradient */
   --shimmer-bg: linear-gradient(
     90deg,
     rgb(255 255 255 / 0%) 0%,
-    rgb(88 166 255 / 20%) 50%, /* Subtle blue shimmer */
+    rgb(139 157 195 / 15%) 50%, /* Soft blue shimmer */
     rgb(255 255 255 / 0%) 100%
   );
 
-  /* Sidebar */
-  --site-title-color: #ffffff; /* Alb perfect pentru modul dark */
-  --site-subtitle-color: #8b949e; /* Muted for subtitle */
-  --sidebar-bg: #0d1117; /* Matches main background */
-  --sidebar-border-color: #21262d; /* Consistent border color */
-  --sidebar-muted-color: #8b949e; /* Muted for sidebar text */
-  --sidebar-active-color: #ffffff; /* Bright white for active states */
-  --sidebar-hover-bg: #161b22; /* Slightly lighter hover state */
-  --sidebar-btn-bg: #21262d; /* Dark gray for sidebar buttons */
-  --sidebar-btn-color: #8b949e; /* Muted button text */
-  --avatar-border-color: rgb(201 209 217 / 90%); /* Light gray for avatar borders */
+  /* Sidebar - Paper theme */
+  --site-title-color: #f8f8fa; /* Pure paper white */
+  --site-subtitle-color: #b4b4b8; /* Warm gray */
+  --sidebar-bg: #1a1a1e; /* Darker paper */
+  --sidebar-border-color: #3a3a40; /* Gray borders */
+  --sidebar-muted-color: #b4b4b8;
+  --sidebar-active-color: #8b9dc3; /* Soft blue active */
+  --sidebar-hover-bg: #2a2a2f; /* Same as cards */
+  --sidebar-btn-bg: #4a4a50; /* Medium gray buttons */
+  --sidebar-btn-color: #c8c8cc; /* Light gray text */
+  --avatar-border-color: rgb(139 157 195 / 60%); /* Soft blue glow */
 
-  /* Topbar */
-  --topbar-bg: rgb(13 17 23 / 80%); /* Semi-transparent deep black */
-  --topbar-text-color: var(--text-color); /* Matches body text */
-  --search-border-color: #30363d; /* Dark gray for search borders */
-  --search-icon-color: #6e7681; /* Muted gray for icons */
-  --input-focus-border-color: #58a6ff; /* Blue for focused inputs */
+  /* Topbar - SAME as card background */
+  --topbar-bg: #1f1f23; /* EXACT same as card-bg */
+  --topbar-text-color: var(--text-color);
+  --search-border-color: #4a4a50;
+  --search-icon-color: #7a7a7f;
+  --input-focus-border-color: #8b9dc3; /* Soft blue focus */
 
   /* Home page */
-  --post-list-text-color: #c9d1d9; /* Light gray for post lists */
-  --btn-patinator-text-color: var(--text-color); /* Matches text color */
-  --btn-paginator-hover-color: #21262d; /* Dark gray for hover */
+  --post-list-text-color: #f0f0f2;
+  --btn-patinator-text-color: var(--text-color);
+  --btn-paginator-hover-color: #4a4a50;
 
-  /* Posts */
-  --toc-highlight: #58a6ff; /* Blue for table of contents highlights */
-  --toc-popup-border-color: #30363d; /* Dark gray for TOC borders */
-  --tag-hover: #21262d; /* Dark gray for tag hovers */
-  --tb-odd-bg: #161b22; /* Dark gray for odd table rows */
-  --tb-even-bg: #0d1117; /* Deeper black for even rows */
-  --tb-border-color: var(--tb-odd-bg); /* Matches odd rows */
-  --footnote-target-bg: #1f6feb; /* Darker blue for footnote highlights */
-  --btn-share-color: #6e7681; /* Muted gray for share buttons */
-  --btn-share-hover-color: #c9d1d9; /* Light gray for hover */
-  --card-bg: #161b22; /* Dark gray for cards */
-  --card-hover-bg: #21262d; /* Slightly lighter for hover */
-  --card-shadow: rgb(0 0 0 / 50%) 0 6px 18px 0,
-    rgb(201 209 217 / 20%) 0 0 0 1px; /* Darker shadow */
+  /* Posts - Paper harmony */
+  --toc-highlight: #8b9dc3; /* Soft blue highlights */
+  --toc-popup-border-color: #4a4a50;
+  --tag-hover: #2a2a2f;
+  --tb-odd-bg: #2a2a2f; /* Same as cards */
+  --tb-even-bg: #1f1f23; /* Main background alternating */
+  --tb-border-color: var(--tb-odd-bg);
+  --footnote-target-bg: #5a7bc2; /* Blue footnotes */
+  --btn-share-color: #7a7a7f;
+  --btn-share-hover-color: #8b9dc3; /* Soft blue hover */
+  --card-hover-bg: #3a3a40; /* Light gray hover */
+  --card-shadow: rgb(0 0 0 / 35%) 0 4px 16px 0,
+    rgb(139 157 195 / 6%) 0 0 0 1px; /* Subtle blue glow */
 
-  --kbd-wrap-color: #6e7681; /* Muted gray for keyboard input wrap */
-  --kbd-text-color: #e6edf3; /* Near-white for keyboard text */
-  --kbd-bg-color: #0d1117; /* Matches main background */
-  --prompt-text-color: rgb(201 209 217 / 75%); /* Muted light gray */
-  --prompt-tip-bg: rgb(22 101 52 / 70%); /* Dark green for tips */
-  --prompt-tip-icon-color: #22c55e; /* Bright green for icons */
-  --prompt-info-bg: rgb(29 78 216 / 70%); /* Dark blue for info */
-  --prompt-info-icon-color: #3b82f6; /* Bright blue for icons */
-  --prompt-warning-bg: rgb(124 45 18 / 70%); /* Dark orange for warnings */
-  --prompt-warning-icon-color: #f97316; /* Bright orange for icons */
-  --prompt-danger-bg: rgb(153 27 27 / 70%); /* Dark red for danger */
-  --prompt-danger-icon-color: #ef4444; /* Bright red for icons */
+  --kbd-wrap-color: #7a7a7f;
+  --kbd-text-color: #f8f8fa;
+  --kbd-bg-color: #1a1a1e;
+  --prompt-text-color: rgb(240 240 242 / 85%);
+  --prompt-tip-bg: rgb(34 139 69 / 65%); /* Muted green tips */
+  --prompt-tip-icon-color: #4ade80; /* Soft green */
+  --prompt-info-bg: rgb(90 123 194 / 65%); /* Soft blue info */
+  --prompt-info-icon-color: #7c9dd9; /* Paper blue */
+  --prompt-warning-bg: rgb(202 138 4 / 65%); /* Muted gold warnings */
+  --prompt-warning-icon-color: #fbbf24; /* Soft gold */
+  --prompt-danger-bg: rgb(185 28 28 / 65%); /* Muted red danger */
+  --prompt-danger-icon-color: #f87171; /* Soft red */
 
-  /* Tags */
-  --tag-border: #30363d; /* Dark gray for tag borders */
-  --tag-shadow: #0d1117; /* Matches main background */
-  --dash-color: #6e7681; /* Muted gray for dashes */
-  --search-tag-bg: #161b22; /* Dark gray for search tags */
+  /* Tags - Paper tones */
+  --tag-border: #4a4a50;
+  --tag-shadow: #1a1a1e;
+  --dash-color: #7a7a7f;
+  --search-tag-bg: #2a2a2f;
 
   /* Categories */
-  --categories-border: rgb(48 54 61 / 50%); /* Semi-transparent gray */
-  --categories-hover-bg: #21262d; /* Dark gray for hover */
-  --categories-icon-hover-color: #ffffff; /* White for icon hovers */
+  --categories-border: rgb(74 74 80 / 35%);
+  --categories-hover-bg: #2a2a2f;
+  --categories-icon-hover-color: #8b9dc3; /* Soft blue icon hover */
 
   /* Archive */
-  --timeline-node-bg: #6e7681; /* Muted gray for timeline nodes */
-  --timeline-color: #30363d; /* Dark gray for timeline */
-  --timeline-year-dot-color: var(--timeline-color); /* Matches timeline */
+  --timeline-node-bg: #7a7a7f;
+  --timeline-color: #4a4a50;
+  --timeline-year-dot-color: var(--timeline-color);
 
-  /* Code highlight colors */
-  --language-border-color: #21262d; /* Dark gray for code borders */
-  --highlight-bg-color: #0d1117; /* Deep black for code background */
-  --highlighter-rouge-color: #c9d1d9; /* Light gray for code text */
-  --highlight-lineno-color: #6e7681; /* Muted gray for line numbers */
-  --inline-code-bg: rgb(255 255 255 / 5%); /* Subtle white for inline code */
-  --code-color: #c9d1d9; /* Light gray for code */
-  --code-header-text-color: #8b949e; /* Muted gray for code headers */
-  --code-header-muted-color: #21262d; /* Dark gray for muted headers */
-  --code-header-icon-color: #6e7681; /* Muted gray for icons */
-  --clipboard-checked-color: #22c55e; /* Green for clipboard check */
-  --filepath-text-color: #c9d1d9; /* Light gray for file paths */
+  /* Code highlight colors - Paper manuscript palette */
+  --language-border-color: #4a4a50;
+  --highlight-bg-color: #1a1a1e; /* Dark paper code background */
+  --highlighter-rouge-color: #f0f0f2;
+  --highlight-lineno-color: #7a7a7f;
+  --inline-code-bg: rgb(139 157 195 / 8%); /* Soft blue tint */
+  --code-color: #f0f0f2;
+  --code-header-text-color: #b4b4b8;
+  --code-header-muted-color: #4a4a50;
+  --code-header-icon-color: #7a7a7f;
+  --clipboard-checked-color: #4ade80; /* Soft green success */
+  --filepath-text-color: #c8c8cc;
 
   .light {
     display: none;
@@ -142,11 +142,11 @@
   #archives li:nth-child(odd) {
     background-image: linear-gradient(
       to left,
-      #0d1117,
-      #161b22,
-      #161b22,
-      #161b22,
-      #0d1117
+      #1a1a1e,
+      #2a2a2f,
+      #3a3a40,
+      #2a2a2f,
+      #1a1a1e
     );
   }
 
@@ -155,9 +155,9 @@
     color-scheme: none;
   }
 
-  /* --- Syntax highlight theme --- */
+  /* --- Paper Manuscript Syntax highlight theme --- */
   .highlight .gp {
-    color: #8b949e; /* Muted gray for prompt */
+    color: #b4b4b8; /* Warm gray prompt */
   }
 
   .highlight table td {
@@ -170,13 +170,13 @@
 
   .highlight,
   .highlight .w {
-    color: #c9d1d9;
-    background-color: #0d1117;
+    color: #f0f0f2;
+    background-color: #1a1a1e;
   }
 
   .highlight .err {
-    color: #0d1117;
-    background-color: #f85149; /* Bright red for errors */
+    color: #fef2f2;
+    background-color: #dc2626; /* Soft red error */
   }
 
   .highlight .c,
@@ -186,39 +186,41 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #8b949e; /* Muted gray for comments */
+    color: #9ca3af; /* Medium gray comments */
+    font-style: italic;
   }
 
   .highlight .cp {
-    color: #e6b800; /* Yellow for preprocessor */
+    color: #d1d5db; /* Light gray preprocessor */
   }
 
   .highlight .nt {
-    color: #e6b800; /* Yellow for tags */
+    color: #8b9dc3; /* Soft blue tags */
   }
 
   .highlight .o,
   .highlight .ow {
-    color: #c9d1d9; /* Light gray for operators */
+    color: #c8c8cc; /* Light gray operators */
   }
 
   .highlight .p,
   .highlight .pi {
-    color: #c9d1d9; /* Light gray for punctuation */
+    color: #c8c8cc; /* Light gray punctuation */
   }
 
   .highlight .gi {
-    color: #22c55e; /* Green for insertions */
+    color: #6ee7b7; /* Soft green insertions */
+    background-color: rgb(34 139 69 / 10%);
   }
 
   .highlight .gd {
-    color: #f85149; /* Red for deletions */
-    background-color: #2d0000; /* Dark red background */
+    color: #fca5a5; /* Soft red deletions */
+    background-color: rgb(185 28 28 / 10%);
   }
 
   .highlight .gh {
-    color: #58a6ff; /* Blue for headers */
-    background-color: #0d1117;
+    color: #8b9dc3; /* Soft blue headers */
+    background-color: #1a1a1e;
     font-weight: bold;
   }
 
@@ -227,19 +229,20 @@
   .highlight .kp,
   .highlight .kr,
   .highlight .kv {
-    color: #d3869b; /* Soft pink for keywords */
+    color: #a5b4fc; /* Light purple keywords */
+    font-weight: 500;
   }
 
   .highlight .kc {
-    color: #e6b800; /* Yellow for constants */
+    color: #fde68a; /* Soft yellow constants */
   }
 
   .highlight .kt {
-    color: #e6b800; /* Yellow for types */
+    color: #7dd3fc; /* Light blue types */
   }
 
   .highlight .kd {
-    color: #e6b800; /* Yellow for declarations */
+    color: #a5b4fc; /* Light purple declarations */
   }
 
   .highlight .s,
@@ -251,39 +254,39 @@
   .highlight .sh,
   .highlight .sx,
   .highlight .s1 {
-    color: #22c55e; /* Green for strings */
+    color: #86efac; /* Soft green strings */
   }
 
   .highlight .sa {
-    color: #d3869b; /* Pink for string attributes */
+    color: #fde68a; /* Soft yellow string attributes */
   }
 
   .highlight .sr {
-    color: #2dd4bf; /* Teal for regex */
+    color: #7dd3fc; /* Light blue regex */
   }
 
   .highlight .si {
-    color: #e6b800; /* Yellow for interpolation */
+    color: #fde68a; /* Soft yellow interpolation */
   }
 
   .highlight .se {
-    color: #e6b800; /* Yellow for escapes */
+    color: #fed7aa; /* Soft orange escapes */
   }
 
   .highlight .nn {
-    color: #e6b800; /* Yellow for names */
+    color: #7dd3fc; /* Light blue namespaces */
   }
 
   .highlight .nc {
-    color: #e6b800; /* Yellow for class names */
+    color: #8b9dc3; /* Soft blue classes */
   }
 
   .highlight .no {
-    color: #e6b800; /* Yellow for constants */
+    color: #fde68a; /* Soft yellow constants */
   }
 
   .highlight .na {
-    color: #58a6ff; /* Blue for attributes */
+    color: #8b9dc3; /* Soft blue attributes */
   }
 
   .highlight .m,
@@ -294,10 +297,10 @@
   .highlight .il,
   .highlight .mo,
   .highlight .mx {
-    color: #22c55e; /* Green for numbers */
+    color: #fed7aa; /* Soft orange numbers */
   }
 
   .highlight .ss {
-    color: #22c55e; /* Green for symbols */
+    color: #86efac; /* Soft green symbols */
   }
 }

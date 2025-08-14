@@ -2,107 +2,106 @@
   color-scheme: dark;
 
   /* Framework color */
-  --main-bg: rgb(24, 24, 37);
-  --mask-bg: rgb(69, 71, 90);
-  --main-border-color: rgb(69, 71, 90);
+  --main-bg: rgb(24 24 37);
+  --mask-bg: rgb(69 71 90);
+  --main-border-color: rgb(69 71 90);
 
   /* Common color */
-  --text-color: rgb(205, 214, 244);
-  --text-muted-color: rgb(186, 194, 222);
-  --text-muted-highlight-color: rgb(170, 190, 255); /* replaced pink */
-  --heading-color: rgb(116, 199, 236);
-  --label-color: rgb(180, 190, 254);
-  --blockquote-border-color: rgb(69, 71, 90);
-  --blockquote-text-color: rgb(186, 194, 222);
-  --link-color: rgb(137, 180, 250);
-  --link-underline-color: rgb(137, 180, 250);
-  --button-bg: rgb(69, 71, 90);
-  --btn-border-color: rgb(69, 71, 90);
+  --text-color: rgb(205 214 244);
+  --text-muted-color: rgb(186 194 222);
+  --text-muted-highlight-color: rgb(170 190 255); /* replaced pink */
+  --heading-color: rgb(116 199 236);
+  --label-color: rgb(180 190 254);
+  --blockquote-border-color: rgb(69 71 90);
+  --blockquote-text-color: rgb(186 194 222);
+  --link-color: rgb(137 180 250);
+  --link-underline-color: rgb(137 180 250);
+  --button-bg: rgb(69 71 90);
+  --btn-border-color: rgb(69 71 90);
   --btn-backtotop-color: var(--text-color);
-  --btn-backtotop-border-color: rgb(69, 71, 90);
-  --card-header-bg: rgb(49, 50, 68);
-  --card-bg: rgb(30, 30, 46);
-  --checkbox-color: rgb(235, 160, 172);
+  --btn-backtotop-border-color: rgb(69 71 90);
+  --card-header-bg: rgb(49 50 68);
+  --card-bg: rgb(30 30 46);
+  --checkbox-color: rgb(235 160 172);
   --checkbox-checked-color: var(--link-color);
-  --img-bg: radial-gradient(circle, rgb(17, 17, 27) 0%, rgb(24, 24, 37) 100%);
-  --shimmer-bg: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(58, 55, 55, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+  --img-bg: radial-gradient(circle, rgb(17 17 27) 0%, rgb(24 24 37) 100%);
+  --shimmer-bg: linear-gradient(90deg, rgb(255 255 255 / 0%) 0%, rgb(58 55 55 / 40%) 50%, rgb(255 255 255 / 0%) 100%);
 
   /* Sidebar */
   --site-title-color: var(--text-color);
-  --site-subtitle-color: rgb(186, 194, 222);
-  --sidebar-bg: rgb(30, 30, 46);
-  --sidebar-border-color: rgb(69, 71, 90);
-  --sidebar-muted-color: rgb(166, 173, 200);
-  --sidebar-active-color: rgb(250, 179, 135);
-  --sidebar-hover-bg: rgb(17, 17, 27);
-  --sidebar-btn-bg: rgb(30, 30, 46);
-  --sidebar-btn-color: rgb(166, 173, 200);
-  --avatar-border-color: rgb(69, 71, 90);
+  --site-subtitle-color: rgb(186 194 222);
+  --sidebar-bg: rgb(30 30 46);
+  --sidebar-border-color: rgb(69 71 90);
+  --sidebar-muted-color: rgb(166 173 200);
+  --sidebar-active-color: rgb(250 179 135);
+  --sidebar-hover-bg: rgb(17 17 27);
+  --sidebar-btn-bg: rgb(30 30 46);
+  --sidebar-btn-color: rgb(166 173 200);
+  --avatar-border-color: rgb(69 71 90);
 
   /* Topbar */
-  --topbar-bg: rgba(24, 24, 37, 0.64);
+  --topbar-bg: rgb(24 24 37 / 64%);
   --topbar-text-color: var(--text-color);
-  --search-border-color: rgb(69, 71, 90);
+  --search-border-color: rgb(69 71 90);
   --search-icon-color: var(--text-color);
-  --input-focus-border-color: rgb(250, 180, 100); /* replaced orange */
+  --input-focus-border-color: rgb(250 180 100); /* replaced orange */
 
   /* Home page */
   --post-list-text-color: var(--text-color);
   --btn-patinator-text-color: var(--text-color);
-  --btn-paginator-hover-color: rgb(91, 114, 186); /* replaced pink */
+  --btn-paginator-hover-color: rgb(91 114 186); /* replaced pink */
 
   /* Posts */
-  --toc-highlight: rgb(166, 227, 161);
-  --tag-hover: rgb(17, 17, 27);
-  --tb-odd-bg: rgb(30, 30, 46);
-  --tb-even-bg: rgb(31, 31, 34);
+  --toc-highlight: rgb(166 227 161);
+  --tag-hover: rgb(17 17 27);
+  --tb-odd-bg: rgb(30 30 46);
+  --tb-even-bg: rgb(31 31 34);
   --tb-border-color: var(--tb-odd-bg);
-  --footnote-target-bg: rgb(63, 81, 181);
+  --footnote-target-bg: rgb(63 81 181);
   --btn-share-color: var(--text-color);
-  --btn-share-hover-color: rgb(250, 180, 100); /* replaced orange */
-  --card-hover-bg: rgb(49, 50, 68);
+  --btn-share-hover-color: rgb(250 180 100); /* replaced orange */
+  --card-hover-bg: rgb(49 50 68);
   --card-shadow: rgb(0 0 0 / 35%) 0 4px 16px 0,
     rgb(137 180, 250 / 6%) 0 0 0 1px;
-
-  --kbd-wrap-color: rgb(166, 173, 200);
+  --kbd-wrap-color: rgb(166 173 200);
   --kbd-text-color: var(--text-color);
-  --kbd-bg-color: rgb(30, 30, 46);
+  --kbd-bg-color: rgb(30 30 46);
   --prompt-text-color: rgb(240 240 242 / 85%);
-  --prompt-tip-bg: rgba(34, 139, 69, 0.65);
-  --prompt-tip-icon-color: rgb(74, 222, 128);
-  --prompt-info-bg: rgba(90, 123, 194, 0.65);
-  --prompt-info-icon-color: rgb(124, 157, 217);
-  --prompt-warning-bg: rgba(255, 180, 100, 0.65); /* replaced orange */
-  --prompt-warning-icon-color: rgb(255, 180, 100); /* replaced orange */
-  --prompt-danger-bg: rgba(185, 28, 28, 0.65);
-  --prompt-danger-icon-color: rgb(248, 113, 113);
+  --prompt-tip-bg: rgb(34 139 69 / 65%);
+  --prompt-tip-icon-color: rgb(74 222 128);
+  --prompt-info-bg: rgb(90 123 194 / 65%);
+  --prompt-info-icon-color: rgb(124 157 217);
+  --prompt-warning-bg: rgb(255 180 100 / 65%); /* replaced orange */
+  --prompt-warning-icon-color: rgb(255 180 100); /* replaced orange */
+  --prompt-danger-bg: rgb(185 28 28 / 65%);
+  --prompt-danger-icon-color: rgb(248 113 113);
 
   /* Tags & Categories */
-  --tag-border: rgb(69, 71, 90);
-  --tag-shadow: rgb(30, 30, 46);
-  --dash-color: rgb(166, 173, 200);
-  --search-tag-bg: rgb(30, 30, 46);
-  --categories-border: rgba(74, 74, 80, 0.35);
-  --categories-hover-bg: rgb(30, 30, 46);
-  --categories-icon-hover-color: rgb(250, 180, 100);
+  --tag-border: rgb(69 71 90);
+  --tag-shadow: rgb(30 30 46);
+  --dash-color: rgb(166 173 200);
+  --search-tag-bg: rgb(30 30 46);
+  --categories-border: rgb(74 74 80 / 35%);
+  --categories-hover-bg: rgb(30 30 46);
+  --categories-icon-hover-color: rgb(250 180 100);
 
   /* Archive */
-  --timeline-node-bg: rgb(166, 173, 200);
-  --timeline-color: rgb(69, 71, 90);
+  --timeline-node-bg: rgb(166 173 200);
+  --timeline-color: rgb(69 71 90);
   --timeline-year-dot-color: var(--timeline-color);
 
   /* Code highlight */
-  --language-border-color: rgb(69, 71, 90);
-  --highlight-bg-color: rgb(17, 17, 27);
-  --highlighter-rouge-color: rgb(255, 180, 100); /* replaced orange */
-  --highlight-lineno-color: rgb(166, 173, 200);
-  --inline-code-bg: rgb(30, 30, 46);
-  --code-color: rgb(205, 214, 244);
-  --code-header-text-color: rgb(255, 180, 100); /* replaced orange */
-  --code-header-muted-color: rgb(255, 180, 100);
-  --code-header-icon-color: rgb(255, 180, 100);
-  --clipboard-checked-color: rgb(170, 190, 255); /* replaced pink */
-  --filepath-text-color: rgb(170, 190, 255);
+  --language-border-color: rgb(69 71 90);
+  --highlight-bg-color: rgb(17 17 27);
+  --highlighter-rouge-color: rgb(255 180 100); /* replaced orange */
+  --highlight-lineno-color: rgb(166 173 200);
+  --inline-code-bg: rgb(30 30 46);
+  --code-color: rgb(205 214 244);
+  --code-header-text-color: rgb(255 180 100); /* replaced orange */
+  --code-header-muted-color: rgb(255 180 100);
+  --code-header-icon-color: rgb(255 180 100);
+  --clipboard-checked-color: rgb(170 190 255); /* replaced pink */
+  --filepath-text-color: rgb(170 190 255);
 
   .light {
     display: none;

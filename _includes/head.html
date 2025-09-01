@@ -50,12 +50,13 @@
 
   {{ seo_tags }}
 
-  <title>
-    {%- unless page.layout == 'home' -%}
-      {{ page.title | append: ' | ' }}
-    {%- endunless -%}
-    {{ site.title }}
-  </title>
+<title>
+  {%- if page.layout == 'home' -%}
+    {{ site.title }} - Insights from my tech journey
+  {%- else -%}
+    {{ page.title | append: ' | ' }}{{ site.title }}
+  {%- endif -%}
+</title>
 
   {% include_cached favicons.html %}
 

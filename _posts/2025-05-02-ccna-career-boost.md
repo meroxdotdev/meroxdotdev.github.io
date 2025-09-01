@@ -51,12 +51,12 @@ The exams at Savnet were challenging practical exercises, often more complex tha
 
 ### Lab Gallery
 
-![M1 Exam](/assets/img/posts/savnet-m1-exam.webp){: width="300" height="200" .left}
-![Final CCNA Project Module 3](/assets/img/posts/final-project-module3.webp){: width="300" height="200" .left}
-![First Cisco Lab in GNS3](/assets/img/posts/lab1.webp){: width="300" height="200" .left}
+![M1 Exam](/assets/img/posts/savnet-m1-exam.webp)
+![Final CCNA Project Module 3](/assets/img/posts/final-project-module3.webp)
+![First Cisco Lab in GNS3](/assets/img/posts/lab1.webp)
 
-![Random EVE-NG Topology](/assets/img/posts/random-eve-ng.webp){: width="300" height="200" .left}
-![Module 4 CCNA Topology](/assets/img/posts/module-4-ccna.webp){: width="300" height="200" .left}
+![Random EVE-NG Topology](/assets/img/posts/random-eve-ng.webp)
+![Module 4 CCNA Topology](/assets/img/posts/module-4-ccna.webp)
 
 ## Certification Day
 

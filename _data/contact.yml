@@ -3,9 +3,9 @@
 - type: github
   icon: "fab fa-github"
 
--  type: reddit
-   icon: 'fa-brands fa-reddit'
-   url: 'https://www.reddit.com/user/merox57/'                
+#-  type: reddit
+#   icon: 'fa-brands fa-reddit'
+#   url: 'https://www.reddit.com/user/merox57/'                
 
 - type: linkedin
   icon: "fab fa-linkedin"

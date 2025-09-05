@@ -3,7 +3,7 @@ title: "Inside Google's Offices"
 date: 2025-03-17 10:00:00 +0200
 categories: [tech-culture]
 #tags: [google, work-environment, innovation, warsaw, office-tour, tech-culture]
-description: A deep dive into Google's Warsaw HUB, exploring its work culture, amenities, and high-tech environment.
+description: A deep dive into Google's Warsaw HUB, exploring its work culture, amenities, and high-tech environment. During my business trip to Warsaw, I had the unique opportunity to visit Google's impressive offices
 image:
   path: /assets/img/posts/google-warsaw-hub-banner.webp
   alt: Google Warsaw HUB Office Tour
@@ -14,7 +14,7 @@ _The reception area of Google's Warsaw HUB_
 
 *Source: [Google Warsaw HUB Reception Image](https://bi.im-g.pl/im/f9/72/1a/z27730169IEG,Hol-wejsciowy-w-wiezowcu-The-Warsaw-Hub-przy-Towar.jpg). The image is external, as I forgot to take a photo of the reception myself.*
 
-During my business trip to Warsaw, I had the unique opportunity to visit Google's impressive offices. Here's an inside look at their workspace, from panoramic views to relaxation zones.
+Here's an inside look at their workspace, from panoramic views to relaxation zones.
 
 ## A Business Trip Turned Into a Tech Adventure
 

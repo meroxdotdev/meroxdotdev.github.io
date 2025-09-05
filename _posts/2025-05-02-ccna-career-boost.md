@@ -5,7 +5,7 @@ categories: [career]
 #tags: [ccna, networking, professional-development, cisco, cybersecurity, career-growth]
 description: Follow my complete journey from networking beginner to CCNA certified professional - including study methods, practical labs, challenges, and how this certification opened doors to cybersecurity opportunities.
 image:
-  path: /assets/img/posts/ccna-journey-banner.webp
+  path: /assets/img/posts/ccnacareer.webp
   alt: CCNA Certification Journey
 ---
 

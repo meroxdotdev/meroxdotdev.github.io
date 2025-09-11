@@ -1,23 +1,23 @@
 ---
-title: "Restoring from Longhorn Backups: A Complete Guide"
+title: "Restoring from Longhorn Backups"
 date: 2025-09-11 14:30:00 +0300
-categories: [kubernetes, disaster-recovery]
+categories: [infrastructure]
 #tags: [kubernetes,longhorn,backup,restore,disaster-recovery,k8s,storage,minio,prometheus,grafana,jellyfin,flux,gitops]
-description: Complete step-by-step guide to restoring Kubernetes applications from Longhorn backups stored in MinIO, including scaling strategies, PVC management, and real-world lessons learned.
+description: Oops, My App Died! The Complete Human's Guide to Rescuing Kubernetes Applications from Longhorn Backups in MinIO
 image:
   path: /assets/img/posts/k8s-longhorn-restore.webp
   alt: Kubernetes Longhorn backup restoration guide
-draft: true
+draft: false
 ---
 
 
-# Restoring Your Kubernetes Applications from Longhorn Backups: A Complete Guide
+# Restoring Your Kubernetes Applications from Longhorn Backups
 
-When disaster strikes your Kubernetes cluster, having a solid backup strategy isn't enough—you need to know how to restore your applications quickly and reliably. Recently, I had to rebuild my entire K8S cluster from scratch and restore all my applications from 3-month-old Longhorn backups stored in MinIO. Here's the complete step-by-step process that got my media stack and observability tools back online.
+When disaster strikes your Kubernetes cluster, having a solid backup strategy isn't enough—you need to know how to restore your applications quickly and reliably. Recently, I had to rebuild my entire K8S cluster from scratch and restore all my applications from Longhorn backups stored in MinIO. Here's the complete process that got my media stack and observability tools back online.
 
 ## The Situation
 
-After redeploying my K8S cluster with Flux GitOps, I found myself with:
+After redeploying my K8S cluster with [Flux GitOps](https://merox.dev/blog/homelab-tour/), I found myself with:
 - ✅ Fresh cluster with all applications deployed via Flux
 - ✅ Longhorn storage configured and connected to MinIO backend
 - ✅ All backup data visible in Longhorn UI
@@ -42,7 +42,7 @@ Before starting, ensure you have:
 - Kubernetes cluster with kubectl access
 - Longhorn installed and configured
 - Backup storage backend accessible (MinIO/S3)
-- Applications deployed (scaled up or down doesn't matter)
+- Applications deployed (scaled up or down doesn't really matter)
 - Longhorn UI access for backup management
 
 ## Step 1: Assess Current State
@@ -128,7 +128,7 @@ For each backup, click the **⟲ (restore)** button and configure:
 Once restoration completes, the restored Longhorn volumes need PersistentVolumes to be accessible by Kubernetes:
 
 ```yaml
-# Example for Jellyfin - repeat for all applications
+# Example for Jellyfin - repeat for all applications you want to be restored
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -222,25 +222,6 @@ kubectl get pods -n default -o wide
 kubectl get pods -n observability -o wide
 ```
 
-## Results and Key Lessons
-
-### What Was Restored Successfully ✅
-- **Jellyfin**: Complete media library, metadata, and user settings
-- **Grafana**: All dashboards, data sources, and alerting rules
-- **Prometheus**: Historical metrics and configuration
-- **Loki**: Log retention policies and stored logs
-- **QBittorrent**: Torrent configurations and download states
-- **Sonarr**: TV show monitoring and quality profiles
-
-### Important Considerations
-
-1. **Data Age**: My backups were 3 months old, so any data created after that point was lost. Plan backup frequency accordingly.
-
-2. **Storage Sizes**: Pay attention to backup sizes vs. current PVC sizes. My Prometheus backup was 45GB while the current PVC was only 15GB—the restore process required updating the PVC size.
-
-3. **Volume Naming**: Longhorn creates restored volumes with specific names. The PV `volumeHandle` must match exactly.
-
-4. **Application Dependencies**: Some applications have interdependencies. Restore core infrastructure (Prometheus, Grafana) before application-specific services.
 
 ## Alternative: CLI-Based Restoration
 
@@ -260,23 +241,9 @@ spec:
 
 ## Conclusion
 
-Restoring Kubernetes applications from Longhorn backups requires careful orchestration of scaling, PVC management, and volume binding. The process took about 45 minutes for 6 applications, but the result was a complete restoration to the previous backup state.
-
-Key takeaways:
-- **Always scale down applications first** to prevent corruption
-- **Understand the relationship** between Longhorn volumes, PVs, and PVCs
-- **Test your backup restoration process** before you need it
-- **Document your PVC naming conventions** for faster recovery
-- **Monitor backup age** vs. acceptable data loss
+Restoring Kubernetes applications from Longhorn backups requires careful orchestration of scaling, PVC management, and volume binding. The process took about 30 minutes for 6 applications, but the result was a complete restoration to the previous backup state.
 
 Having a solid backup strategy is crucial, but knowing how to restore efficiently under pressure is what separates good infrastructure management from great infrastructure management.
 
-## Next Steps
 
-Consider implementing:
-- **Automated backup validation** to ensure restorability
-- **Backup age monitoring** with alerts
-- **Documentation of critical PVC mappings**
-- **Regular disaster recovery drills**
-
-Your future self will thank you when disaster strikes again.
+Your future self will thank you when disaster strikes again. 😆

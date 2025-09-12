@@ -16,7 +16,7 @@ timezone: Europe/Bucharest
 
 title: Merox # the main title
 
-tagline: Insights from my tech journey—homelab to real-world IT. # it will display as the subtitle
+tagline: Geek. Curious. Thinker. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   System Administrator with cybersecurity background and expertise in Linux, Networking, and Security. I focus on practical solutions and sharing knowledge gained through hands-on experience in enterprise environments.

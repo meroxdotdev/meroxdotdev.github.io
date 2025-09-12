@@ -3,7 +3,7 @@ title: "Restoring from Longhorn Backups"
 date: 2025-09-11 14:30:00 +0300
 categories: [infrastructure]
 #tags: [kubernetes,longhorn,backup,restore,disaster-recovery,k8s,storage,minio,prometheus,grafana,jellyfin,flux,gitops]
-description: Oops, My App Died! The Complete Human's Guide to Rescuing Kubernetes Applications from Longhorn Backups in MinIO
+description: Oops, My App Died! The Complete Guide to Rescuing Kubernetes Applications from Longhorn Backups in MinIO
 image:
   path: /assets/img/posts/k8s-longhorn-restore.webp
   alt: Kubernetes Longhorn backup restoration guide

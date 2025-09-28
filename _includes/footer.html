@@ -1,14 +1,35 @@
 <!-- The Footer -->
+<!-- Bitcoin address bar -->
+<style>
+:root {
+    --btc-bg: #1a1d23;
+    --btc-text: #f7931e;
+    --btc-secondary: #6e7681;
+    --btc-border: #2a2e35;
+    --btc-shadow: rgba(0,0,0,0.1);
+}
+
+[data-mode="light"] {
+    --btc-bg: #ffffff;
+    --btc-text: #f7931e;
+    --btc-secondary: #6c757d;
+    --btc-border: #e9ecef;
+    --btc-shadow: rgba(0,0,0,0.15);
+}
+</style>
+
 <center>
-<span style="display:inline-flex; align-items:center; background:#1a1d23; color:#f7931e; padding:6px 14px; border-radius:25px; font-family:system-ui, -apple-system, sans-serif; font-size:11px; border:1px solid #2a2e35; box-shadow:0 2px 10px rgba(0,0,0,0.1); gap:8px;">
+<span style="display:inline-flex; align-items:center; background:var(--btc-bg); color:var(--btc-text); padding:6px 14px; border-radius:25px; font-family:system-ui, -apple-system, sans-serif; font-size:11px; border:1px solid var(--btc-border); box-shadow:0 2px 10px var(--btc-shadow); gap:8px;">
     <span style="font-size:12px; opacity:0.9;">₿</span>
-    <span style="color:#6e7681; font-size:10px; font-weight:500;">bc1q8dnj5cmzzc7nhn4adttcpycxxk4f2f3rknq6t4</span>
+    <span style="color:var(--btc-secondary); font-size:10px; font-weight:500;">bc1q8dnj5cmzzc7nhn4adttcpycxxk4f2f3rknq6t4</span>
     <button onclick="navigator.clipboard.writeText('bc1q8dnj5cmzzc7nhn4adttcpycxxk4f2f3rknq6t4')" 
-            style="background:none; color:#f7931e; border:1px solid #f7931e; padding:2px 8px; border-radius:12px; font-size:9px; cursor:pointer; transition:all 0.2s ease; font-weight:500;" 
-            onmouseover="this.style.background='#f7931e'; this.style.color='#000'" 
-            onmouseout="this.style.background='none'; this.style.color='#f7931e'">Copy</button>
+            style="background:none; color:var(--btc-text); border:1px solid var(--btc-text); padding:2px 8px; border-radius:12px; font-size:9px; cursor:pointer; transition:all 0.2s ease; font-weight:500;" 
+            onmouseover="this.style.background='var(--btc-text)'; this.style.color='var(--btc-bg)'" 
+            onmouseout="this.style.background='none'; this.style.color='var(--btc-text)'">Copy</button>
 </span>
 </center>
+<!-- end bitcoin -->
+
 <footer
   aria-label="Site Info"
   class="

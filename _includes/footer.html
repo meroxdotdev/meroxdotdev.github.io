@@ -1,32 +1,87 @@
 <!-- The Footer -->
 <!-- Bitcoin address bar -->
 <style>
-:root {
-    --btc-bg: #1a1d23;
-    --btc-text: #f7931e;
-    --btc-secondary: #6e7681;
-    --btc-border: #2a2e35;
-    --btc-shadow: rgba(0,0,0,0.1);
+.footer-cta {
+    font-family: 'Arial', sans-serif;
+    background: var(--card-bg);
+    backdrop-filter: blur(8px) saturate(160%);
+    -webkit-backdrop-filter: blur(8px) saturate(160%);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 14px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
-[data-mode="light"] {
-    --btc-bg: #ffffff;
-    --btc-text: #f7931e;
-    --btc-secondary: #6c757d;
-    --btc-border: #e9ecef;
-    --btc-shadow: rgba(0,0,0,0.15);
+[data-theme="dark"] .footer-cta {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    color: var(--text-color);
+}
+
+.footer-cta:hover {
+    transform: scale(1.02);
+}
+
+.btc-symbol {
+    font-size: 12px;
+    color: #f7931e; /* Fixed orange color for Bitcoin logo */
+    opacity: 0.9;
+}
+
+.btc-address {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.copy-button {
+    background: none;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 9px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.copy-button:hover {
+    background: var(--text-color);
+    color: var(--card-bg);
+}
+
+@media (max-width: 768px) {
+    .footer-cta {
+        padding: 5px 12px;
+    }
+    .btc-symbol {
+        font-size: 11px;
+    }
+    .btc-address {
+        font-size: 9px;
+    }
+    .copy-button {
+        font-size: 8px;
+        padding: 2px 6px;
+    }
 }
 </style>
 
 <center>
-<span style="display:inline-flex; align-items:center; background:var(--btc-bg); color:var(--btc-text); padding:6px 14px; border-radius:25px; font-family:system-ui, -apple-system, sans-serif; font-size:11px; border:1px solid var(--btc-border); box-shadow:0 2px 10px var(--btc-shadow); gap:8px;">
-    <span style="font-size:12px; opacity:0.9;">₿</span>
-    <span style="color:var(--btc-secondary); font-size:10px; font-weight:500;">bc1q8dnj5cmzzc7nhn4adttcpycxxk4f2f3rknq6t4</span>
-    <button onclick="navigator.clipboard.writeText('bc1q8dnj5cmzzc7nhn4adttcpycxxk4f2f3rknq6t4')" 
-            style="background:none; color:var(--btc-text); border:1px solid var(--btc-text); padding:2px 8px; border-radius:12px; font-size:9px; cursor:pointer; transition:all 0.2s ease; font-weight:500;" 
-            onmouseover="this.style.background='var(--btc-text)'; this.style.color='var(--btc-bg)'" 
-            onmouseout="this.style.background='none'; this.style.color='var(--btc-text)'">Copy</button>
-</span>
+<div class="footer-cta">
+    <span class="btc-symbol">₿</span>
+    <span class="btc-address">bc1q8dnj5cmzzc7nhn4adttcpycxxk4f2f3rknq6t4</span>
+    <button class="copy-button" onclick="navigator.clipboard.writeText('bc1q8dnj5cmzzc7nhn4adttcpycxxk4f2f3rknq6t4')">Copy</button>
+</div>
 </center>
 <!-- end bitcoin -->
 

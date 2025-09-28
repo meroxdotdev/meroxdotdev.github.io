@@ -40,8 +40,15 @@ copyright:
     Except where otherwise noted, the blog posts on this site are licensed
     under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.
 
-meta: <a href="https://systools.merox.dev/">🛠️​ Systools</a> &nbsp; <a href="https://coff.ee/merox.dev">⚡Refuel my server</a>
-
+meta: >
+  <a href="https://systools.merox.dev/">🛠️ Sys tools</a> &nbsp;
+  <a href="https://coff.ee/merox.dev">⚡Buy me server refuel</a> <br>
+  <span style="display:inline-block; background:#1a202c; color:#f7931e; padding:3px 8px; border-radius:6px; font-family:monospace; font-size:10px; border:1px solid #2d3748; box-shadow:0 0 15px rgba(247,147,30,0.15);">
+    <span style="margin-right:6px; text-shadow:0 0 8px currentColor;">₿</span>Bitcoin: 
+    <span style="color:#e2e8f0; letter-spacing:0.3px;">bc1q8dnj5cmzzc7nhn4adttcpycxxk4f2f3rknq6t4</span>
+    <button onclick="navigator.clipboard.writeText('bc1q8dnj5cmzzc7nhn4adttcpycxxk4f2f3rknq6t4')" style="background:#f7931e; color:#1a202c; border:none; padding:2px 6px; border-radius:3px; font-size:9px; font-weight:bold; cursor:pointer; margin-left:6px; transition:all 0.2s ease;" onmouseover="this.style.background='#ff9500'; this.style.boxShadow='0 0 8px rgba(247,147,30,0.4)'" onmouseout="this.style.background='#f7931e'; this.style.boxShadow='none'">Copy</button>
+  </span>
+  
 not_found:
   statement: Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
 

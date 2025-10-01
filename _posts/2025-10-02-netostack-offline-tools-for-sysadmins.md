@@ -1,8 +1,7 @@
 ---
 title: "NetoStack: Offline Tools for SysAdmins"
-date: 2025-10-03 10:00:00 +0300
+date: 2025-10-01 05:00:00 +0300
 categories: [infrastructure, networking]
-draft: true
 description: "Discover NetoStack - your offline network command center with IP calculators, subnetting tools, CIDR converters, and more. Learn how I deployed this open-source project in under 10 minutes using GitHub and Netlify."
 image:
   path: /assets/img/posts/netostack.webp

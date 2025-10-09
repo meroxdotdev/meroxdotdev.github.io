@@ -1,6 +1,7 @@
 ---
 title: "Reverse Proxies Homelab and Production"
 date: 2025-10-09 10:00:00 +0200
+draft: true
 categories: [infrastructure]
 description: Practical guide to choosing and configuring reverse proxies for homelab and production environments. Compare Traefik, Caddy, and HAProxy with real-world examples and battle-tested configurations.
 image:

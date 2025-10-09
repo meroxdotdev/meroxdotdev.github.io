@@ -4,9 +4,9 @@ date: 2025-10-09 10:00:00 +0200
 draft: true
 categories: [infrastructure]
 description: Practical guide to choosing and configuring reverse proxies for homelab and production environments. Compare Traefik, Caddy, and HAProxy with real-world examples and battle-tested configurations.
-image:
+#image:
 #  path: /assets/img/posts/reverse-proxies-guide.webp
-  alt: Reverse Proxies Guide - Traefik, Caddy, HAProxy
+#  alt: Reverse Proxies Guide - Traefik, Caddy, HAProxy
 ---
 
 I've been running reverse proxies for years—first fumbling through Apache configs, then discovering Nginx, and eventually landing on modern solutions like Traefik and Caddy. Here's what I've learned about choosing and configuring reverse proxies for both homelab tinkering and production environments.

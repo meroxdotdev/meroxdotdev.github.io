@@ -5,7 +5,7 @@ draft: true
 categories: [infrastructure]
 description: Practical guide to choosing and configuring reverse proxies for homelab and production environments. Compare Traefik, Caddy, and HAProxy with real-world examples and battle-tested configurations.
 image:
-  path: /assets/img/posts/reverse-proxies-guide.webp
+#  path: /assets/img/posts/reverse-proxies-guide.webp
   alt: Reverse Proxies Guide - Traefik, Caddy, HAProxy
 ---
 

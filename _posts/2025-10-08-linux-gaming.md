@@ -1,16 +1,14 @@
 ---
-title: "Gaming on Linux: My Homelab Gaming Journey"
-date: 2025-10-20 09:00:00 +0300
+title: "Gaming on Linux"
+date: 2025-11-07 09:00:00 +0300
 categories: [infrastructure]
 #tags: [gaming, linux, steam, proton, nvidia, lutris, egpu, homelab, quadro]
-description: Real experience gaming on enterprise hardware - Dell R720 with Quadro P2200 and planning eGPU setup. What works, what doesn't, and the issues you'll actually face.
+description: Real experience gaming on - Dell R720 with Quadro P2200. What works, what doesn't, and the issues you'll actually face.
 image:
   path: /assets/img/posts/linux-gaming-setup.webp
   alt: Linux Gaming on Homelab Hardware
 ---
 
-![Linux Gaming Setup](/assets/img/posts/linux-gaming-hero.webp){: width="700" height="400" }
-_Gaming on homelab hardware - not your typical gaming rig_
 
 I've been experimenting with Linux gaming on my homelab equipment for a few years now. Here's what actually works when you're gaming on enterprise hardware instead of a dedicated gaming PC.
 
@@ -184,8 +182,6 @@ Proton has significantly improved font handling. Most font issues are now resolv
 ```bash
 # Install MS core fonts system-wide
 sudo apt install ttf-mscorefonts-installer
-
-# Accept the EULA during installation
 ```
 
 This makes fonts available to all Wine/Proton prefixes automatically - **no need for winetricks corefonts anymore** in most cases.
@@ -569,12 +565,10 @@ chmod +x linux-gaming-setup.sh
 - Games with aggressive DRM
 
 **My Experience:**
-I game on Linux about 60% of the time. For competitive shooters or games with kernel-level anti-cheat (League, Valorant, GTA Online), I still dual-boot to Windows. But for everything else, Linux works surprisingly well - especially on enterprise hardware that's overkill for gaming.
+I game on Linux about 20% of the time. For competitive shooters or games with kernel-level anti-cheat (League, Valorant, GTA Online), I still dual-boot to Windows. But for everything else, Linux works surprisingly well - especially on enterprise hardware that's overkill for gaming.
 
 ## Conclusion
 
 Gaming on Linux with homelab hardware isn't conventional, but it works better than expected. The Quadro P2200 handles 1080p gaming at medium/high settings, and once I add the RTX 4060 eGPU to the Beelink, I'll have a proper gaming setup.
 
 The biggest hurdle isn't performance - it's anti-cheat compatibility. If you play mostly single-player games or older multiplayer titles, Linux gaming is viable. If you're into competitive esports titles, keep Windows around.
-
-Questions about specific games or hardware? Drop a comment below!

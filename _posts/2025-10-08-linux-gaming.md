@@ -12,7 +12,7 @@ image:
 
 I've been experimenting with Linux gaming on my homelab equipment for a few years now. Here's what actually works when you're gaming on enterprise hardware instead of a dedicated gaming PC.
 
-## My Gaming Hardware
+## My Gaming Hw
 
 **Current Setup (Dell R720):**
 - 2× Intel Xeon E5-2697v2 (24C/48T)

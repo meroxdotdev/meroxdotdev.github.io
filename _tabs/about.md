@@ -1,7 +1,7 @@
 ---
 title: About
 icon: fas fa-user-cog
-order: 5
+order: 6
 ---
 
 # Robert Melcher

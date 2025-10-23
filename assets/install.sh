@@ -19,7 +19,7 @@ command -v git >/dev/null 2>&1 || {
 }
 
 # Clone repo
-REPO_URL="https://github.com/YOUR_USERNAME/cloudlab-merox.git"
+REPO_URL="https://github.com/meroxdotdev/cloudlab-merox.git"
 TARGET_DIR="${1:-cloudlab-merox}"
 
 if [ -d "$TARGET_DIR" ]; then

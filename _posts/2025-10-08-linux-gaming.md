@@ -1,6 +1,6 @@
 ---
 title: "Gaming on Linux"
-date: 2025-11-07 09:00:00 +0300
+date: 2025-11-06 09:00:00 +0300
 categories: [infrastructure]
 #tags: [gaming, linux, steam, proton, nvidia, lutris, egpu, homelab, quadro]
 description: Real experience gaming on - Dell R720 with Quadro P2200. What works, what doesn't, and the issues you'll actually face.

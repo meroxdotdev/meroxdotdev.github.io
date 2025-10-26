@@ -147,7 +147,7 @@
     
     &:hover {
       transform: translateY(-2px);
-      border-color: rgba(107, 166, 255, 0.2);
+      border-color: rgb(107 166 255 / 20%);
       box-shadow: rgb(0 0 0 / 40%) 0 12px 40px 0,
                   rgb(198 205 219 / 10%) 0 0 0 1px,
                   rgb(107 166 255 / 15%) 0 2px 8px 0;
@@ -170,14 +170,14 @@
 
   /* Enhanced image borders */
   .card img {
-    border: 1px solid rgba(74, 81, 96, 0.5);
+    border: 1px solid rgb(74 81 96 / 50%);
     border-radius: 0.5rem;
   }
 
   /* Sidebar cu bordură subtilă pentru a o separa de content */
   #sidebar {
     border-right: 1px solid #3a3f48;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 0 8px rgb(0 0 0 / 15%);
   }
 
   #archives li:nth-child(odd) {

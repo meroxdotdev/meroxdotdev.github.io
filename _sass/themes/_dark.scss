@@ -1,122 +1,123 @@
 @mixin styles {
   color-scheme: dark;
 
-  /* Framework color */
-  --main-bg: #0d1117; /* Deep black with a slight blue tint, inspired by modern dark themes */
-  --mask-bg: #161b22; /* Slightly lighter dark gray for overlays */
-  --main-border-color: #21262d; /* Subtle gray for borders */
+  /* Framework color - Fundal cu contrast pentru sidebar */
+  --main-bg: #2d323a; /* Fundal principal pentru content */
+  --mask-bg: #3d434d; /* Overlay */
+  --main-border-color: #4a5160; /* Borduri */
 
-  /* Common color */
-  --text-color: #c9d1d9; /* Light gray for body text, high readability */
-  --text-muted-color: #8b949e; /* Muted gray for secondary text */
-  --text-muted-highlight-color: #b3bac5; /* Slightly brighter for hover states */
-  --heading-color: #e6edf3; /* Near-white for headings, high contrast */
-  --label-color: #b3bac5; /* Light gray for labels */
-  --blockquote-border-color: #30363d; /* Dark gray for blockquote borders */
-  --blockquote-text-color: #8b949e; /* Muted gray for blockquote text */
-  --link-color: #58a6ff; /* Vibrant blue for links, inspired by tech themes */
-  --link-underline-color: #2f81f7; /* Darker blue for link underlines */
-  --button-bg: #161b22; /* Dark gray for buttons */
-  --btn-border-color: #30363d; /* Subtle border for buttons */
-  --btn-backtotop-color: var(--text-color); /* Matches text color */
-  --btn-backtotop-border-color: #21262d; /* Matches main border */
-  --card-header-bg: #161b22; /* Consistent dark gray for card headers */
-  --checkbox-color: #6e7681; /* Muted gray for checkboxes */
-  --checkbox-checked-color: var(--link-color); /* Blue for checked state */
-  --img-bg: radial-gradient(circle, #0d1117 0%, #161b22 100%); /* Darker gradient for images */
+  /* Common color - Text perfect optimizat */
+  --text-color: #c6cddb; /* Text principal */
+  --text-muted-color: #a5afc2; /* Text secundar */
+  --text-muted-highlight-color: #b8c0d0; /* Hover pe text secundar */
+  --heading-color: #ebeef3; /* Headings */
+  --label-color: #bfc7d4; /* Labels */
+  --blockquote-border-color: #565d6d; /* Borduri blockquote */
+  --blockquote-text-color: #a5afc2; /* Text blockquote */
+  --link-color: #6ba6ff; /* Link-uri */
+  --link-underline-color: #5a95ee; /* Underline */
+  --button-bg: #3d434d; /* Fundal butoane */
+  --btn-border-color: #565d6d; /* Borduri butoane */
+  --btn-backtotop-color: var(--text-color);
+  --btn-backtotop-border-color: #4a5160;
+  --card-header-bg: #3d434d; /* Header carduri */
+  --checkbox-color: #7d8599; /* Checkbox-uri inactive */
+  --checkbox-checked-color: var(--link-color); /* Checkbox-uri active */
+  --img-bg: radial-gradient(circle, #2d323a 0%, #3d434d 100%); 
   --shimmer-bg: linear-gradient(
     90deg,
     rgb(255 255 255 / 0%) 0%,
-    rgb(88 166 255 / 20%) 50%, /* Subtle blue shimmer */
+    rgb(198 205 219 / 13%) 50%,
     rgb(255 255 255 / 0%) 100%
   );
 
-  /* Sidebar */
-  --site-title-color: #ffffff; /* Alb perfect pentru modul dark */
-  --site-subtitle-color: #8b949e; /* Muted for subtitle */
-  --sidebar-bg: #0d1117; /* Matches main background */
-  --sidebar-border-color: #21262d; /* Consistent border color */
-  --sidebar-muted-color: #8b949e; /* Muted for sidebar text */
-  --sidebar-active-color: #ffffff; /* Bright white for active states */
-  --sidebar-hover-bg: #161b22; /* Slightly lighter hover state */
-  --sidebar-btn-bg: #21262d; /* Dark gray for sidebar buttons */
-  --sidebar-btn-color: #8b949e; /* Muted button text */
-  --avatar-border-color: rgb(201 209 217 / 90%); /* Light gray for avatar borders */
+  /* Sidebar - Mai închis pentru contrast cu main content */
+  --site-title-color: #ffffff; 
+  --site-subtitle-color: #a5afc2; 
+  --sidebar-bg: #24282f; /* Mai închis decât main-bg pentru contrast */
+  --sidebar-border-color: #3a3f48; /* Borduri mai subtile pentru sidebar */
+  --sidebar-muted-color: #9da8ba; /* Text muted în sidebar */
+  --sidebar-active-color: #ebeef3; 
+  --sidebar-hover-bg: #2d323a; /* Hover match cu main-bg */
+  --sidebar-btn-bg: #3a3f48; 
+  --sidebar-btn-color: #9da8ba; 
+  --avatar-border-color: rgb(198 205 219 / 65%); 
 
-  /* Topbar */
-  --topbar-bg: rgb(13 17 23 / 80%); /* Semi-transparent deep black */
-  --topbar-text-color: var(--text-color); /* Matches body text */
-  --search-border-color: #30363d; /* Dark gray for search borders */
-  --search-icon-color: #6e7681; /* Muted gray for icons */
-  --input-focus-border-color: #58a6ff; /* Blue for focused inputs */
+  /* Topbar - Glass-morphism */
+  --topbar-bg: rgb(45 50 58 / 94%); 
+  --topbar-text-color: var(--text-color);
+  --search-border-color: #565d6d; 
+  --search-icon-color: #7d8599; 
+  --input-focus-border-color: #6ba6ff; 
 
   /* Home page */
-  --post-list-text-color: #c9d1d9; /* Light gray for post lists */
-  --btn-patinator-text-color: var(--text-color); /* Matches text color */
-  --btn-paginator-hover-color: #21262d; /* Dark gray for hover */
+  --post-list-text-color: #c6cddb; 
+  --btn-patinator-text-color: var(--text-color);
+  --btn-paginator-hover-color: #4a5160; 
 
-  /* Posts */
-  --toc-highlight: #58a6ff; /* Blue for table of contents highlights */
-  --toc-popup-border-color: #30363d; /* Dark gray for TOC borders */
-  --tag-hover: #21262d; /* Dark gray for tag hovers */
-  --tb-odd-bg: #161b22; /* Dark gray for odd table rows */
-  --tb-even-bg: #0d1117; /* Deeper black for even rows */
-  --tb-border-color: var(--tb-odd-bg); /* Matches odd rows */
-  --footnote-target-bg: #1f6feb; /* Darker blue for footnote highlights */
-  --btn-share-color: #6e7681; /* Muted gray for share buttons */
-  --btn-share-hover-color: #c9d1d9; /* Light gray for hover */
-  --card-bg: #161b22; /* Dark gray for cards */
-  --card-hover-bg: #21262d; /* Slightly lighter for hover */
-  --card-shadow: rgb(0 0 0 / 50%) 0 6px 18px 0,
-    rgb(201 209 217 / 20%) 0 0 0 1px; /* Darker shadow */
+  /* Posts - Carduri cu mai mult "pop" */
+  --toc-highlight: #6ba6ff; 
+  --toc-popup-border-color: #565d6d; 
+  --tag-hover: #4a5160; 
+  --tb-odd-bg: #3d434d; 
+  --tb-even-bg: #2d323a; 
+  --tb-border-color: #4a5160; 
+  --footnote-target-bg: #3d5f8a; 
+  --btn-share-color: #7d8599; 
+  --btn-share-hover-color: #c6cddb; 
+  --card-bg: #383e48; /* Carduri mai luminoase */
+  --card-hover-bg: #414853; /* Hover mai vizibil */
+  --card-shadow: rgb(0 0 0 / 35%) 0 8px 24px 0,
+    rgb(198 205 219 / 8%) 0 0 0 1px,
+    rgb(107 166 255 / 4%) 0 1px 3px 0; /* Umbră cu hint de albastru */
 
-  --kbd-wrap-color: #6e7681; /* Muted gray for keyboard input wrap */
-  --kbd-text-color: #e6edf3; /* Near-white for keyboard text */
-  --kbd-bg-color: #0d1117; /* Matches main background */
-  --prompt-text-color: rgb(201 209 217 / 75%); /* Muted light gray */
-  --prompt-tip-bg: rgb(22 101 52 / 70%); /* Dark green for tips */
-  --prompt-tip-icon-color: #22c55e; /* Bright green for icons */
-  --prompt-info-bg: rgb(29 78 216 / 70%); /* Dark blue for info */
-  --prompt-info-icon-color: #3b82f6; /* Bright blue for icons */
-  --prompt-warning-bg: rgb(124 45 18 / 70%); /* Dark orange for warnings */
-  --prompt-warning-icon-color: #f97316; /* Bright orange for icons */
-  --prompt-danger-bg: rgb(153 27 27 / 70%); /* Dark red for danger */
-  --prompt-danger-icon-color: #ef4444; /* Bright red for icons */
+  --kbd-wrap-color: #7d8599; 
+  --kbd-text-color: #ebeef3; 
+  --kbd-bg-color: #2d323a; 
+  --prompt-text-color: rgb(198 205 219 / 92%); 
+  --prompt-tip-bg: rgb(74 222 128 / 20%); 
+  --prompt-tip-icon-color: #5edc87; 
+  --prompt-info-bg: rgb(107 166 255 / 20%); 
+  --prompt-info-icon-color: #6ba6ff; 
+  --prompt-warning-bg: rgb(251 146 60 / 20%); 
+  --prompt-warning-icon-color: #ff9f52; 
+  --prompt-danger-bg: rgb(248 113 113 / 20%); 
+  --prompt-danger-icon-color: #ff7979; 
 
-  /* Tags */
-  --tag-border: #30363d; /* Dark gray for tag borders */
-  --tag-shadow: #0d1117; /* Matches main background */
-  --dash-color: #6e7681; /* Muted gray for dashes */
-  --search-tag-bg: #161b22; /* Dark gray for search tags */
+  /* Tags - Mai vizibile */
+  --tag-border: #565d6d; 
+  --tag-shadow: #2d323a; 
+  --dash-color: #8590a3; /* Dash-uri mai luminoase */
+  --search-tag-bg: #3d434d; 
 
   /* Categories */
-  --categories-border: rgb(48 54 61 / 50%); /* Semi-transparent gray */
-  --categories-hover-bg: #21262d; /* Dark gray for hover */
-  --categories-icon-hover-color: #ffffff; /* White for icon hovers */
+  --categories-border: rgb(86 93 109 / 50%); 
+  --categories-hover-bg: #4a5160; 
+  --categories-icon-hover-color: #ebeef3; 
 
   /* Archive */
-  --timeline-node-bg: #6e7681; /* Muted gray for timeline nodes */
-  --timeline-color: #30363d; /* Dark gray for timeline */
-  --timeline-year-dot-color: var(--timeline-color); /* Matches timeline */
+  --timeline-node-bg: #7d8599; 
+  --timeline-color: #565d6d; 
+  --timeline-year-dot-color: var(--timeline-color);
 
-  /* Code highlight colors */
-  --language-border-color: #21262d; /* Dark gray for code borders */
-  --highlight-bg-color: #0d1117; /* Deep black for code background */
-  --highlighter-rouge-color: #c9d1d9; /* Light gray for code text */
-  --highlight-lineno-color: #6e7681; /* Muted gray for line numbers */
-  --inline-code-bg: rgb(255 255 255 / 5%); /* Subtle white for inline code */
-  --code-color: #c9d1d9; /* Light gray for code */
-  --code-header-text-color: #8b949e; /* Muted gray for code headers */
-  --code-header-muted-color: #21262d; /* Dark gray for muted headers */
-  --code-header-icon-color: #6e7681; /* Muted gray for icons */
-  --clipboard-checked-color: #22c55e; /* Green for clipboard check */
-  --filepath-text-color: #c9d1d9; /* Light gray for file paths */
+  /* Code highlight */
+  --language-border-color: #4a5160; 
+  --highlight-bg-color: #272c33; /* Cod puțin mai închis */
+  --highlighter-rouge-color: #c6cddb; 
+  --highlight-lineno-color: #7d8599; 
+  --inline-code-bg: rgb(198 205 219 / 11%); 
+  --code-color: #c6cddb; 
+  --code-header-text-color: #a5afc2; 
+  --code-header-muted-color: #4a5160; 
+  --code-header-icon-color: #7d8599; 
+  --clipboard-checked-color: #5edc87; 
+  --filepath-text-color: #c6cddb; 
 
   .light {
     display: none;
   }
 
-  /* Categories */
+  /* Categories styling */
   .categories.card,
   .list-group-item {
     background-color: var(--card-bg);
@@ -139,14 +140,54 @@
     }
   }
 
+  /* Enhanced card styling pentru home page */
+  .card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    
+    &:hover {
+      transform: translateY(-2px);
+      border-color: rgba(107, 166, 255, 0.2);
+      box-shadow: rgb(0 0 0 / 40%) 0 12px 40px 0,
+                  rgb(198 205 219 / 10%) 0 0 0 1px,
+                  rgb(107 166 255 / 15%) 0 2px 8px 0;
+    }
+  }
+
+  /* Enhanced metadata styling */
+  .post-meta {
+    color: #a5afc2;
+    
+    a {
+      color: #b5bfce;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: #6ba6ff;
+      }
+    }
+  }
+
+  /* Enhanced image borders */
+  .card img {
+    border: 1px solid rgba(74, 81, 96, 0.5);
+    border-radius: 0.5rem;
+  }
+
+  /* Sidebar cu bordură subtilă pentru a o separa de content */
+  #sidebar {
+    border-right: 1px solid #3a3f48;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  }
+
   #archives li:nth-child(odd) {
     background-image: linear-gradient(
       to left,
-      #0d1117,
-      #161b22,
-      #161b22,
-      #161b22,
-      #0d1117
+      #2d323a,
+      #383e48,
+      #383e48,
+      #383e48,
+      #2d323a
     );
   }
 
@@ -155,9 +196,9 @@
     color-scheme: none;
   }
 
-  /* --- Syntax highlight theme --- */
+  /* --- Syntax highlighting --- */
   .highlight .gp {
-    color: #8b949e; /* Muted gray for prompt */
+    color: #a5afc2;
   }
 
   .highlight table td {
@@ -170,13 +211,13 @@
 
   .highlight,
   .highlight .w {
-    color: #c9d1d9;
-    background-color: #0d1117;
+    color: #c6cddb;
+    background-color: #272c33;
   }
 
   .highlight .err {
-    color: #0d1117;
-    background-color: #f85149; /* Bright red for errors */
+    color: #272c33;
+    background-color: #ff6b6b;
   }
 
   .highlight .c,
@@ -186,39 +227,40 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #8b949e; /* Muted gray for comments */
+    color: #8d96a8;
+    font-style: italic;
   }
 
   .highlight .cp {
-    color: #e6b800; /* Yellow for preprocessor */
+    color: #ffd866;
   }
 
   .highlight .nt {
-    color: #e6b800; /* Yellow for tags */
+    color: #ffd866;
   }
 
   .highlight .o,
   .highlight .ow {
-    color: #c9d1d9; /* Light gray for operators */
+    color: #78dce8;
   }
 
   .highlight .p,
   .highlight .pi {
-    color: #c9d1d9; /* Light gray for punctuation */
+    color: #c6cddb;
   }
 
   .highlight .gi {
-    color: #22c55e; /* Green for insertions */
+    color: #a9dc76;
   }
 
   .highlight .gd {
-    color: #f85149; /* Red for deletions */
-    background-color: #2d0000; /* Dark red background */
+    color: #ff6b6b;
+    background-color: #4d3234;
   }
 
   .highlight .gh {
-    color: #58a6ff; /* Blue for headers */
-    background-color: #0d1117;
+    color: #6ba6ff;
+    background-color: #272c33;
     font-weight: bold;
   }
 
@@ -227,19 +269,19 @@
   .highlight .kp,
   .highlight .kr,
   .highlight .kv {
-    color: #d3869b; /* Soft pink for keywords */
+    color: #c792ea;
   }
 
   .highlight .kc {
-    color: #e6b800; /* Yellow for constants */
+    color: #ffb86c;
   }
 
   .highlight .kt {
-    color: #e6b800; /* Yellow for types */
+    color: #ffd866;
   }
 
   .highlight .kd {
-    color: #e6b800; /* Yellow for declarations */
+    color: #c792ea;
   }
 
   .highlight .s,
@@ -251,39 +293,39 @@
   .highlight .sh,
   .highlight .sx,
   .highlight .s1 {
-    color: #22c55e; /* Green for strings */
+    color: #a9dc76;
   }
 
   .highlight .sa {
-    color: #d3869b; /* Pink for string attributes */
+    color: #c792ea;
   }
 
   .highlight .sr {
-    color: #2dd4bf; /* Teal for regex */
+    color: #78dce8;
   }
 
   .highlight .si {
-    color: #e6b800; /* Yellow for interpolation */
+    color: #ffd866;
   }
 
   .highlight .se {
-    color: #e6b800; /* Yellow for escapes */
+    color: #ffb86c;
   }
 
   .highlight .nn {
-    color: #e6b800; /* Yellow for names */
+    color: #ffd866;
   }
 
   .highlight .nc {
-    color: #e6b800; /* Yellow for class names */
+    color: #ffd866;
   }
 
   .highlight .no {
-    color: #e6b800; /* Yellow for constants */
+    color: #ffb86c;
   }
 
   .highlight .na {
-    color: #58a6ff; /* Blue for attributes */
+    color: #6ba6ff;
   }
 
   .highlight .m,
@@ -294,10 +336,10 @@
   .highlight .il,
   .highlight .mo,
   .highlight .mx {
-    color: #22c55e; /* Green for nummbers */
+    color: #ffb86c;
   }
 
   .highlight .ss {
-    color: #22c55e; /* Green for symbols */
+    color: #a9dc76;
   }
 }

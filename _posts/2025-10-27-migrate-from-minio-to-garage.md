@@ -4,7 +4,7 @@ date: 2025-10-27 10:00:00 +0200
 categories: [storage, kubernetes]
 description: A step-by-step guide to migrating Longhorn backup storage from MinIO to Garage after MinIO discontinued their Docker images. Learn how to set up Garage as an S3-compatible backup target for your Kubernetes cluster.
 image:
-  path: /assets/img/posts/garagewebui.png
+  path: /assets/img/posts/garage.webp
   alt: Garage S3 Storage for Longhorn Backups
 ---
 

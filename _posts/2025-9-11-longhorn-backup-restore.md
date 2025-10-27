@@ -247,3 +247,7 @@ Having a solid backup strategy is crucial, but knowing how to restore efficientl
 
 
 Your future self will thank you when disaster strikes again. 😆
+
+## Update (October 2025)
+
+Since writing this guide, I've migrated my backup storage from MinIO to Garage due to MinIO's decision to discontinue Docker images. The restoration process described above works identically with Garage as the backup target. If you're interested in making the same migration, check out my guide on [Migrating Longhorn Backup from MinIO to Garage](/blog/migrate-from-minio-to-garage/).

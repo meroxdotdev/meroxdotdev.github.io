@@ -14,123 +14,54 @@ order: 6
 
 ## 👋 Hello, I'm Robert
 
-I'm a **DevOps-focused HPC System Administrator** and former **Cybersecurity Engineer** with **9+ years of experience** building secure, scalable, and high-performance IT infrastructures. My passion lies in leveraging **automation**, **cloud technology**, and **containerization** to solve complex infrastructure challenges.
+DevOps-focused **HPC System Administrator** & former **Cybersecurity Engineer** (9+ years). I build secure, scalable infrastructures using **automation**, **cloud**, and **containerization**.
 
-Currently serving as an **HPC System Administrator** at Forvia, where I manage enterprise-grade HPC environments, coordinate datacenter deployment activities, and collaborate with cross-functional IT teams for demanding computational workloads.
+**Current role:** HPC SysAdmin @ **Forvia** – managing enterprise HPC clusters, datacenter deployments, and cross-functional IT coordination.
 
 ## 🚀 Core Expertise
 
-| **Focus Area** | **Key Activities** |
+| Area | Key Skills |
 | :--- | :--- |
-| **HPC Infrastructure & Operations** | Coordinating datacenter deployment activities (server racking, patching, cabling), collaborating with network/firewall teams for VLAN/port allocation and security flows, managing **InfiniBand** (Mellanox switches), and handling end-to-end infrastructure provisioning. |
-| **Enterprise Systems Management** | Remote server deployment via **iDRAC**, OS installation and configuration, managing **SMB/NFS** shares, implementing **PBS** job scheduling, and supporting HPC applications (**CST**, **Moldflow**, **Altair**) with vendor coordination. |
-| **Hybrid Cloud & Virtualization** | Designing and managing Linux/Windows servers, **AWS (EC2/S3)**, **Oracle Cloud (Ampere)**, **Proxmox** virtualization, and **Docker** containerization. |
-| **DevOps & Automation** | Implementing Infrastructure as Code (IaC), **Puppet** automation, **GitOps** workflows, and orchestrating **Kubernetes** (**K8s/K3S**) clusters with **Rancher**. |
-| **Security & Network Engineering** | VLAN design coordination, firewall flow configuration, vulnerability assessments (**NESSUS**), next-gen firewall management (**Cisco, Fortinet, Palo Alto, Juniper**), and enterprise access control. |
+| **HPC Ops** | Datacenter coordination (racking/cabling), InfiniBand (Mellanox), iDRAC provisioning, PBS scheduling, SMB/NFS, app support (**CST**, **Moldflow**, **Altair**) |
+| **Cloud & Virt** | AWS (EC2/S3), Oracle Cloud (Ampere), Proxmox/XEN, Docker, Kubernetes (K8s/K3s + Rancher) |
+| **DevOps** | IaC, Puppet/SALT, GitOps, Terraform/Ansible |
+| **Security & Net** | CCNA, VLAN/firewall design (Cisco/Fortinet/Palo/Juniper), NESSUS, IPsec (StrongSwan), WAF |
 
-## 🛠️ Technical Stack
+## 🛠️ Tech Stack
 
-**HPC & Infrastructure**
-- **PBS (Portable Batch System)** job scheduling & resource management
-- **InfiniBand** networking (Mellanox switch configuration)
-- HPC application support: **CST**, **Moldflow**, **Altair** (troubleshooting & vendor coordination)
-- **iDRAC** remote management & bare-metal provisioning
-- **SMB/NFS** storage solutions & enterprise file sharing
+**HPC:** PBS, InfiniBand, iDRAC, SMB/NFS, CST/Moldflow/Altair  
+**Cloud:** AWS, Oracle Ampere (4vCPU/24GB), K8s/K3s, Docker/Portainer  
+**SysAdmin:** Linux/Windows, Puppet/SALT, AD, BAREOS  
+**Net/Sec:** CCNA, multi-vendor firewalls, StrongSwan, Forescout, CyberArk
 
-**Cloud & Virtualization**
-- **AWS** (EC2 instances, S3 storage) & **Oracle Cloud** (Ampere 4vCPU/24GB/200GB in Phoenix datacenter)
-- **Kubernetes** (K8s, K3S with Rancher) & **Docker** (Portainer orchestration)
-- **Proxmox**, **XEN** hypervisors, **ManageIQ** virtual management
+## 💡 Key Achievements
 
-**System Administration & Automation**
-- Linux/Windows Server (enterprise production environments)
-- **Puppet** & **SALT** configuration management
-- **Active Directory** integration & **BAREOS** enterprise backup solutions
+- **Forvia HPC:** Full datacenter deployments, InfiniBand clusters, PBS + app integration, cross-team VLAN/firewall flows  
+- **Homelab:** Proxmox + K3s/Rancher on Dell R720, pfSense + VLAN/WAF security  
+- **Cloud:** AWS/EC2+S3 apps, Oracle Ampere ARM testing  
+- **Past:** Puppet→K8s migration, BAREOS 99.9% backup, Forescout Windows 10 rollout  
+- **Dolphost (2022–24):** Secure WordPress hosting with WHMCS/cPanel automation
 
-**Networking & Security**
-- **CCNA** certified - VLAN design, network segmentation, firewall flow management
-- Cross-team collaboration (network team for VLAN/port allocation, firewall team for security flows)
-- Next-gen firewall management (Cisco, Fortinet, Palo Alto, Juniper)
-- IPsec VPN (**StrongSwan**), **WAF** deployment, enterprise network architecture
+## 💼 Experience
 
-## 💡 Key Projects & Achievements
+**HPC SysAdmin @ Forvia** (2022–Present)  
+**Cybersecurity Engineer @ Atos** (2020–22) – firewall policies, CyberArk, Forescout  
+**SysAdmin @ Netex Romania** (2018–20) – Puppet→K8s, Asterisk VOIP, datacenter ops
 
-**HPC Infrastructure Operations @ Forvia**
-- **End-to-end datacenter deployment:** Coordinating with IT teams for physical server installation (racking, cabling, patching) in enterprise datacenters
-- **Cross-functional collaboration:** Working alongside network teams for VLAN/port allocation and firewall teams for security flow approvals
-- **Bare-metal provisioning:** Remote OS deployment via **iDRAC** with automated configuration workflows
-- **Storage infrastructure:** Implementing enterprise **SMB/NFS** shares for HPC workload data management
-- **HPC application support:** Managing **PBS** scheduler, troubleshooting **CST**, **Moldflow**, and **Altair** applications with vendor support coordination
-- **InfiniBand networking:** Configuring **Mellanox** switches for high-speed interconnects in HPC clusters
+## 🎓 Education & Certs
 
-**Production Homelab**
-- **Dell PowerEdge R720** running **Proxmox** with multi-tenant VM environment
-- **K3S cluster** managed via **Rancher** with **Portainer**-orchestrated containers
-- Network security: **pFsense** firewall, VLAN isolation, web application firewall
+**Computer Science** – West University of Timișoara (2016–18)  
+**CCNA** – ID: NJXWKRFD7D1EQ7C0 (2019–20)
 
-**Cloud Exploration**
-- Hands-on experience with **AWS EC2/S3** for scalable application deployment
-- Running production **Oracle Cloud Ampere** instance (4vCPU/24GB RAM/200GB storage) in Phoenix datacenter for performance testing and ARM architecture exploration
+## 🔮 Exploring
 
-**Infrastructure Transformation (Previous Roles)**
-- Migrated legacy **Puppet** infrastructure to **Kubernetes** cluster, improving scalability and deployment velocity
-- Designed enterprise **BAREOS** backup architecture ensuring 99.9% data integrity
-- Implemented **Forescout** policy framework for 1000+ Windows 10 endpoints
-
-**Founder @ Dolphost** *(2022–2024)*
-- Built and managed secure WordPress hosting platform with automated deployment
-- Integrated **WHMCS/cPanel** for streamlined client management and VPS provisioning
-
-## 💼 Career Highlights
-
-**HPC System Administrator @ Forvia** *(2022–Present)*
-- **Datacenter operations:** Coordinating server deployment activities including racking, patching, and cabling infrastructure
-- **Cross-team collaboration:** Working with network teams for VLAN design and port allocation, and firewall teams for secure flow implementation
-- **Infrastructure provisioning:** Managing end-to-end server deployment from physical installation to application readiness
-- **Network architecture:** Configuring **InfiniBand** (Mellanox) switches for high-speed cluster interconnects
-- **HPC systems:** Implementing **PBS** job scheduler, managing **Active Directory/SALT** integration, supporting computational applications (**CST**, **Moldflow**, **Altair**)
-- **Storage solutions:** Configuring enterprise **SMB/NFS** shares for distributed HPC workloads
-- **Remote management:** Deploying and configuring servers via **iDRAC** with automated OS provisioning
-
-**Cybersecurity Engineer @ Atos IT Solutions** *(2020–2022)*
-- Conducted enterprise security assessments and delivered detailed risk reports to senior management
-- Configured firewall policies across multi-vendor environments (Cisco, Fortinet, Palo Alto, Juniper)
-- Managed endpoint security with **CyberArk** and led **Forescout** Windows 10 migration
-
-**System Administrator @ Netex Romania** *(2018–2020)*
-- Led infrastructure modernization initiatives including **Puppet-to-Kubernetes** migration
-- Deployed **Asterisk VOIP** system with CISCO phone integration
-- Managed datacenter operations: rack installations, network cabling, UPS maintenance
-
-## 🎓 Education & Certifications
-
-**Computer Science** - West University of Timișoara *(2016–2018)*
-
-**Cisco Certified Network Associate (CCNA)** - Credential ID: NJXWKRFD7D1EQ7C0 *(2019–2020)*  
-*Completed intensive 7-month training program with hands-on CISCO hardware labs and GNS3 network simulation*
-
-## 🔮 Currently Exploring
-
-- HPC cluster optimization and high-speed interconnect technologies
-- Multi-cloud infrastructure strategies (AWS, Oracle Cloud, Azure)
-- Kubernetes-native security & service mesh architectures
-- ARM-based computing optimization (Ampere processors)
-- Terraform & Ansible for declarative infrastructure automation
+HPC optimization, multi-cloud, K8s security, ARM (Ampere), Terraform/Ansible
 
 ---
 
-## 🏷️ About the Merox Name
+## 🏷️ Merox = ME(lcher) + RO(bert) + X  
+*(ex-mer0x39 → 0x39 = 57 = May 7 birth)*
 
-The name **merox** represents my technical identity — a carefully crafted blend of personal heritage and digital evolution:
+**Open to infra, or cyber discussions.**
 
-- **ME** = **Melcher** (family name)
-- **RO** = **Robert** (first name)
-- **X** = Added for phonetic impact and modern appeal
-
-Originally, my handle was **mer0x39** (hexadecimal notation), where `0x39` equals **57** — representing my birth day and month (May 7th). I simplified it to **merox** for a clean, memorable professional brand that's concise and instantly recognizable.
-
----
-
-**Ready to connect?** I'm always open to discussing infrastructure challenges, HPC architecture, or cybersecurity initiatives.
-
-[📄 Download Full CV](https://merox.dev/robert-melcher-cv.pdf){: .btn .btn-primary }
+[📄 Download CV](https://merox.dev/robert-melcher-cv.pdf){: .btn .btn-primary }

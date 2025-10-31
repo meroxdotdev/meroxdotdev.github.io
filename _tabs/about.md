@@ -60,7 +60,7 @@ HPC optimization, multi-cloud, K8s security, ARM (Ampere), Terraform/Ansible
 ---
 
 ## 🏷️ Merox = ME(lcher) + RO(bert) + X  
-*(ex-mer0x39 → 0x39 = 57 = May 7 birth)*
+*(ex-mer0x39 → 0x39 = 57 = July 5 birth)*
 
 **Open to infra, or cyber discussions.**
 

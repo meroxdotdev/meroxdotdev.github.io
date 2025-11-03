@@ -1,123 +1,121 @@
 @mixin styles {
   color-scheme: dark;
 
-  /* Framework color - Fundal cu contrast pentru sidebar */
-  --main-bg: #2d323a; /* Fundal principal pentru content */
-  --mask-bg: #3d434d; /* Overlay */
-  --main-border-color: #4a5160; /* Borduri */
+  /* Framework color - GitHub Dark inspired */
+  --main-bg: #0d1117;
+  --mask-bg: #161b22;
+  --main-border-color: #30363d;
 
-  /* Common color - Text perfect optimizat */
-  --text-color: #c6cddb; /* Text principal */
-  --text-muted-color: #a5afc2; /* Text secundar */
-  --text-muted-highlight-color: #b8c0d0; /* Hover pe text secundar */
-  --heading-color: #ebeef3; /* Headings */
-  --label-color: #bfc7d4; /* Labels */
-  --blockquote-border-color: #565d6d; /* Borduri blockquote */
-  --blockquote-text-color: #a5afc2; /* Text blockquote */
-  --link-color: #6ba6ff; /* Link-uri */
-  --link-underline-color: #5a95ee; /* Underline */
-  --button-bg: #3d434d; /* Fundal butoane */
-  --btn-border-color: #565d6d; /* Borduri butoane */
+  /* Common color */
+  --text-color: #c9d1d9;
+  --text-muted-color: #8b949e;
+  --text-muted-highlight-color: #a5afba;
+  --heading-color: #f0f6fc;
+  --label-color: #8b949e;
+  --blockquote-border-color: #3f4954;
+  --blockquote-text-color: #8b949e;
+  --link-color: #58a6ff;
+  --link-underline-color: #1f6feb;
+  --button-bg: #21262d;
+  --btn-border-color: #30363d;
   --btn-backtotop-color: var(--text-color);
-  --btn-backtotop-border-color: #4a5160;
-  --card-header-bg: #3d434d; /* Header carduri */
-  --checkbox-color: #7d8599; /* Checkbox-uri inactive */
-  --checkbox-checked-color: var(--link-color); /* Checkbox-uri active */
-  --img-bg: radial-gradient(circle, #2d323a 0%, #3d434d 100%); 
+  --btn-backtotop-border-color: #30363d;
+  --card-header-bg: #1c2128;
+  --checkbox-color: #484f58;
+  --checkbox-checked-color: var(--link-color);
+  --img-bg: radial-gradient(circle, #0d1117 0%, #161b22 100%);
   --shimmer-bg: linear-gradient(
     90deg,
     rgb(255 255 255 / 0%) 0%,
-    rgb(198 205 219 / 13%) 50%,
+    rgb(48 54 61 / 40%) 50%,
     rgb(255 255 255 / 0%) 100%
   );
 
-  /* Sidebar - Mai închis pentru contrast cu main content */
-  --site-title-color: #ffffff; 
-  --site-subtitle-color: #a5afc2; 
-  --sidebar-bg: #24282f; /* Mai închis decât main-bg pentru contrast */
-  --sidebar-border-color: #3a3f48; /* Borduri mai subtile pentru sidebar */
-  --sidebar-muted-color: #9da8ba; /* Text muted în sidebar */
-  --sidebar-active-color: #ebeef3; 
-  --sidebar-hover-bg: #2d323a; /* Hover match cu main-bg */
-  --sidebar-btn-bg: #3a3f48; 
-  --sidebar-btn-color: #9da8ba; 
-  --avatar-border-color: rgb(198 205 219 / 65%); 
+  /* Sidebar */
+  --site-title-color: #f0f6fc;
+  --site-subtitle-color: #8b949e;
+  --sidebar-bg: #010409;
+  --sidebar-border-color: #21262d;
+  --sidebar-muted-color: #8b949e;
+  --sidebar-active-color: #f0f6fc;
+  --sidebar-hover-bg: #161b22;
+  --sidebar-btn-bg: #21262d;
+  --sidebar-btn-color: #8b949e;
+  --avatar-border-color: rgb(240 246 252 / 10%);
 
-  /* Topbar - Glass-morphism */
-  --topbar-bg: rgb(45 50 58 / 94%); 
+  /* Topbar */
+  --topbar-bg: rgb(13 17 23 / 95%);
   --topbar-text-color: var(--text-color);
-  --search-border-color: #565d6d; 
-  --search-icon-color: #7d8599; 
-  --input-focus-border-color: #6ba6ff; 
+  --search-border-color: #30363d;
+  --search-icon-color: #6e7681;
+  --input-focus-border-color: #58a6ff;
 
   /* Home page */
-  --post-list-text-color: #c6cddb; 
+  --post-list-text-color: #c9d1d9;
   --btn-patinator-text-color: var(--text-color);
-  --btn-paginator-hover-color: #4a5160; 
+  --btn-paginator-hover-color: #1c2128;
 
-  /* Posts - Carduri cu mai mult "pop" */
-  --toc-highlight: #6ba6ff; 
-  --toc-popup-border-color: #565d6d; 
-  --tag-hover: #4a5160; 
-  --tb-odd-bg: #3d434d; 
-  --tb-even-bg: #2d323a; 
-  --tb-border-color: #4a5160; 
-  --footnote-target-bg: #3d5f8a; 
-  --btn-share-color: #7d8599; 
-  --btn-share-hover-color: #c6cddb; 
-  --card-bg: #383e48; /* Carduri mai luminoase */
-  --card-hover-bg: #414853; /* Hover mai vizibil */
-  --card-shadow: rgb(0 0 0 / 35%) 0 8px 24px 0,
-    rgb(198 205 219 / 8%) 0 0 0 1px,
-    rgb(107 166 255 / 4%) 0 1px 3px 0; /* Umbră cu hint de albastru */
+  /* Posts */
+  --toc-highlight: #58a6ff;
+  --toc-popup-border-color: #30363d;
+  --tag-hover: #1f6feb;
+  --tb-odd-bg: #010409;
+  --tb-even-bg: #0d1117;
+  --tb-border-color: #30363d;
+  --footnote-target-bg: #1f6feb;
+  --btn-share-color: #8b949e;
+  --btn-share-hover-color: #c9d1d9;
+  --card-bg: #1c2128;
+  --card-hover-bg: #22272e;
+  --card-shadow: rgb(1 4 9 / 70%) 0 8px 24px 0,
+    rgb(48 54 61 / 50%) 0 0 0 1px;
+  --kbd-wrap-color: #6e7681;
+  --kbd-text-color: #f0f6fc;
+  --kbd-bg-color: #161b22;
+  --prompt-text-color: rgb(201 209 217 / 75%);
+  --prompt-tip-bg: rgb(35 134 54 / 15%);
+  --prompt-tip-icon-color: #3fb950;
+  --prompt-info-bg: rgb(31 111 235 / 15%);
+  --prompt-info-icon-color: #58a6ff;
+  --prompt-warning-bg: rgb(187 128 9 / 15%);
+  --prompt-warning-icon-color: #d29922;
+  --prompt-danger-bg: rgb(248 81 73 / 15%);
+  --prompt-danger-icon-color: #f85149;
 
-  --kbd-wrap-color: #7d8599; 
-  --kbd-text-color: #ebeef3; 
-  --kbd-bg-color: #2d323a; 
-  --prompt-text-color: rgb(198 205 219 / 92%); 
-  --prompt-tip-bg: rgb(74 222 128 / 20%); 
-  --prompt-tip-icon-color: #5edc87; 
-  --prompt-info-bg: rgb(107 166 255 / 20%); 
-  --prompt-info-icon-color: #6ba6ff; 
-  --prompt-warning-bg: rgb(251 146 60 / 20%); 
-  --prompt-warning-icon-color: #ff9f52; 
-  --prompt-danger-bg: rgb(248 113 113 / 20%); 
-  --prompt-danger-icon-color: #ff7979; 
-
-  /* Tags - Mai vizibile */
-  --tag-border: #565d6d; 
-  --tag-shadow: #2d323a; 
-  --dash-color: #8590a3; /* Dash-uri mai luminoase */
-  --search-tag-bg: #3d434d; 
+  /* Tags */
+  --tag-border: #1f6feb;
+  --tag-shadow: #010409;
+  --dash-color: #30363d;
+  --search-tag-bg: #1c2128;
 
   /* Categories */
-  --categories-border: rgb(86 93 109 / 50%); 
-  --categories-hover-bg: #4a5160; 
-  --categories-icon-hover-color: #ebeef3; 
+  --categories-border: rgb(48 54 61 / 50%);
+  --categories-hover-bg: #1c2128;
+  --categories-icon-hover-color: #f0f6fc;
 
   /* Archive */
-  --timeline-node-bg: #7d8599; 
-  --timeline-color: #565d6d; 
+  --timeline-node-bg: #8b949e;
+  --timeline-color: #30363d;
   --timeline-year-dot-color: var(--timeline-color);
 
-  /* Code highlight */
-  --language-border-color: #4a5160; 
-  --highlight-bg-color: #272c33; /* Cod puțin mai închis */
-  --highlighter-rouge-color: #c6cddb; 
-  --highlight-lineno-color: #7d8599; 
-  --inline-code-bg: rgb(198 205 219 / 11%); 
-  --code-color: #c6cddb; 
-  --code-header-text-color: #a5afc2; 
-  --code-header-muted-color: #4a5160; 
-  --code-header-icon-color: #7d8599; 
-  --clipboard-checked-color: #5edc87; 
-  --filepath-text-color: #c6cddb; 
+  /* Code highlight colors */
+  --language-border-color: #30363d;
+  --highlight-bg-color: #161b22;
+  --highlighter-rouge-color: #a5d6ff;
+  --highlight-lineno-color: #6e7681;
+  --inline-code-bg: rgb(110 118 129 / 10%);
+  --code-color: #e6edf3;
+  --code-header-text-color: #8b949e;
+  --code-header-muted-color: #30363d;
+  --code-header-icon-color: #6e7681;
+  --clipboard-checked-color: #3fb950;
+  --filepath-text-color: #c9d1d9;
 
   .light {
     display: none;
   }
 
-  /* Categories styling */
+  /* Categories */
   .categories.card,
   .list-group-item {
     background-color: var(--card-bg);
@@ -140,34 +138,14 @@
     }
   }
 
-  /* Enhanced metadata styling */
-  .post-meta {
-    color: #a5afc2;
-    
-    a {
-      color: #b5bfce;
-      transition: color 0.2s ease;
-      
-      &:hover {
-        color: #6ba6ff;
-      }
-    }
-  }
-
-  /* Sidebar cu bordură subtilă pentru a o separa de content */
-  #sidebar {
-    border-right: 1px solid #3a3f48;
-    box-shadow: 2px 0 8px rgb(0 0 0 / 15%);
-  }
-
   #archives li:nth-child(odd) {
     background-image: linear-gradient(
       to left,
-      #2d323a,
-      #383e48,
-      #383e48,
-      #383e48,
-      #2d323a
+      #0d1117,
+      #1c2128,
+      #1c2128,
+      #1c2128,
+      #0d1117
     );
   }
 
@@ -176,9 +154,10 @@
     color-scheme: none;
   }
 
-  /* --- Syntax highlighting --- */
+  /* --- GitHub-inspired syntax highlighting --- */
+
   .highlight .gp {
-    color: #a5afc2;
+    color: #8b949e;
   }
 
   .highlight table td {
@@ -191,13 +170,13 @@
 
   .highlight,
   .highlight .w {
-    color: #c6cddb;
-    background-color: #272c33;
+    color: #e6edf3;
+    background-color: #161b22;
   }
 
   .highlight .err {
-    color: #272c33;
-    background-color: #ff6b6b;
+    color: #f85149;
+    background-color: transparent;
   }
 
   .highlight .c,
@@ -207,40 +186,39 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #8d96a8;
-    font-style: italic;
+    color: #8b949e;
   }
 
   .highlight .cp {
-    color: #ffd866;
+    color: #8b949e;
   }
 
   .highlight .nt {
-    color: #ffd866;
+    color: #7ee83f;
   }
 
   .highlight .o,
   .highlight .ow {
-    color: #78dce8;
+    color: #ff7b72;
   }
 
   .highlight .p,
   .highlight .pi {
-    color: #c6cddb;
+    color: #e6edf3;
   }
 
   .highlight .gi {
-    color: #a9dc76;
+    color: #56d364;
+    background-color: rgb(46 160 67 / 15%);
   }
 
   .highlight .gd {
-    color: #ff6b6b;
-    background-color: #4d3234;
+    color: #f85149;
+    background-color: rgb(248 81 73 / 15%);
   }
 
   .highlight .gh {
-    color: #6ba6ff;
-    background-color: #272c33;
+    color: #58a6ff;
     font-weight: bold;
   }
 
@@ -249,19 +227,19 @@
   .highlight .kp,
   .highlight .kr,
   .highlight .kv {
-    color: #c792ea;
+    color: #ff7b72;
   }
 
   .highlight .kc {
-    color: #ffb86c;
+    color: #79c0ff;
   }
 
   .highlight .kt {
-    color: #ffd866;
+    color: #ff7b72;
   }
 
   .highlight .kd {
-    color: #c792ea;
+    color: #ff7b72;
   }
 
   .highlight .s,
@@ -273,39 +251,39 @@
   .highlight .sh,
   .highlight .sx,
   .highlight .s1 {
-    color: #a9dc76;
+    color: #a5d6ff;
   }
 
   .highlight .sa {
-    color: #c792ea;
+    color: #ff7b72;
   }
 
   .highlight .sr {
-    color: #78dce8;
+    color: #a5d6ff;
   }
 
   .highlight .si {
-    color: #ffd866;
+    color: #a5d6ff;
   }
 
   .highlight .se {
-    color: #ffb86c;
+    color: #79c0ff;
   }
 
   .highlight .nn {
-    color: #ffd866;
+    color: #e6edf3;
   }
 
   .highlight .nc {
-    color: #ffd866;
+    color: #ffa657;
   }
 
   .highlight .no {
-    color: #ffb86c;
+    color: #79c0ff;
   }
 
   .highlight .na {
-    color: #6ba6ff;
+    color: #e6edf3;
   }
 
   .highlight .m,
@@ -316,10 +294,10 @@
   .highlight .il,
   .highlight .mo,
   .highlight .mx {
-    color: #ffb86c;
+    color: #79c0ff;
   }
 
   .highlight .ss {
-    color: #a9dc76;
+    color: #a5d6ff;
   }
 }
